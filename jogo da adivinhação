@@ -1,16 +1,27 @@
 texto = 'JOGO DE ADIVINHAÇÃO'
-print('*' * 30)
-print('{:^30}'.format(texto))
-print('*' * 30)
+print('*' * 45)
+print('{:^45}'.format(texto))
+print('*' * 45)
 
 secreto = 42
+tentativas = 3
+rodada = 1
 
-chute = int(input('Digite o seu número: '))
-print('Você digitou o número: {}'.format(chute))
+while tentativas > 0:
+    print('Rodada {}, restam {} tentativas'.format(rodada, tentativas))
+    chute = int(input('Digite o seu número: '))
+    print('Você digitou {}'.format(chute))
 
-if chute == secreto:
-    print('Você acertou')
-elif chute > secreto:
-    print('Você errou! O número secreto é menor que {}'.format(chute))
-elif chute < secreto:
-    print('Você errou! O número secreto é maior que {}'.format(chute))
+    acertou = chute == secreto
+    maior = chute > secreto
+    menor = chute < secreto
+
+    if acertou:
+        print('Você acertou!')
+        break
+    elif menor:
+        print('Você ERROU! O seu chute é menor que o número secreto.')
+    elif maior:
+        print('Você ERROU! O seu chute é maior que o número secreto.')
+    tentativas -= 1
+    rodada += 1
