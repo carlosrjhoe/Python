@@ -1,0 +1,16 @@
+texto = 'JOGO DE ADIVINHAÇÃO'
+print('*' * 30)
+print('{:^30}'.format(texto))
+print('*' * 30)
+
+secreto = 42
+
+chute = int(input('Digite o seu número: '))
+print('Você digitou o número: {}'.format(chute))
+
+if chute == secreto:
+    print('Você acertou')
+elif chute > secreto:
+    print('Você errou! O número secreto é menor que {}'.format(chute))
+elif chute < secreto:
+    print('Você errou! O número secreto é maior que {}'.format(chute))
