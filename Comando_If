@@ -1,11 +1,9 @@
-
 secreto = 5
 chute = int(input('Digite um numero de [0 a 10]: '))
 
-if chute == secreto:
+if (chute == secreto):
     print('Você acertou')
-else:
-    if chute > secreto:
-        print('Você errou! O chute foi maior que o número secreto')
-    else:
-        print('Voce errou! O chute foi menor que o número secreto')
+elif (chute > secreto):
+print('Você errou! O chute foi maior que o número secreto')
+elif (chute < secreto):
+    print('Voce errou! O chute foi menor que o número secreto')
