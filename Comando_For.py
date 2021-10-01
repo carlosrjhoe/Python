@@ -8,6 +8,7 @@ tentativas = 3
 
 for rodada in range(1, tentativas + 1):
     chute = int(input('Digite o seu número: '))
+    
 
     acertou = chute == secreto
     maior = chute > secreto

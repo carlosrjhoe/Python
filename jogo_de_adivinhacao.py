@@ -1,6 +1,6 @@
 texto = 'JOGO DE ADIVINHAÇÃO'
 print('*' * 45)
-print('{:^45}'.format(texto))
+print(f'{texto:^45}')
 print('*' * 45)
 
 secreto = 42
@@ -8,9 +8,9 @@ tentativas = 3
 rodada = 1
 
 while tentativas > 0:
-    print('Rodada {}, restam {} tentativas'.format(rodada, tentativas))
+    print(f'Rodada {rodada}, restam {tentativas} tentativas.')
     chute = int(input('Digite o seu número: '))
-    print('Você digitou {}'.format(chute))
+    print(f'Você digitou {chute}.')
 
     acertou = chute == secreto
     maior = chute > secreto
@@ -25,3 +25,4 @@ while tentativas > 0:
         print('Você ERROU! O seu chute é maior que o número secreto.')
     tentativas -= 1
     rodada += 1
+print('Fim de jogo')
