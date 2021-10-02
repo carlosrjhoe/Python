@@ -4,6 +4,7 @@ def jogar():
     print(texto.center(45))
     print('#' * 45)
 
+<<<<<<< HEAD
     palavra_secreta = 'banada'
     enforcou = False
     acertou = False
