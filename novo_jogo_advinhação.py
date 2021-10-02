@@ -5,14 +5,24 @@ print('#' * 45)
 print(f'{texto:^45}')
 print('#' * 45)
 
-numero_secreto = random.randrange(10)
-total_tentativas = 10
+numero_secreto = random.randrange(100)
+total_tentativas = 0
+pontos = 1000
 
+print('(1) Fácio (2)Médio (3)Difícil')
+nivel = int(input('Defina o nível: '))
+
+if(nivel == 1):
+    total_tentativas = 15
+elif(nivel == 2):
+    total_tentativas = 10
+else:
+    total_tentativas = 5
 
 
 for rodada in range(1, total_tentativas + 1):
     print(f'Tentativa {rodada} de {total_tentativas}')
-    chute_str = input("Digite um número entre 1 e 10: ")
+    chute_str = input("Digite um número entre 1 e 100: ")
     print("Você digitou: ", chute_str)
     chute = int(chute_str)
 
@@ -25,12 +35,14 @@ for rodada in range(1, total_tentativas + 1):
         print("Você deve digitar um número entre 1 e 100!")
         continue
     elif(acertou):
-        print('Acretou!')
+        print('Acertou!')
         break
     elif(maior):
         print('O chupe foi maior que numero secreto...')
     else:
         print('O chute foi menor que o numero secreto...')
-
+    pontos_perdidos = abs(numero_secreto - chute)
+    pontos = pontos - pontos_perdidos
+print(f'Você acertou e fez {pontos}')
 
     
