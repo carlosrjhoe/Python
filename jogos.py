@@ -8,11 +8,11 @@ print('#' * 45)
 
 print('(1) FOCA (2) ADIVINHAÇÃO')
 
-jogo = int(input('Qualo jogo? '))
+jogo = int(input('Qual o jogo? '))
 
 if(jogo == 1):
     print('Jogando forca.')
     forca.jogar()
 elif(jogo == 2):
-    print('Jogando adinihação')
+    print('Jogando adivinhação')
     adivinhacao.jogar()
