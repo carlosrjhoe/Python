@@ -4,12 +4,9 @@ def jogar():
     print(texto.center(45))
     print('#' * 45)
 
-<<<<<<< HEAD
-    palavra_secreta = 'banada'
+    palavra_secreta = 'banana'
     enforcou = False
     acertou = False
-
-    print(palavra_secreta)
 
     while(not enforcou and not acertou):
         chute = input('Qual a letra: ')
