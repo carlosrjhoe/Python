@@ -1,13 +1,35 @@
-# def nome():
-#     print('Carlos Roberto Conceição Júnior')
 
-# nome()
-# nome()
-# nome()
+# def num_cubo(numero):
+#     resultado = numero * numero * numero
+#     return(resultado)
 
-def soma(a,b):
-    return a + b
+# numero = num_cubo(4)
+# print(numero)
 
-s = soma(3, 4)
+# def print_ola(nome='Estranho'):
+#     print('Olá,', nome)
 
-print(s)
+# print_ola()
+# print_ola('Carlos')
+
+# def print_informacoes(nome, idade):
+#     print(f'Olá, meu nome é {nome} e tenho {idade}')
+
+# print_informacoes(nome='Carlos', idade=35)
+
+def soma(a, b):
+    print(f'A soma de {a} + {b} é igual a {a+b}')
+
+soma(25, 9)
+
+# def print_info(nome, idade, **kwargs):
+#     print('INFORMAÇÕES ADICIONAIS\n')
+#     print(f'Nome: {nome}')
+#     print(f'Idade: {idade}')
+
+#     for i, valor in kwargs.items():
+#         print(i, '-', (valor))
+
+# print_info(nome='Carlos', idade=35, nacionalidade='Brasil', telefone='81995419951')
+
+#from _typeshed import Self
