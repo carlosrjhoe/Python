@@ -2,27 +2,9 @@ import random
 
 def jogar():
 
-    texto = 'JOGO DA FORCA'
-    print('#' * 45)
-    print(texto.center(45))
-    print('#' * 45)
-
-    arquivo = open('palavra.txt', 'r')
-    
-    # Depois temos que criar uma lista e percorrer o arquivo. Cada linha do arquivo deve ser guardada nessa lista:
-
-    palavra = []
-
-    for linha in arquivo:
-        linha = linha.strip() # Precisamos remover o \n ao final da linha, fazendo um .strip
-        palavra.append(linha)
-
-    arquivo.close()
-
-    numero = random.randrange(0, len(palavra))
-
-    palavra_secreta = palavra[numero].upper()
-    letras_acertadas = ['_' for letra in palavra_secreta]
+    msg_de_abertra()
+    palavra_secreta = carrega_palavra_secreta()
+    letras_acertadas = inicializa_letras_acertada(palavra_secreta)
 
     enforcou = False
     acertou = False
@@ -55,5 +37,33 @@ def jogar():
 
 print('Fim de jogo!')
 
+
+def inicializa_letras_acertada(palavra):
+    return ['_' for letra in palavra]
+
+def msg_de_abertra():
+    texto = 'JOGO DA FORCA'
+    print('#' * 45)
+    print(texto.center(45))
+    print('#' * 45)
+
+def carrega_palavra_secreta():
+    arquivo = open('palavra.txt', 'r')
+    
+    # Depois temos que criar uma lista e percorrer o arquivo. Cada linha do arquivo deve ser guardada nessa lista:
+
+    palavra = []
+
+    for linha in arquivo:
+        linha = linha.strip() # Precisamos remover o \n ao final da linha, fazendo um .strip
+        palavra.append(linha)
+
+    arquivo.close()
+
+    numero = random.randrange(0, len(palavra))
+    palavra_secreta = palavra[numero].upper()
+    return palavra
+    
 if(__name__ == "__main__"): #garante a execução como programa principal:
     jogar()
+
