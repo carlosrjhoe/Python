@@ -1,10 +1,27 @@
+import random
+
 def jogar():
+
     texto = 'JOGO DA FORCA'
     print('#' * 45)
     print(texto.center(45))
     print('#' * 45)
 
-    palavra_secreta = 'banana'.upper()
+    arquivo = open('palavra.txt', 'r')
+    
+    # Depois temos que criar uma lista e percorrer o arquivo. Cada linha do arquivo deve ser guardada nessa lista:
+
+    palavra = []
+
+    for linha in arquivo:
+        linha = linha.strip() # Precisamos remover o \n ao final da linha, fazendo um .strip
+        palavra.append(linha)
+
+    arquivo.close()
+
+    numero = random.randrange(0, len(palavra))
+
+    palavra_secreta = palavra[numero].upper()
     letras_acertadas = ['_' for letra in palavra_secreta]
 
     enforcou = False
