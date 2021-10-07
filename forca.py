@@ -35,7 +35,6 @@ def jogar():
 print('Fim de jogo!')
 
 def imprime_vencedor():
-    print('Você ganhou!!')
     print("Parabéns, você ganhou!")
     print("       ___________      ")
     print("      '._==_==_=_.'     ")
@@ -159,7 +158,7 @@ def carrega_palavra_secreta():
 
     numero = random.randrange(0, len(palavra))
     palavra_secreta = palavra[numero].upper()
-    return palavra
+    return palavra_secreta
 
 if(__name__ == "__main__"): #garante a execução como programa principal:
     jogar()
