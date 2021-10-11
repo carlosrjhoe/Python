@@ -1,21 +1,17 @@
-from conta import Conta
-
 class Conta:
 
-    def __init__(Self, numero, titular, saldo, limite):
-        print(f'Contruido objeto... {Self}')
-        Self.numero = numero
-        Self.titular = titular
-        Self.saldo = saldo
-        Self.limite = limite
+    def __init__(self, numero, titular, saldo, limite):
+        print(f"Construindo objeto ... {self}")
+        self.numero = numero
+        self.titular = titular
+        self.saldo = saldo
+        self.limite = limite
 
-# conta = Conta(321, 'Carlos', 100.0, 1000.0) 
+    def extrato(self):
+        print(f"Saldo de {self.saldo} do titular {self.titular}")
 
-def extrato(Self):
-    print(f'Saldo de {Self.saldo} do titular {Self.titular}')
+    def deposita(self, valor):
+        self.saldo += valor
 
-def deposita(Self,valor):
-    Self.saldo += Valor
-
-def saca(Self, valor):
-    Self.saldo -= valor
+    def saca(self, valor):
+        self.saldo -= valor
