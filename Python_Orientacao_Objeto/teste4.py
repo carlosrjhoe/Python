@@ -23,6 +23,9 @@ class Carro:
 carro_01 = Carro('Renault', 'Clio Sedan', 2009, 20.000)
 carro_02 = Carro('Fiat', 'Uno', 2021, 35.000)
 
-
 carro_01.Informacaocarro()
 carro_02.Informacaocarro()
+carro_01.LigarCarro()
+carro_02.LigarCarro()
+carro_01.DesligaCarro()
+carro_02.DesligaCarro()
