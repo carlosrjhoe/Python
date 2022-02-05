@@ -11,14 +11,16 @@ class Conta:    # CLASS
 
     def deposita(self, valor):  # METODO DEPOSITAR VALOR
         self.__saldo += valor
-    
+        
     def sacar(self, valor):   # METODO SACAR VALOR
         if valor > self.__saldo:
-            print('Saldo insuficiente')
+            print('Saldo insuficiente')         
         else:
             self.__saldo -= valor
     
     def transferir(self, valor, destino):   # METODO TRANSFERIR
         self.sacar(valor)
         destino.deposita(valor)
+        
+    
         
