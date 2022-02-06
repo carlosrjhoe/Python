@@ -14,7 +14,7 @@ class Conta:    # CLASS
         
     def sacar(self, valor):   # METODO SACAR VALOR
         if valor > self.__saldo:
-            print('Saldo insuficiente')         
+            print('Saldo insuficiente')
         else:
             self.__saldo -= valor
     
@@ -22,5 +22,16 @@ class Conta:    # CLASS
         self.sacar(valor)
         destino.deposita(valor)
         
+    def get_saldo(self):    # "GET" Recupera o valor atribuido à chave que voce envia como argumento para o método.
+        return self.__saldo
+
+    def get_titular(self):
+        return self.__titular
     
+    def get_limite(self):
+        return self.__limite
+    
+    def set_limite(self, limite):   # "SET" Permitem as operações de adição, atualização e remoção de elementos.
+        self.__limite = limite
+        
         
