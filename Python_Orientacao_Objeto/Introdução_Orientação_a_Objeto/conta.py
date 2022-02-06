@@ -37,6 +37,27 @@ class Conta:    # CLASS
     
     def set_limite(self, limite):   # "SET" Permitem as operações de adição, atualização e remoção de elementos.
         self.__limite = limite
+    
+    @staticmethod  
+    def codigos_bancos():
+        return {'BB': '001', 'CAIXA': '104', 'BRADESCO': '237'}
+    
+'''
+Métodos estáticos:
+Estamos criando umas contas com dicionário com os bancos: Brasil, Caixa e bradesco, que cada um possui um código, independe da conta, faz sentido acessá-lo sem termos um objeto da classe Conta.
+
+    @staticmethod
+    def codigos_bancos():
+        return {'BB':'001', 'Caixa':'104', 'Bradesco':'237'}
+    
+Teste o código, crie uma conta e tente sacar um valor acima do limite mais o seu saldo, por exemplo:
+
+    >>> from conta import Conta
+    >>> Conta.codigo_banco()
+    '001'
+    >>> Conta.codigos_bancos()
+    {'Caixa': '104', 'BB': '001', 'Bradesco': '237'}
+'''
         
 '''
 Agora que vimos as propriedades, crie-os no lugar dos getters da classe Conta. Por exemplo, no lugar do get_saldo, teremos:
