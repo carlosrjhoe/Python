@@ -12,11 +12,15 @@ class Conta:    # CLASS
     def deposita(self, valor):  # METODO DEPOSITAR VALOR
         self.__saldo += valor
         
+    def __pode_sacar(self, valor_a_sacar):
+        valor_disponivel_a_sacar = self.__saldo + self.__limite
+        return valor_a_sacar <= valor_disponivel_a_sacar
+        
     def sacar(self, valor):   # METODO SACAR VALOR
-        if valor > self.__saldo:
-            print('Saldo insuficiente')
-        else:
+        if (self.__pode_sacar(valor)):
             self.__saldo -= valor
+        else:
+            print(f'O valor {valor} passou o limite!')
     
     def transferir(self, valor, destino):   # METODO TRANSFERIR
         self.sacar(valor)
