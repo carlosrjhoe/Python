@@ -1,10 +1,10 @@
 class Programa:
     
     def __init__(self, nome, ano):
-        self._nome = nome.title() # O title() é um método que retorna uma string onde o primeiro caractere em cada palavra é maiúsculo.
+        self._nome = nome.title()
         self.ano = ano
         self._likes = 0
-        
+
     @property
     def likes(self):
         return self._likes
@@ -19,16 +19,25 @@ class Programa:
     @nome.setter
     def nome(self, nome):
         self._nome = nome
+        
+    def __str__(self):
+        return (f'{self._nome} - {self.ano} - {self._likes} likes')
 
 class Filmes(Programa):
     def __init__(self, nome, ano, duracao):
         super().__init__(nome, ano)
         self.duracao = duracao
         
+    def __str__(self):
+        return (f'{self._nome} - {self.ano} - {self.duracao} min - {self._likes} likes')
+        
 class Series(Programa):
     def __init__(self, nome, ano, temporada):
         super().__init__(nome, ano)
         self.temporada = temporada
+        
+    def __str__(self):
+        return (f'{self._nome} - {self.ano} - {self.temporada} temporadas - {self._likes} likes')
 
 
 vingadores = Filmes('vingadores', 2018, 150)
@@ -39,6 +48,21 @@ smallville.dar_like()
 vingadores.dar_like()
 smallville.dar_like()
 
-print(f'Filme: {vingadores.nome} - Ano: {vingadores.ano} - Duração: {vingadores.duracao} - Likes: {vingadores.likes}')
-print(f'Série: {smallville.nome} - Ano: {smallville.ano} - Temporada: {smallville.temporada} - Likes: {smallville.likes}')
+filmes_e_series = [vingadores, smallville]
+for programa in filmes_e_series:
+    print(programa)
+    
+    
+'''
+SOBRE @PROPERTY:
+    Você pode definir propriedades com a sintaxe @property, que é mais compacta e legível.
+    O uso de @property pode ser considerada a maneira "pytônica" de definir getters, setters e deleters.
+    Ao definir propriedades, você pode alterar a implementação interna de uma classe sem afetar o programa, para adicionar getters setters e deleters que atuam como intermediários "nos bastidores" para evitar acessar ou modificar osdadosdiretamente.
+    
+SOBRE SETTER:
+    Esses são os métodos usados ​​no recurso OOPS que ajudam a definir o valor para atributos privados em uma classe .
 
+SOBRE __str__:
+    É um método especial, como __init__, usado para retornar uma representação de string de um objeto.
+    Quando escrevo uma nova classe, quase sempre começo escrevendo __init__, o que facilita a instanciação de objetos, e __str__, que é útil para a depuração.
+'''
