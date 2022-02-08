@@ -1,5 +1,12 @@
-url = 'bytebank.com/cambio?moedaOrigem=real'
-print(url)
+#url = 'bytebank.com/cambio?moedaOrigem=real'
+url = " "
+
+# Sanitização da URL
+url = url.strip()
+
+#Validação da URL
+if url == "":
+    raise ValueError('A url está vazia...')
 
 # Separa base e os parâmetros
 indice_interrogacao = url.find('?')
@@ -33,4 +40,16 @@ METODO LEN()
     
     Sintaxe
     len(object)
+    
+METODO REPLACE():
+    A função substitui uma parte do texto por uma outra String. A palavra replace(), do Inglês, siginifca substituir e é isso que a função replace() da classe String do Python faz.
+    
+    Sintaxe
+    url.replace("aa", "123")
+    
+METODO STRIP():
+    O função remove caracteres da esquerda e da direita com base no argumento (uma string que especifica o conjunto de caracteres a ser removido).
+    
+    Sintaxe
+    url = url.strip()
 '''
