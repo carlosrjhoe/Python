@@ -1,6 +1,3 @@
-from socket import SOMAXCONN
-
-
 num1 = int(input('Digite um numero: '))
 num2 = int(input('Digite outro numero: '))
 
