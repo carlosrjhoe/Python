@@ -1,3 +1,4 @@
+import re
 class ExtratorURL:
     
     def __init__(self, url):
@@ -14,6 +15,12 @@ class ExtratorURL:
         """Valida se a url está vazia"""
         if not self.url:
             raise ValueError('A url está vazia...')
+        
+        padrao_url = re.compile('(http(s)?://)?(www.)?bytebank.com(.br)?/cambio')
+        match = padrao_url.match(url)
+        if not match:
+            raise ValueError('A URL não é válida.')
+        print('A URL é válida!')
 
     def get_url_base(self):
         """Retorna a base da url."""
@@ -39,11 +46,9 @@ class ExtratorURL:
             valor = self.get_url_parametros()[indice_valor:indice_e_comercial]
         return valor
 
-
-extrator_url = ExtratorURL('bytebank.com/cambio?quantidade=100&moedaOrigem=real')
-valor_quantidade = extrator_url.get_valor_parametro('quantidade')
-print(valor_quantidade)
-
+url = "bytebank.com/cambio?quantidade=100&moedaOrigem=real&moedaDestino=dolar"
+extrator_url = ExtratorURL(url)
+valor_quantidade = extrator_url.get_valor_parametro('url')
 
 '''
 METODO FIND():
@@ -73,4 +78,11 @@ METODO STRIP():
     
 METODO RAISE:
     A raisepalavra-chave é usada para gerar uma exceção. Você pode definir que tipo de erro gerar e o texto a ser impresso para o usuário.
+
+MODULO RE: # Expressão Regulares
+    re.compile(): 
+    também aceita um argumento opcional flags, utilizados para habilitar vários recursos especiais e variações de sintaxe. Nós vamos ver todas as configurações disponíveis mais tarde, mas por agora, um único exemplo vai servir:
+    
+    match():
+    Determina se a RE combina com o início da string.
 '''
