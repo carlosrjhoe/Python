@@ -85,4 +85,10 @@ MODULO RE: # Expressão Regulares
     
     match():
     Determina se a RE combina com o início da string.
+    
+    No final desse modulo:
+
+    Métodos especiais são chamados pelo próprio interpretador Python de acordo com alguma instrução.
+    Como implementar métodos especiais em nossas classes para criar comportamentos customizados.
+    A diferença entre igualdade (==) e identidade (is).
 '''
