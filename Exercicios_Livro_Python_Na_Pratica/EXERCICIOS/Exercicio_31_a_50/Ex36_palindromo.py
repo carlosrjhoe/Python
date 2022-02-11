@@ -9,5 +9,5 @@ strip():
 palavras = frase.split()
 caractere = ".join(palavras)fraseinvertida="
 for i in range(len(caractere)-1,-1,-1):
-    fraseinvertida += caractere[i]
-print(caractere, fraseinvertida)
+    fraseinvertida += caractere
+print(caractere)
