@@ -1,3 +1,5 @@
+from validate_docbr import CPF
+
 class Cpf:
     
     def __init__(self, documento):
@@ -9,24 +11,22 @@ class Cpf:
             print('CPF é válido')
         else:
             '''Se este não for igual ao documento, lançaremos uma exceção ValueError() com a mensagem "CPF invalido!".'''
-            raise ValueError("CPF inválido!")
+            return ValueError('CPF inválido')
         
         
-    def __str__(self) -> str:
+    def __str__(self):
         '''A forma correta da epresentação de uma str dentro de uma classe.'''
         return self.format_cpf()
     
     def cpf_e_valido(self, documento):
         '''Método que validará o CPF'''
         if len(documento) == 11:
-            return True
+            validador = CPF()
+            return validador.validate(documento)
         else:
-            return False
+            raise ValueError('Quantidade de digitos inválida')
         
     def format_cpf(self):
         '''Aqui estou fatiando o strings do CPF, para formata-lo no formato padrão Brasileiro'''
-        fatia_um = self.cpf[:3]
-        fatia_dois = self.cpf[3:6]
-        fatia_tres = self.cpf[6:9]
-        fatia_quatro = self.cpf[9:]
-        return f'{fatia_um}.{fatia_dois}.{fatia_tres}-{fatia_quatro}'
+        mascara = CPF()
+        return mascara.mask(self.documento)
