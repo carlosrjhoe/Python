@@ -11,4 +11,4 @@ if divisoes == 2:
     print(f'{num} é divisivel por 1 ou por {num}')
 else:
     print(f'{num} não é primo')
-    print(f'{} é divisível {} vezes...')
+    print(f'{num} é divisível {divisoes} vezes...')
