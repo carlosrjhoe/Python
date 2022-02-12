@@ -1,4 +1,4 @@
-class Cpf:
+class CPF:
     
     def __init__(self, documento):
         '''O método	__init__() é responsável por inicializar o objeto'''
