@@ -1,23 +1,3 @@
-from validate_docbr import CPF
-
-class Documento:
-    
-    @staticmethod
-    def criar_novo(documento):
-        doc_str = str(documento)
-        if len(doc_str) == 11:
-            return DocCpf(doc_str)
-        if len(doc_str) == 14:
-            return DocCnpj(doc_str)
-        if len(doc_str) == 20:
-            return DocQualquer(doc_str)
-        else:
-            raise ValueError('Documento incorreto.')
-        
-    
-    
-        
-        
 class Cpf:
     
     def __init__(self, documento):
