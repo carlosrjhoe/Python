@@ -1,2 +1,2 @@
 num = int(input('Digite um numero: '))
-print(f'O número {num} elevado ao quadrado é igual a {num**num}')
+print(f'O número {num} elevado ao quadrado é igual a {num**2}')
