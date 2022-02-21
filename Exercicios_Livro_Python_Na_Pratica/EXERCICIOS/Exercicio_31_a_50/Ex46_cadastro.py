@@ -1,3 +1,6 @@
+from multiprocessing import Value
+
+
 cadastro_pessoa = {
     'Sexo': 'Masculino',
     'Idade': 36,
