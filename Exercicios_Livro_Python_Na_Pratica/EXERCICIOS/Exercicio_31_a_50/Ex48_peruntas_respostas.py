@@ -17,9 +17,12 @@ for pkeys, pvalues in base.items():
     print(f'{pkeys}:{pvalues["pergunta"]}')
     
     for rkeys, rvalues in pvalues['alternativas'].item():
-        print(f[{'rkeys'}]:{rvalues})
+        print(f'[{'rkeys'}]:{'rvalues'}')
         
     resposta = input('Escolha uma alternativa: [a][b][c] ou [d]')
     
-    if resposta == pvalues['Cesposta Correta']:
-        
+    if resposta == pvalues['respostas_certas']:
+        print('Resposta correta0')
+        respostas_certas += 1
+    else:
+        print('respostaIncorreta')
