@@ -7,3 +7,4 @@ porcentagem = float(input('Informe a porcentagem do almento: '))
 aumento = salario * porcentagem / 100
 
 print(f'O aumento será de R${aumento:.2f}')
+print(f'E seu novo salario será de R${salario+aumento:.2f}')
