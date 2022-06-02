@@ -4,4 +4,4 @@
 celsius  = int(input('Digite uma temperatura em [C°]: '))
 F = ((9 * celsius) / 5) + 32
 
-print(f'A temperatura de {celsius}c° em igual a {F}f') 
+print(f'A temperatura de {celsius}c° e igual a {F}f') 
