@@ -6,4 +6,6 @@ for letra in palavras:
   if letra in vogais:
     print(meu_nome)
   else:
-    print(letra)
+    print()
+
+print('Olá mundo')
