@@ -1,5 +1,6 @@
 {
   "recommendations": [
-    "MS-CEINTL.vscode-language-pack-pt-BR"
+    "ms-ceintl.vscode-language-pack-pt-br",
+    "Edward.google-fonts-instant-import"
   ]
 }
