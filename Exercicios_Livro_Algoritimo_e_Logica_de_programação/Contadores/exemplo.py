@@ -26,8 +26,24 @@
 
 """Listagem 5.9 – Tabuada simples"""
 
-n = int(input('Tabuada de: '))
-x = 1
-while x <= 10:
-    print(f'{n} x {x} = {n * x}')
-    x += 1
+# n = int(input('Tabuada de: '))
+# x = 1
+# while x <= 10:
+#     print(f'{n} x {x} = {n * x}')
+#     x += 1
+
+"""Listagem 5.10 – Contagem de questões corretas"""
+
+# pontos = 0
+# questao = 1
+# while questao <= 3:
+#     resposta = input(f'Resposta da questão {questao}: ').upper()
+#     if questao == 1 and resposta == "B":
+#         pontos += 1
+#     if questao == 2 and resposta == "A":
+#         pontos += 1
+#     if questao == 3 and resposta == "C":
+#         pontos += 1
+#     questao +=1
+# print(f'o aluno fez {pontos}')
+
