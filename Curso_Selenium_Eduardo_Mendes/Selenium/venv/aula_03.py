@@ -1,5 +1,3 @@
-from cgitb import text
-from contextlib import closing
 from typing import Text
 from selenium.webdriver import Chrome
 from selenium.webdriver.common.by import By
