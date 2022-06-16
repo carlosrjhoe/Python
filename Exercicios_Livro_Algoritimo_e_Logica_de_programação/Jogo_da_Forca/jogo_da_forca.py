@@ -47,5 +47,6 @@ while True:
     print('X\n==========')
     if erros == 6:
         print('Enforcado!')
+        print(f'A palavra secreta era: {palavra}')
         break
             
