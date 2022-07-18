@@ -65,8 +65,8 @@
 
 # Instruções de loop while
 
-spam = 1
-while spam <= 5:
-  print('Hello, world.')
-  print(spam)
-  spam = spam + 1
+# spam = 1
+# while spam <= 5:
+#   print('Hello, world.')
+#   print(spam)
+#   spam = spam + 1
