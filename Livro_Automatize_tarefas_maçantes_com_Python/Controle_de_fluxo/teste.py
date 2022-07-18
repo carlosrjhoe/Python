@@ -39,6 +39,34 @@
 
 # Misturando operadores booleanos e de comparação
 
-print((4 < 5) and (5 > 6))
-print((4 < 5) and (9 < 6))
-print((1 == 2) or (2 == 2))
+# print((4 < 5) and (5 > 6))
+# print((4 < 5) and (9 < 6))
+# print((1 == 2) or (2 == 2))
+
+# Instruções if
+
+# name = 'Carlos'
+# age = 2111
+# if name == 'Alice':
+#     print('Hi, Alice.')
+# else:
+#     print('Hello, stranger.')
+
+# Instrução Elif
+
+# if name == 'Alice':
+#   print('Hi, Alice.')
+# elif age < 12:
+#   print('You are not Alice, kiddo.')
+# elif age > 100:
+#   print('You are not Alice, grannie.')
+# elif age > 2000:
+#   print('Unlike you, Alice is not an undead, immortal vampire.')
+
+# Instruções de loop while
+
+spam = 1
+while spam <= 5:
+  print('Hello, world.')
+  print(spam)
+  spam = spam + 1
