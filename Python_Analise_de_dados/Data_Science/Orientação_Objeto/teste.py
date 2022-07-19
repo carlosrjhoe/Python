@@ -3,6 +3,7 @@ class Livro():
   def __init__(self):
     self.titulo = 'O monge e o executivo'
     self.isbn = 99988877
+    print('Construtor chamado para criar um objeto desta classe.')
     
   def imprime(self):
     print(f'Foi criado o livro {self.titulo} e ISBN é {self.isbn}')
