@@ -5,10 +5,15 @@ import random
 cont = 0
 
 numeroSecreto = random.randint(1, 20)
+""" O valor de retorno, que é um inteiro aleatório entre 1 e 20, é
+armazenado na variável numeroSecreto. """
+
 print('Estou pensando em um número entre [1 e 20] Adivinhe.: ')
 
 for chute in range(1, 7):
-  # Peça para o jogador adivinhar 6 vezes
+  """ O programa informa o jogador que tem um número secreto e que dará seis
+      chances a ele para adivinhá-lo. """
+      
   print('Adivinhe...')
   chute = int(input())
   
