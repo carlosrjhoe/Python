@@ -26,6 +26,5 @@ circ = Circulo()
 # Executando e imprindo um método da classe Circulo
 print(f'O raio é: {circ.getRaio()}')
 
-
 # Imprimindo o método da area
 print(f'A área é: {circ.area()}')
