@@ -74,8 +74,9 @@ class Enforcado():
         return True
     
     # Método para verificar se o jogo terminou
-    def fim_de_jogo(self):
-        
+    def jogo_perdido(self):
+        return self.jogo_vencido() or (len(self.letra_errada) == 6)
+    
     # Método para verificar se o jogo foi vencido
     def jogo_vencido(self):
         
