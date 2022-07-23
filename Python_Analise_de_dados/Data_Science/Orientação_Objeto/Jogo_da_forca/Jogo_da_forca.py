@@ -59,9 +59,19 @@ tabuleriro = ['''
 class Enforcado():
     # Método construtor
     def __init__(self, palavra) -> None:
+        self.palavra = palavra
+        self.letra_errada = []
+        self.letra_certa = []
     
     # Método para adivinhar uma letra
     def chute(self, letra):
+        if letra in self.palavra and letra not in self.letra_certa:
+            self.letra_certa.append(letra)
+        elif letra not in self.palavra and  letra not in self.letra_errada:
+            self.letra_errada.append(letra)
+        else:
+            return False
+        return True
     
     # Método para verificar se o jogo terminou
     def fim_de_jogo(self):
