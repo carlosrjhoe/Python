@@ -79,9 +79,20 @@ class Enforcado():
     
     # Método para verificar se o jogo foi vencido
     def jogo_vencido(self):
+        if '_' not in self.mostrar_letra():
+            return True
+        return False
         
-    # Método para verificar mostrar a letra
+    # Método para verificar mostrar a letra no tabuleiro
     def mostrar_letra(self):
+        rtn = ''
+        for letra in self.palavra:
+            if letra not in self.letra_certa:
+                rtn += '_'
+            else:
+                rtn += letra
+        return rtn
+        
         
     # Método para verificar status e imprimir no tabukeiro da forca
     def checar_status(self):
