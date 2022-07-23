@@ -60,22 +60,22 @@ class Enforcado():
     # Método construtor
     def __init__(self, palavra) -> None:
         self.palavra = palavra
-        self.letra_errada = []
-        self.letra_certa = []
+        self.letras_erradas = []
+        self.letras_certas = []
     
     # Método para adivinhar uma letra
     def chute(self, letra):
-        if letra in self.palavra and letra not in self.letra_certa:
-            self.letra_certa.append(letra)
-        elif letra not in self.palavra and  letra not in self.letra_errada:
-            self.letra_errada.append(letra)
+        if letra in self.palavra and letra not in self.letras_certas:
+            self.letras_certas.append(letra)
+        elif letra not in self.palavra and  letra not in self.letras_erradas:
+            self.letras_erradas.append(letra)
         else:
             return False
         return True
     
     # Método para verificar se o jogo terminou
     def jogo_perdido(self):
-        return self.jogo_vencido() or (len(self.letra_errada) == 6)
+        return self.jogo_vencido() or (len(self.letras_erradas) == 6)
     
     # Método para verificar se o jogo foi vencido
     def jogo_vencido(self):
@@ -87,7 +87,7 @@ class Enforcado():
     def mostrar_letra(self):
         rtn = ''
         for letra in self.palavra:
-            if letra not in self.letra_certa:
+            if letra not in self.letras_certas:
                 rtn += '_'
             else:
                 rtn += letra
