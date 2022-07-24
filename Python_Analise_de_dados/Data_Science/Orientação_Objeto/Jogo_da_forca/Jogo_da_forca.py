@@ -57,7 +57,8 @@ tabuleriro = ['''
 ''' Início '''
 
 class Enforcado():
-    # Método construtor
+    
+    # Método construtor + especificação do métodos
     def __init__(self, palavra) -> None:
         self.palavra = palavra
         self.letras_erradas = []
