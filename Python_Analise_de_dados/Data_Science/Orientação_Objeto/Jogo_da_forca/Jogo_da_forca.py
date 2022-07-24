@@ -94,8 +94,18 @@ class Enforcado():
         return rtn
         
         
-    # Método para verificar status e imprimir no tabukeiro da forca
+    # Método para checar o status do jogo e imprimir no tabuleiro da forca
     def checar_status(self):
+        print(tabuleriro[len(self.letras_erradas)])
+        print(f'\nPalavra: {self.mostrar_letra()}')
+        print(f'\nLetras erradas: ',)
+        for letra in self.letras_erradas:
+            print(letra)
+        print()
+        print('Letras corretas: ',)
+        for letra in self.letras_certas:
+            print(letra)
+        print()
     
 # Função para ler uma palavra de forma aleatória do banco de palavras
 def escolher_palavra():
