@@ -100,14 +100,14 @@ class Enforcado():
         print(f'\nPalavra: {self.mostrar_letra()}')
         print(f'\nLetras erradas: ',)
         for letra in self.letras_erradas:
-            print(letra)
+            print(letra,)
         print()
         print('Letras corretas: ',)
         for letra in self.letras_certas:
-            print(letra)
+            print(letra,)
         print()
     
-# Função para ler uma palavra de forma aleatória do banco de palavras
+# Método para ler uma palavra de forma aleatória do banco de palavras
 def escolher_palavra():
     with open('palavras.txt', 'rt') as f:
         bank = f.readlines()
@@ -115,9 +115,27 @@ def escolher_palavra():
 
 # Função menu - Execução do programa
 def menu():
+    
+    # Objeto
     jogo = Enforcado(escolher_palavra())
     
-    jogo.checar_status()
+    # Enquanto o jogo não tiver terminado, print do status, solicitar uma letra e faz a leitura do caractere.
+    while not Enforcado.jogo_perdido():
+        Enforcado.hecar_status()
+        usuario = input('\nDigite uma letra: ')
+        Enforcado.chute(usuario)
     
-    if jogo.
+    # Verificar o status do jogo
+    Enforcado.checar_status()
+    
+    # De acordo com o status, imprime a mensagem na tela para o usuário
+    if Enforcado.jogo_vencido():
+        print('\nParabens! Você venceu!!!')
+    else:
+        print('\nGame Over! Você perdeu!!!')
+        print(f'A palavra era: {Enforcado.palavra}')
+    print('\nFoi bom jogar com você! Agora vá estudar!\n')
+    
+# Executar o programa
+
     
