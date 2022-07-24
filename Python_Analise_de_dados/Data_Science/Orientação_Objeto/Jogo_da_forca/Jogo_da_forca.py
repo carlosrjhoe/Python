@@ -1,56 +1,56 @@
 """ Jogo da forca com Programação Orientada a Objeto"""
 
-import random 
+import random
 tabuleriro = ['''
 >>>>>>>>Forca<<<<<<<<<
 +---+
 |   |
-|
-|
-|
-|
-=========''', '''
-+---+
-|   |
-|   O
-|
-|
-|
+    |
+    |
+    |
+    |
 =========''','''
 +---+
 |   |
-|   O
-|   |
-|
-|
+O   |
+    |
+    |
+    |  
 =========''','''
-+---+
-|   |
-|   O
-|   |\
-|
-|
+ +---+
+ |   |
+ O   |
+ |   |
+     |
+     |
 =========''','''
-+---+
-|   |
-|   O
-|  /|\
-|
-|
+ +---+
+ |   |
+ O   |
+/|   |
+     |
+     |
 =========''','''
-+---+
-|   |
-|   O
-|  /|\
-|  /
-|
+ +---+
+ |   |
+ O   |
+/|\  |
+     |
+     |
 =========''','''
-+---+
-|   |
-|   O
-|  /|\
-|  / \
-|
+ +---+
+ |   |
+ O   |
+/|\  |
+/    |
+     |
+=========''','''
+ +---+
+ |   |
+ O   |
+/|\  |
+/ \  |
+     |
 ========='''
 ]
 
@@ -121,22 +121,24 @@ def menu():
     jogo = Enforcado(escolher_palavra())
     
     # Enquanto o jogo não tiver terminado, print do status, solicitar uma letra e faz a leitura do caractere.
-    while not Enforcado.jogo_perdido():
-        Enforcado.hecar_status()
-        usuario = input('\nDigite uma letra: ')
-        Enforcado.chute(usuario)
+    while not jogo.jogo_perdido():
+        jogo.checar_status()
+        usuario = input('\nDigite uma letra: ').upper()
+        jogo.chute(usuario)
     
     # Verificar o status do jogo
-    Enforcado.checar_status()
+    jogo.checar_status()
     
     # De acordo com o status, imprime a mensagem na tela para o usuário
-    if Enforcado.jogo_vencido():
+    if jogo.jogo_vencido():
         print('\nParabens! Você venceu!!!')
     else:
         print('\nGame Over! Você perdeu!!!')
-        print(f'A palavra era: {Enforcado.palavra}')
+        print(f'A palavra era: {jogo.palavra}')
     print('\nFoi bom jogar com você! Agora vá estudar!\n')
     
 # Executar o programa
+if __name__ == "__main__":
+    menu()
 
     
