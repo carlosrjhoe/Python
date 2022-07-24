@@ -107,7 +107,7 @@ class Enforcado():
             print(letra,)
         print()
     
-# Método para ler uma palavra de forma aleatória do banco de palavras
+# Método para ler uma palavra de forma aleatória do banco de palavras de um arquivo txt
 def escolher_palavra():
     with open('palavras.txt', 'rt') as f:
         bank = f.readlines()
