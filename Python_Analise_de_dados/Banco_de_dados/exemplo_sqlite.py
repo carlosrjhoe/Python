@@ -45,3 +45,6 @@ dados = curso.fetchall()
 # Mostrar
 for linha in dados:
     print('Curso Id: %d, Título: %s, Categoria: %s' %linha)
+    
+# fechar a conexão (IMPORTANTE)
+con.close()
