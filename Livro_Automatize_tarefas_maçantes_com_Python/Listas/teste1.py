@@ -1,3 +1,7 @@
 nomes = ["carlos","mayara","neto","luna",]
-for i in range(len(nomes)):
-    print(f"{str(i)} - {nomes[i]}")
+
+nome = input("Qual seu nome: ")
+if nome not in nomes:
+    print(f"Não te conheço {nome}. ")
+else:
+    print(f"Oie! {nome}")
