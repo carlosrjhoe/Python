@@ -1,12 +1,15 @@
+# Importando a biblioteca de testes
 from unittest import TestCase, main
 
 def par(valor):
+    # Função onde me retor "Verdadeiro" se o valor for par
     return True if valor % 2 == 0 else False
 
 def impar(valor):
+    # Função onde me retor "Verdadeiro" se o valor for impar
     return True if valor % 2 != 0 else False
 
-
+# Case de testes
 class Testes(TestCase):
     def test_par(self):
         self.assertEqual(par(2), True)
