@@ -3,8 +3,11 @@ from unittest import TestCase, main
 
 def par(valor):
     # Função onde me retor "Verdadeiro" se o valor for par
-    return True if valor % 2 == 0 else False
-
+    try:
+        return True if valor % 2 == 0 else False
+    except TypeError:
+        return False
+    
 def impar(valor):
     # Função onde me retor "Verdadeiro" se o valor for impar
     return True if valor % 2 != 0 else False
