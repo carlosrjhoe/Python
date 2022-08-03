@@ -1,5 +1,6 @@
 from selenium.webdriver import Chrome
 from selenium.webdriver.common.by import By
+from time import sleep
 
 driver = Chrome()
 driver.get('https://selenium.dunossauro.live/aula_04_b.html')
@@ -23,3 +24,11 @@ lista = ['um', 'dois', 'tres', 'quatro']
 
 for texto in lista:
     elemento = find_by_text(driver, 'div', texto).click()
+    
+for texto in lista:
+    sleep(1)
+    driver.back()
+    
+for texto in lista:
+    sleep(1)
+    driver.forward()
