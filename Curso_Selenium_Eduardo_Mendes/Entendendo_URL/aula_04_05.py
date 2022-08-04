@@ -18,13 +18,13 @@ sleep(1)
 def pegar_todos_os_elementos(driver, elemento):
     """Retornar um dicionario com os tag's e seus atrubutos de href"""
     resultados = {} # Cria um dicionário vázio
-    elemento = driver.find_element(By.TAG_NAME, "main") # Procura e atribui o resultado a tag MAIN na variavel
-    main_ancoras = elemento.find_elements(By.TAG_NAME, 'a') # Procura os elementos e atribui na variável
+    elemento = driver.find_element(By.TAG_NAME, "main") # Este método localizará o elemento em uma página e atribuir em uma variável
+    main_ancoras = elemento.find_elements(By.TAG_NAME, 'a') # Este método encontrar vários elementos, e retornar uma lista e atribui na variável
     
     for ancora in main_ancoras:
-        resultados[ancora.text] = ancora.get_attribute('href')
-
-    pprint(resultados)
-
-
+        resultados[ancora.text] = ancora.get_attribute('href') # Este método tentará primeiro retornar o valor de uma propriedade com o nome fornecido.
+    
+    driver.get(resultados['Exercício 3']) # Este método navegará até um link selecionado
+    
+    
 pegar_todos_os_elementos(driver, 'main')
