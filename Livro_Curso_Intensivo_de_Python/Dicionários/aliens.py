@@ -52,6 +52,5 @@ linguagem_favorita = {
 }
 
 print(linguagem_favorita)
-print(f'A linguagem favorita de Carlos é {linguagem_favorita["carlos"].title()}')
-
-print('###############################################')
+for nome, linguagem in linguagem_favorita.items():
+    print(f'A linguagem favorita de {nome.title()} é {linguagem.title()}')
