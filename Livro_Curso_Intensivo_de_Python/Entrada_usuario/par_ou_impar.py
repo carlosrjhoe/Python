@@ -3,4 +3,9 @@ print('#'*len(palavra))
 print(f'{(palavra.center(len(palavra)))}')
 print('#'*len(palavra))
 
-print(4 % 3)
+numero = int(input('Digite um número, e eu vou te dizer se é par ou ímpar: '))
+if numero % 2 == 0:
+    print(f'O numero e PAR')
+else:
+    print(f'O numero e IMPAR')
+    
