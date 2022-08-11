@@ -1,9 +1,22 @@
-palavra = 'LACO WHILE EM ACAO'
+# palavra = 'LACO WHILE EM ACAO'
+# print('#'*len(palavra))
+# print(f'{(palavra.center(len(palavra)))}')
+# print('#'*len(palavra))
+
+# msg = ''
+# while msg != 'sair':
+#     msg = input('Diga-me algo e eu repetirei para voce \nDigite "sair" para encerrar o programa: ')
+#     print(msg)
+    
+palavra = 'USANDO UM FLAG'
 print('#'*len(palavra))
 print(f'{(palavra.center(len(palavra)))}')
 print('#'*len(palavra))
 
-numero_atual = 1
-while numero_atual <= 5:
-    print(f'{numero_atual}')
-    numero_atual += 1
+ativo = True
+while ativo:
+    msg = input('Diga-me algo e eu repetirei para voce \nDigite "sair" para encerrar o programa: ')
+    if msg == 'sair':
+        ativo = False
+    else:
+        print(msg)
