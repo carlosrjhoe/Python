@@ -45,12 +45,14 @@ print('###############################################')
 """Um dicionário de objetos semelhantes"""
 
 linguagem_favorita = {
-    'carlos': 'python',
-    'mayara': 'java',
+    'carlos': ['python', 'java'],
+    'mayara': ['java', 'javascript'],
     'neto': 'c++',
-    'luna': 'javascript'
+    'luna': ['javascript', 'ruby']
 }
 
 print(linguagem_favorita)
-for nome, linguagem in linguagem_favorita.items():
-    print(f'A linguagem favorita de {nome.title()} é {linguagem.title()}')
+for nome, linguagens in linguagem_favorita.items():
+    print(f'Para {nome.title()}, suas linguagens de programação favoritas são:')
+    for linguagem in linguagens:
+        print(f'\t{linguagem.title()}')
