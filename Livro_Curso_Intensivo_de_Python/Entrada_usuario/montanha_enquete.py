@@ -3,7 +3,7 @@ print('#'*len(palavra))
 print(f'{(palavra.center(len(palavra)))}')
 print('#'*len(palavra))
 
-respostas = {}
+respostas = {} # Criar um dicionário vazio
 sondagem_ativa = True
 
 # Define uma flag para indicar que a enquete está ativa
