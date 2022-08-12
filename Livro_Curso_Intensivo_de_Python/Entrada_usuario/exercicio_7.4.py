@@ -8,10 +8,14 @@ print('#'*len(palavra))
 print(f'{(palavra.center(len(palavra)))}')
 print('#'*len(palavra))
 
+from time import sleep
+
 ingredientes = []
 while True:
     ingrediente = input(f'Digite um ingrediente da pizza: \nDigite [sair] para encerrar o programa ')
     print(f'{ingrediente.title()} adicionado!')
+    # Adicionado sleep(1) para que demore 1seg para que o programa pergunte o ingrediente novamente 
+    sleep(1)
     if ingrediente == 'sair':
         break
     else:

@@ -10,15 +10,20 @@ print('#'*len(palavra))
 print(f'{(palavra.center(len(palavra)))}')
 print('#'*len(palavra))
 
+from time import sleep
+
 print('PREÇOS DOS INGRESSOS:')
 
 while True:
     print('Crianças até 3 anos = R$0,00\nEntre 3 - 12 anos = R$10,00\nA cima de 12 anos = R$15,00')
     idade = int(input('Informe sua idade: '))
-    if idade <= 3:
+    if idade == str('sair'):
+        break
+    elif idade <= 3:
         print(f'Olá, o ingrésso cursta R$0,00\nTenha uma bom filme!')
     elif idade > 3 and idade <= 12:
         print(f'Olá, o ingrésso cursta R$10,00\nTenha uma bom filme!')
     else:
         print(f'Olá, o ingrésso cursta R$15,00\nTenha uma bom filme!')
     print('#'*len(palavra))
+    sleep(1)
