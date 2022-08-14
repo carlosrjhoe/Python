@@ -1,7 +1,7 @@
-palavra = 'Preenchendo um dicionário com dados de entrada do usuário.'
-print('#'*len(palavra))
-print(f'{(palavra.center(len(palavra)))}')
-print('#'*len(palavra))
+texto = 'Preenchendo um dicionário com dados de entrada do usuário.'
+print('#'*len(texto))
+print(f'{(texto.center(len(texto)))}')
+print('#'*len(texto))
 
 respostas = {} # Criar um dicionário vazio
 sondagem_ativa = True
@@ -21,5 +21,3 @@ while sondagem_ativa:
 print('Resultados da enquete:')
 for nome, resposta in respostas.items():
     print(f'{nome.title()} gostaria de escalar {resposta.title()}')
-    
-print(respostas)
