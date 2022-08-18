@@ -9,7 +9,7 @@ print('#'*50)
 def perfil_construcao(primeiro, segundo, **informacao_usuario):
     perfil = {}
     perfil['primeiro_nome'] = primeiro
-    perfil['segundo_nomes'] = segundo
+    perfil['segundo_nome'] = segundo
     for k, v in informacao_usuario.items():
         perfil[k] = v.title()
     return perfil
