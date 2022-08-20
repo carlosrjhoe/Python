@@ -40,10 +40,10 @@ class Usuarios():
 # neto_restaurante.descricao_do_restaurante()
 # neto_restaurante.abrir_restaurante()
 
-carlos = Usuarios('carlos', 'conceição', 36, 'm')
-carlos.perfil_usuario()
-carlos.saudadacao()
+# carlos = Usuarios('carlos', 'conceição', 36, 'm')
+# carlos.perfil_usuario()
+# carlos.saudadacao()
 
-mayara = Usuarios('mayara', 'ramos', 37, 'f')
-mayara.perfil_usuario()
-mayara.saudadacao()
+# mayara = Usuarios('mayara', 'ramos', 37, 'f')
+# mayara.perfil_usuario()
+# mayara.saudadacao()
