@@ -1,9 +1,9 @@
-from .restaurante import Restaurante
-from restaurante import Restaurante as RT
+# from .restaurante import Restaurante
+# from restaurante import Restaurante as RT
 
-class Sorveteria(RT):
+# class Sorveteria(RT):
     
-# sorveteria = Restaurante('casa do sorvete', 'Sorveteria')
+# # sorveteria = Restaurante('casa do sorvete', 'Sorveteria')
 
-# sorveteria.abrir_restaurante()
-# sorveteria.descricao_do_restaurante()
+# # sorveteria.abrir_restaurante()
+# # sorveteria.descricao_do_restaurante()
