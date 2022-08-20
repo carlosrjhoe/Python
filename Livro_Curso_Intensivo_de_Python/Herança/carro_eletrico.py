@@ -29,6 +29,10 @@ class Carro_eletrico(Carro):
     def capacidade_bateria(self):
         print(f'Este carro tem {self.carga_bateria}-kwh')
         pass
+    
+    def encher_tanque_gasolina(self):
+        print('Este carro não precisa de um tanque de gasolina.')
+        pass
         
 carro_neto = Carro_eletrico('tesla', 'fuderozo', 2022)
 
