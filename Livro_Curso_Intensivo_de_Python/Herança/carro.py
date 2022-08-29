@@ -5,6 +5,7 @@ class Carro():
         self.modelo = modelo 
         self.ano = ano
         self.odometro = 1000
+
         
     def descricao_carro(self):
         tipagem_carro = f'Tipo: {self.tipo.title()}\nModelo: {self.modelo.title()}\nFabricação: {self.ano}'
@@ -18,3 +19,12 @@ class Carro():
             self.odometro = kilometragem
         else:
             print('Você não pode reverter um odômetro!')
+            
+
+class Bateria():
+    
+    def __init__(self, tamanho_da_bateria=100):
+        self.tamanho_da_bateria = tamanho_da_bateria
+        
+    def descricao_bateria(self):
+        print(f'Este carro tem {(str(self.tamanho_da_bateria))}-kwh')

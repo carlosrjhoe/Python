@@ -2,7 +2,7 @@ class Carro():
     
     def __init__(self, tipo, modelo, ano):
         self.tipo = tipo
-        self.modelo = modelo 
+        self.modelo = modelo
         self.ano = ano
         self.odometro = 1000
         
