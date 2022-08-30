@@ -14,9 +14,7 @@ class Carro_eletrico(Carro):
         
         
 carro_neto = Carro_eletrico('tesla', 'fuderozo', 2022)
-
-print(carro_neto.descricao_carro())
-print(carro_neto.capacidade_bateria())
+carro_neto.bateria.get_alcance()
 
 
 

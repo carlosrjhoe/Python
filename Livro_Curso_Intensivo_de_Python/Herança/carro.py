@@ -28,3 +28,12 @@ class Bateria():
         
     def descricao_bateria(self):
         print(f'Este carro tem {(str(self.tamanho_da_bateria))}-kwh')
+        
+    def get_alcance(self):
+        if self.tamanho_da_bateria == 70:
+            alcance = 240
+        elif self.tamanho_da_bateria == 80:
+            alcance = 270
+            
+        msg = f'Este carro pode ir aproximadamente {str(alcance)}km com carga completa'
+        print(msg) 
