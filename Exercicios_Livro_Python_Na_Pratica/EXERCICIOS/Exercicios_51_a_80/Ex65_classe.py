@@ -5,9 +5,13 @@ class Carro:
         self.ano = ano
         self.cor = cor
 
-
+    def informacao(self):
+        print(f'Carro: {self.nome}')
+        print(f'Ano: {self.ano}')
+        print(f'Cor: {self.cor}')
+        
 carro_carlos = Carro('serato', 2008, 'prata')
 carro_mayara = Carro('tucson', 2010, 'branco')
 
-print(f'{carro_carlos.nome}\n{carro_carlos.ano}\n{carro_carlos.cor}.')
-print(f'{carro_mayara.nome}\n{carro_mayara.ano}\n{carro_mayara.cor}.')
+carro_carlos.informacao()
+carro_mayara.informacao()
