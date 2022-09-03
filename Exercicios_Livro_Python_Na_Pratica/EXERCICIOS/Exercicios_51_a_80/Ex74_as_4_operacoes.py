@@ -6,19 +6,19 @@ print(f'#' * len(texto))
 a = int(input('Digite um numero: '))
 b = int(input('Digite outro numero: '))
 
-operacao = input('Qual opéração deseja realiza?\n\tSoma[+]\n\tSubtração[-]\n\tmultiplicação[*]\n\tDivisão[/]\n')
+operacao = input('Qual operação deseja realiza?\n\tSoma[+]\n\tSubtração[-]\n\tmultiplicação[*]\n\tDivisão[/]\n')
 
 if operacao == '+':
     soma = a + b
-    print(f'A soma de {a}+{b}={soma}')
+    print(f'A soma de {a}+{b} = {soma}')
 elif operacao == '-':
     subtracao = a - b
-    print(f'A subtração de {a}-{b}={subtracao:.1f}')
+    print(f'A subtração de {a}-{b} = {subtracao}')
 elif operacao == '*':
     multiplicacao = a * b
-    print(f'A multiplicação de {a}x{b}={multiplicacao}')
+    print(f'A multiplicação de {a}x{b} = {multiplicacao}')
 elif operacao == '/':
     divisao = a / b
-    print(f'A divisão de {a}/{b}={divisao}')
+    print(f'A divisão de {a}/{b} = {divisao}')
 else:
     print('Operação invalida!')
