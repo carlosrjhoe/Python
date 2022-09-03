@@ -81,5 +81,5 @@ texto1 = 'Resultado'
 print(f'{"#"*len(texto)}')
 print(texto1.center(len(texto)))
 print(f'{"#"*len(texto)}')
-print(f'Você acertou {respostas_certas} questões.')
-print(f'Sua porcentagem de acerto foi de {porcentagem_acerto}')
+print(f'Você acertou {respostas_certas} perguntas.')
+print(f'Sua porcentagem de acerto foi de {porcentagem_acerto}%')
