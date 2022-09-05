@@ -7,13 +7,12 @@ alunos = [
     {'nome': 'neto', 'nota': 'C'},
     {'nome': 'luna', 'nota': 'A'},
     {'nome': 'rosiclé', 'nota': 'B'},
-    {'nome': 'valdênia', 'nota': 'C'},
-    {'nome': 'pedro', 'nota': 'A'},
-    {'nome': 'valeria', 'nota': 'B'},
-    {'nome': 'flavio', 'nota': 'C'},
+    {'nome': 'valdênia', 'nota': 'A'},
+    {'nome': 'pedro', 'nota': 'C'},
+    {'nome': 'valeria', 'nota': 'A'},
+    {'nome': 'flavio', 'nota': 'B'},
     {'nome': 'david', 'nota': 'A'},
-    {'nome': 'lucia', 'nota': 'B'},
-    {'nome': 'milena', 'nota': 'C'},
+    {'nome': 'milena', 'nota': 'A'},
     {'nome': 'emilly', 'nota': 'A'},
 ]
 
