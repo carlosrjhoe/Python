@@ -6,4 +6,5 @@ nova_lista_2 = [numero ** 2 for numero in lista_2]
 
 print(lista_1)
 print(nova_lista_1)
+print(lista_2)
 print(nova_lista_2)
