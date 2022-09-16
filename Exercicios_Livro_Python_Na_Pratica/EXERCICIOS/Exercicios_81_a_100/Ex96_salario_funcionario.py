@@ -8,7 +8,8 @@ class Calculo_hora_extra():
         print(f'{"#"*len(texto)}')
         print(f'{texto.center(len(texto))}')
         print(f'{"#"*len(texto)}')
-       
+    
+        
     def calculo_de_horas(self):
         self.horas = int(input('Digite o valor das horas trabalhadas: '))
         self.adicional = int(input('Digite o valor das horas extras: ')) * self.valor_hora_extra
@@ -16,10 +17,17 @@ class Calculo_hora_extra():
         
     def exibe_dados(self):
         if float(self.horas < 40.00):
-            print(f'Salário base: R${self.hora_total}')
+            print(f'Salário base: R${self.hora_total:.2f}')
         else:
-            print(f'Salário base: R${self.hora_total}\nAdicional de horas extras: R${self.adicional:.2f}\nRemuneração total: R${self.hora_total+self.adicional}')
+            print(f'Salário base: R${self.hora_total:.2f}\nAdicional de horas extras: R${self.adicional:.2f}\nRemuneração total: R${self.hora_total+self.adicional:.2f}')
+            
         
-carlos = Calculo_hora_extra()
-carlos.calculo_de_horas()
-carlos.exibe_dados()
+try:
+    
+    carlos = Calculo_hora_extra()
+    carlos.calculo_de_horas()
+    carlos.exibe_dados()
+    
+except ValueError as erro:
+    print('Digite apenas números')
+    quit()
