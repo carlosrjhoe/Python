@@ -1,4 +1,4 @@
-from Ex106_array_invertido import Inverter
+from Ex109_gerar_numero_aleatorio import Geracao
 
-carlos = Inverter()
-carlos.array_invertido()
+carlos = Geracao()
+carlos.perguntar_numero()
