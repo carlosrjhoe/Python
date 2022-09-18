@@ -14,7 +14,7 @@ class Gerador:
             self.lista_1.append(i)
             
         # Um for com listComprehension
-        self.lista_2 = [for j in range(51)]
+        self.lista_2 = [j for j in range(51)]
             
     def exibir_lista(self):
         print(f'{self.lista_1}')
