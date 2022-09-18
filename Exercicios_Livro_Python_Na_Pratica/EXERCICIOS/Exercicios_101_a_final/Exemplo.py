@@ -1,6 +1,4 @@
-from Ex112_letras_maiusculas_e_minusculas import Verifica_letras
+from Ex114_verificar_site import Verificacao
 
-carlos = Verifica_letras()
-carlos.letras_maiusculas()
-carlos.letras_minusculas()
-carlos.exibir_informacoes()
+carlos = Verificacao()
+carlos.verificar_site()
