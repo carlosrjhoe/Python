@@ -1,4 +1,4 @@
-from Ex125_verificar_numeros_de_telefone import Verifica_clientes
+from Ex122_caracteres_individuais import *
 
-carlos = Verifica_clientes()
-carlos.verificar_cliente_no_banco_de_dados()
+carlos = Verificar_letras()
+carlos.exibir_informacoes()
