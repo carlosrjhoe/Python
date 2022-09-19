@@ -1,6 +1,5 @@
 from collections import Counter
 
-
 class Verificar_letras:
     
     def __init__(self) -> None:
