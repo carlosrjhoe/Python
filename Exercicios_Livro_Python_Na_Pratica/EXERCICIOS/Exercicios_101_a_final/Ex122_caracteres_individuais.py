@@ -5,6 +5,7 @@ class Verificar_letras:
     def __init__(self) -> None:
         texto = 'Programa irá verificar a quantidade das vogais'
         print(f'{"#"*len(texto)}')
+        
         print(f'{texto.center(len(texto))}')
         print(f'{"#"*len(texto)}')
         
