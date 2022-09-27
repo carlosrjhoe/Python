@@ -8,4 +8,4 @@ with open('abc.txt', 'w+') as arquivo:
     
     arquivo.seek(0)
     print(arquivo.read())
-    
+     
