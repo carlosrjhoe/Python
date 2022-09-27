@@ -10,9 +10,9 @@
 
 def mostrar_opcoes(lista_desfazer):
     texto = 'LISTA DE TAREFAS'
-    print(f'{"#"*len(texto)*3}')
-    print(f'{texto.center(len(texto)*3)}')
-    print(f'{"#"*len(texto)*3}')
+    print(f'{"#"*len(texto)*4}')
+    print(f'{texto.center(len(texto)*4)}')
+    print(f'{"#"*len(texto)*4}')
     print(lista_desfazer)
 
 
@@ -31,6 +31,7 @@ def refazer(lista_desfazer, lista_refazer):
     
     ultima_tarefa = lista_refazer.pop()
     lista_desfazer.append(ultima_tarefa)
+    print(f'Refazendo... {ultima_tarefa}')
 
 
 def adcionar(todo, lista_desfazer):
