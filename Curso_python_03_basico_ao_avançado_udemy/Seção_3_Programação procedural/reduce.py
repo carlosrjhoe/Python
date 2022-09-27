@@ -18,5 +18,5 @@ from functools import reduce
 # print(f'Valor total: R${soma_valor_produtos:.2f}')
 
 soma_de_idade = reduce(lambda acumulador, idade: idade['idade'] + acumulador, lista_de_pessoas, 0)
-print(soma_de_idade)
+print(lista_de_numeros)
 print(soma_de_idade / len(lista_de_pessoas))
