@@ -22,7 +22,13 @@
     6543298765432 -> Segunro digito
 """
 
-import re
+import cnpj
 
-def remover_caractere(cnpj):
-    return re.sub(r'[^0-9]','',cnpj)
+meu_cnpj = '12.544.992/0001-05'
+
+cnpj.validar_cnpj(meu_cnpj)
+if cnpj.validar_cnpj(meu_cnpj):
+    print(f'{meu_cnpj}\nCNPJ Válido.')
+else:
+    print(f'{meu_cnpj}\nCNPJ Inválido.')
+    
