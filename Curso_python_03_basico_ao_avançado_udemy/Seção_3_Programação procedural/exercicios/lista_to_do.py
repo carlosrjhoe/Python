@@ -8,6 +8,7 @@
 """
 
 def cabecalho():
+    """Imprime a informação do cabeçalho formatada"""
     texto = 'Exercicio de Python (Todo Lista)'
     print(f'{"#"*len(texto)*2}')
     print(f'{texto.center(len(texto)*2)}')
@@ -15,6 +16,7 @@ def cabecalho():
     return
 
 def opcao():
+    """Bloco que inicia o programa"""
     lista_desfazer = []
     lista_refazer = []
     
@@ -37,6 +39,7 @@ def opcao():
         adcionar(todo, lista_desfazer)
 
 def mostrar_opcoes(lista_desfazer):
+    """Irá listar as tarefas que foram adicionadas"""
     texto = 'LISTA DE TAREFAS'
     print(f'\n{"#"*len(texto)*4}')
     print(f'{texto.center(len(texto)*4)}')
@@ -44,6 +47,7 @@ def mostrar_opcoes(lista_desfazer):
     print(f'\n{lista_desfazer}\n')
 
 def apagar(lista_desfazer, lista_refazer):
+    """Irá apagar a ultima tarefa adicionada, depois disso, vai adicionar em uma lista vazia para poder recuperala caso queira"""
     if not lista_desfazer:
         print('Nada para apagar.\n')
         return
@@ -53,6 +57,7 @@ def apagar(lista_desfazer, lista_refazer):
     print(f'Apagando... {ultima_tarefa}\n')
 
 def refazer(lista_desfazer, lista_refazer):
+    """Irá retornar a ultima tarefa que foi apagada da lista to_do"""
     if not lista_refazer:
         print('Nada para refazer.\n')
         return
@@ -62,6 +67,7 @@ def refazer(lista_desfazer, lista_refazer):
     print(f'Refazendo... {ultima_tarefa}\n')
 
 def adcionar(todo, lista_desfazer):
+    """Irá adicionar a tarefa em uma lista"""
     lista_desfazer.append(todo)
 
 if __name__ == '__main__':
