@@ -19,10 +19,4 @@ class Pessoa:
     def gera_id():
         numero_randomico = randint(10000, 19999)
         return numero_randomico
-        
 
-carlos = Pessoa('carlos', 37)
-mayara = Pessoa.por_ano_nascimento('mayara', 37, 1985)
-print(carlos.idade)
-carlos.get_ano_nascimento()
-print(carlos.gera_id())
