@@ -14,6 +14,3 @@ class Pessoa:
         print('Foi executado!')
         self._nome = nome
     
-    
-pessoa_01 = Pessoa('Carlos')
-print(pessoa_01.nome)
