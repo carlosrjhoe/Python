@@ -35,8 +35,6 @@ class AgendaDB:
         
 if __name__ == '__main__': 
     agenda = AgendaDB('agenda.db')
-    agenda.editar(1,'luna ramos cordeiro', '81995419951')
-    agenda.editar(2,'mayara ramos cordeiro', '81911112222')
-    agenda.editar(6,'carlos roberto conceicao neto', '81922223333')
-    agenda.editar(7,'carlos roberto conceicao junior', '81933334444')
-    agenda.buscar('conceicao')
+    agenda.inserir('maria', '81976543526')
+    agenda.listar()
+    agenda.fechar()
