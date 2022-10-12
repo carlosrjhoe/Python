@@ -14,6 +14,7 @@ def conecta():
     try:
         yield conexao
     finally:
+        print('Conexão fechada')
         conexao.close()
 
 
@@ -24,4 +25,3 @@ with conecta() as conexao:
         for linha in resultado:
             print(f'{linha}')
     
-conexao.close()
