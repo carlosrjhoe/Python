@@ -1,5 +1,14 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block titulo %} Pagina sobre {% endblock  %}
 
-{% block conteudo %} PAGINA DE SOBRE {% endblock  %}
+{% block conteudo %} 
+<h1> PAGINA DE SOBRE </h1>
+
+<p>
+    <img src=" {% static 'static\img\namekuzem.jpg' %} " alt="">
+</p>
+
+<h3>Namekusei</h3>
+{% endblock  %}
