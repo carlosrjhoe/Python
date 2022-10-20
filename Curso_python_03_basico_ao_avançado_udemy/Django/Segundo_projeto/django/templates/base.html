@@ -11,10 +11,12 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <title>Template Bootstrap</title>
+    <title> {% block titulo %} {% endblock %} </title>
 
     <!-- Bootstrap core CSS -->
-    <link href=" {% static 'paginas\vendor\bootstrap\css\bootstrap.min.css' %} " rel="stylesheet" />
+    <link
+      href="{% static '\vendor\bootstrap\css\bootstrap.min.css' %}"rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -36,13 +38,13 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#"
+              <a class="nav-link" href="/"
                 >Home
                 <span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Sobre</a>
+              <a class="nav-link" href="/sobre/">Sobre</a>
             </li>
           </ul>
         </div>
@@ -51,15 +53,15 @@
 
     <!-- Page Content -->
     <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                {% block conteudo %}{% endblock  %}
-            </div>
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          {% block conteudo %}{% endblock %}
         </div>
+      </div>
     </div>
 
     <!-- Bootstrap core JavaScript -->
-    <script src=" {% static 'paginas/vendor/jquery/jquery.slim.min.js' %} "></script>
-    <script src=" {% static 'paginas/vendor/bootstrap/js/bootstrap.bundle.min.js' %} "></script>
+    <script src=" {% static '\static\vendor\jquery\jquery.slim.min.js' %} "></script>
+    <script src=" {% static '\static\vendor\bootstrap\js\bootstrap.bundle.min.js' %} "></script>
   </body>
 </html>
