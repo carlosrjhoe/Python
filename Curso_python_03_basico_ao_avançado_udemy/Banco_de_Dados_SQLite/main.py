@@ -36,5 +36,6 @@ class AgendaDB:
 if __name__ == '__main__': 
     agenda = AgendaDB('agenda.db')
     agenda.inserir('maria', '81976543526')
+    agenda.inserir('Bruna', '81992567899')
     agenda.listar()
     agenda.fechar()
