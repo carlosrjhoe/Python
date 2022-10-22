@@ -7,7 +7,7 @@ class Categoria(models.Model):
     nome = models.CharField(max_length = 255)
 
     def __str__(self):
-        return self.nome
+        return f'{self.nome}'
     
     
 class Contato(models.Model):
@@ -20,7 +20,7 @@ class Contato(models.Model):
     categoria = models.ForeignKey(Categoria, on_delete=models.DO_NOTHING)
 
     def __str__(self):
-        return self.nome
+        return f'{self.nome}'
     
 
     
