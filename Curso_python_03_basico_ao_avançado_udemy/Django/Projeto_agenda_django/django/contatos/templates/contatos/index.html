@@ -8,6 +8,7 @@
             <th>Sobrenome</th>
             <th>Telefone</th>
             <th>Categoria</th>
+            {% comment %} <th>Email</th> {% endcomment %}
         </tr>
     </thead>
     <tbody>
@@ -19,6 +20,7 @@
             <td>{{ contato.sobrenome }}</td>
             <td>{{ contato.telefone }}</td>
             <td>{{ contato.categoria }}</td>
+            {% comment %} <td>{{ contato.email }}</td> {% endcomment %}
         </tr>
         {% endfor %}
     </tbody>
