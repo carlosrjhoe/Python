@@ -1,4 +1,5 @@
-{% extends 'base.html' %} {% block conteudo %}
+{% extends 'base.html' %} 
+{% block conteudo %}
 <h1 class="mt-5">Minha agenda</h1>
 
 <table class="table">
@@ -13,13 +14,15 @@
     </thead>
     <tbody>
         {% for contato in contatos %}
-        <tr>
-            <td><a href="{% url 'ver_contato' contato.id %}">{{ contato.nome }}</a></td>
-            <td>{{ contato.sobrenome }}</td>
-            <td>{{ contato.telefone }}</td>
-            <td>{{ contato.date_criacao | date:'d/m/Y' }}</td>
-            <td>{{ contato.categoria }}</td>
-        </tr>
+            {% if contato.mostrar %}
+                <tr>
+                    <td><a href="{% url 'ver_contato' contato.id %}">{{ contato.nome }}</a></td>
+                    <td>{{ contato.sobrenome }}</td>
+                    <td>{{ contato.telefone }}</td>
+                    <td>{{ contato.date_criacao | date:'d/m/Y' }}</td>
+                    <td>{{ contato.categoria }}</td>
+                </tr>
+            {% endif %}
         {% endfor %}
     </tbody>
 </table>
