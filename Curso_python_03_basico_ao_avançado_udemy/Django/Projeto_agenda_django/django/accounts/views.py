@@ -29,9 +29,11 @@ def login(request):
         messages.success(request, 'Usuário logado.')
         return redirect('dashboard') # Quando o usuário logar, ele será redirecionar para dashboard
         
-
 def logout(request):
-    return render(request, 'accounts/logout.html')
+    """Quando deslogado, será redirecionado para página do index.html"""
+    # return render(request, 'accounts/logout.html')
+    auth.logout(request)
+    return redirect('index')
 
 def cadastro(request):
     # messages.success(request, 'Por favor realizar cadastro.') Serve para mostrar mensagens
@@ -96,6 +98,6 @@ def cadastro(request):
 
 @login_required(redirect_field_name='login') # Se o usuário não logar, ele será redirécionado para login.html
 def dashboard(request):
-    """Se o usuário logar, ele sereá direcionado para dashboard.html"""
+    """Se o usuário logar, ele será direcionado para dashboard.html"""
     return render(request, 'accounts/dashboard.html')
 
