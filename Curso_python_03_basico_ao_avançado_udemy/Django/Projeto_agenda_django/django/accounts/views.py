@@ -1,11 +1,34 @@
 from django.shortcuts import render, redirect
-from django.contrib import messages
+from django.contrib import messages, auth
 from django.core.validators import validate_email
 from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def login(request):
-    return render(request, 'accounts/login.html')
+    """Se nada for postado, irá exibir o formulário."""
+    if request.method != 'POST':
+        # messages.error(request, 'Usuário e senha inválidos.')
+        return render(request, 'accounts/login.html')
+    
+    """Pegar usuário e senha"""
+    usuario = request.POST.get('usuario')
+    senha = request.POST.get('senha1')
+    
+    """Vai checar se o usuario vai autenticar"""
+    user = auth.authenticate(request, username=usuario, password=senha)
+    
+    if not user:
+        """Caso o usuário não log"""
+        messages.error(request, 'Usuário inválido.')
+        return render(request, 'accounts/login.html')
+    
+    else:
+        """Se o usuário logar"""
+        auth.login(request, user)
+        messages.success(request, 'Usuário logado.')
+        return redirect('dashboard') # Quando o usuário logar, ele será redirecionar para dashboard
+        
 
 def logout(request):
     return render(request, 'accounts/logout.html')
@@ -71,6 +94,8 @@ def cadastro(request):
     
     return redirect('login')
 
+@login_required(redirect_field_name='login') # Se o usuário não logar, ele será redirécionado para login.html
 def dashboard(request):
+    """Se o usuário logar, ele sereá direcionado para dashboard.html"""
     return render(request, 'accounts/dashboard.html')
 
