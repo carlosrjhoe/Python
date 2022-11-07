@@ -100,6 +100,26 @@ def cadastro(request):
 @login_required(redirect_field_name='login') # Se o usuário não logar, ele será redirécionado para login.html
 def dashboard(request):
     """Se o usuário logar, ele será direcionado para dashboard.html"""
-    formulario = FormContatos()
-    return render(request, 'accounts/dashboard.html', { 'form': formulario })
+    if request.method != 'POST':
+        formulario = FormContatos()
+        return render(request, 'accounts/dashboard.html', { 'form': formulario })
+    
+    form = FormContatos(request.POST, request.FILES)
 
+    if not form.is_valid():
+        """Se o formulário não for válido"""
+        messages.error(request, 'Erro ao enviar formulário.')
+        form = FormContatos(request.POST)
+        return render(request, 'accounts/dashboard.html', { 'form': formulario })
+        
+    descricao = request.POST.get('descricao')
+    
+    if len(descricao) < 5:
+        """Validação de descrição, deve ser maior que 5 caracteres"""
+        messages.error(request, 'Descrição precisa ter mais que 5 caracteres.')
+        form = FormContatos(request.POST)
+        return render(request, 'accounts/dashboard.html', { 'form': formulario })
+        
+    form.save()
+    messages.success(request, f'Contato {request.POST.get("nome")} salvo com sucess!')
+    return redirect('dashboard')
