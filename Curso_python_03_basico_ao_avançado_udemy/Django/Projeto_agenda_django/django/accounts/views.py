@@ -3,6 +3,7 @@ from django.contrib import messages, auth
 from django.core.validators import validate_email
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
+from .models import FormContatos
 
 # Create your views here.
 def login(request):
@@ -99,5 +100,6 @@ def cadastro(request):
 @login_required(redirect_field_name='login') # Se o usuário não logar, ele será redirécionado para login.html
 def dashboard(request):
     """Se o usuário logar, ele será direcionado para dashboard.html"""
-    return render(request, 'accounts/dashboard.html')
+    formulario = FormContatos()
+    return render(request, 'accounts/dashboard.html', { 'form': formulario })
 
