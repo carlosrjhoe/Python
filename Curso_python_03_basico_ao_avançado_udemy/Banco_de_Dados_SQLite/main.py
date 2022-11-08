@@ -2,6 +2,7 @@ import sqlite3
 
 class AgendaDB:
     def __init__(self, arquivo):
+        """Objéto de conecção e objéto de cursor """
         self.coneccao = sqlite3.connect(arquivo)
         self.cursor = self.coneccao.cursor()
         
