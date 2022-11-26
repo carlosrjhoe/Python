@@ -25,9 +25,3 @@ class Caneta:
 
     def mostrar(caneta):
         return caneta.cor
-
-caneta = Caneta('Azul')
-# caneta.cor = 'Rosa'
-caneta.cor_tampa = 'Marron'
-print(caneta.cor)
-print(caneta.cor_tampa)
