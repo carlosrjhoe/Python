@@ -1,6 +1,8 @@
-from Calculadora import Calculadora
+from Calculadora import soma
 
-print(f'Soma = {Calculadora.soma(10, 30)}')
-print(f'Subtração = {Calculadora.subtracao(10, 30)}')
-print(f'Multiplicação = {Calculadora.mutiplicacao(10, 30)}')
-print(f'Divisão = {Calculadora.divisao(10, 30)}')
+try:
+    print(f'{soma(10, "20")}')
+except AssertionError as erro:
+    print(f"Conta invalida {erro}")
+
+print("OI")
