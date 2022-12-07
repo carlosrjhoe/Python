@@ -4,6 +4,10 @@ class Dog:
         self.age = age
 
 
+    def presentation(self):
+        print("My dog's name is", self.name.title())
+        print("My dog's age is", self.age , "years old")
+
     def sit(self):
         """Simula cachorro sentado"""
         print(self.name.title() + " is now sitting")
@@ -15,5 +19,6 @@ class Dog:
 
 if __name__ == "__main__":
     tufik = Dog("tufik", 5)
+    tufik.presentation()
     tufik.sit()
     tufik.roll_over()
