@@ -1,6 +1,6 @@
 magicians = ["Grande Houdini", "Fu-Manchu", "Richiardi Jr", "Jasper Maskelyne", "Dai Vernon", "David Blaine", "Siegfried Fischbacher", "David Copperfield", "Anjo Criss"]
 
-modifiked_magicians = []
+modified_magicians = []
 
 def show_magicians(magicians):
     print("Mostrando lista de magicos!")
@@ -8,18 +8,18 @@ def show_magicians(magicians):
         print(f"{magician}")
     print("################################################")
 
-def modifiked(magicians, modifiked_magicians):
+def modify(magicians, modified_magicians):
     while magicians:
         current_magician = magicians.pop()
-        modifiked_magicians.append(current_magician)
+        modified_magicians.append(current_magician)
 
-def show_modifiked_magicians(modifiked_magicians):
+def show_modified_magicians(modified_magicians):
     print("Mostrando lista de magicos modificados!")
-    for magician in modifiked_magicians:
+    for magician in modified_magicians:
         print(f"O Grande {magician}")
     print("################################################")
 
 if __name__ == "__main__":
     show_magicians(magicians)
-    modifiked(magicians, modifiked_magicians)
-    show_modifiked_magicians(modifiked_magicians)
+    modify(magicians, modified_magicians)
+    show_modified_magicians(modified_magicians)
