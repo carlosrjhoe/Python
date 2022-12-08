@@ -5,16 +5,16 @@ class Dog:
 
 
     def presentation(self):
-        print("My dog's name is", self.name.title())
-        print("My dog's age is", self.age , "years old")
+        print(f"My dog's name is, {self.name.title()}")
+        print(f"My dog's age is, {self.age}, years old")
 
     def sit(self):
         """Simula cachorro sentado"""
-        print(self.name.title() + " is now sitting")
+        print(f"{self.name.title()} is now sitting")
 
     def roll_over(self):
         """Simula cachorro rolar no chão"""
-        print(self.name.title() + " roll over")
+        print(f"{self.name.title()}, roll over")
 
 
 if __name__ == "__main__":
