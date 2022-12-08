@@ -6,17 +6,21 @@ class Restaurant:
 
 
     def describe_restaurant(self):
+        """Imforma descrição do restaurante"""
         print(f"Tipo de restaurante:\n{self.cuisine_type}")
         return
 
     def open_restaurant(self):
+        """Informa que o restaurante está aberto"""
         print("O restaurante",self.restaurant_name,"esta aberto.")
         return
 
     def read_served(self):
+        """Informativo de quantas pessoas estão sendo atendidas"""
         print(f"Estamos atendendo {self.number_served} pessoas")
 
     def set_number_served(self, served):
+        """Modifica a quantidade de clientes"""
         self.number_served = served
 
 
