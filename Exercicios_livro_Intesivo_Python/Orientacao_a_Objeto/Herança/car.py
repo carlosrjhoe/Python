@@ -1,0 +1,65 @@
+class Car:
+    """Uma tentativa simples de representar um carro."""
+
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+        self.odometer_reading = 0
+
+    def get_descripttive_name(self):
+        """Devolve um nome descritivo, formatado de modo elegante."""
+        print(f"\n{str(self.year)} {self.make} {self.model}")
+        return
+
+    def read_odometer(self):
+        """Exibe uma frase que mostra a milhagem do carro."""
+        print(f"This car has {self.odometer_reading} miles on it")
+
+    def update_odometer(self, mileage):
+        """Define o valor de leitura do hodômetro com o valor especificado."""
+        if mileage >= self.odometer_reading:
+            self.odometer_reading = mileage
+        else:
+            print(f"You can't roll back odometer")
+
+    def increment_odomenter(self, miles):
+        """Soma a quantidade especificada ao valor de leitura do hodômetro."""
+        self.odometer_reading += miles
+
+
+class Battery():
+    """Uma tentativa simples de modelar uma bateria para um carro elétrico."""
+
+    def __init__(self, battery_size=70):
+        """Inicializa os atributos da bateria."""
+        self.battery_size = battery_size
+
+    def describe_batery(self):
+        """Exibe uma frase que descreve a capacidade da bateria."""
+        print(f'This car has a {self.battery_size}-KWh battery')
+
+    def get_range(self):
+        """Exibe uma frase sobre a distância que o carro é capaz de percorrer com essa bateria."""
+        if self.battery_size == 70:
+            range = 240
+        elif self.battery_size == 85:
+            range = 270
+
+        print(f'This car can go approximately {range} miles on a full charge')
+        return
+
+
+    
+if __name__ == "__main__":
+    my_new_car = Car('audi', 'a4', 2016)
+    my_new_car.get_descripttive_name()
+    my_new_car.update_odometer(70)
+    my_new_car.update_odometer(40)
+    my_new_car.read_odometer()
+
+    my_used_car = Car('subaru', 'outback', 2013)
+    my_used_car.get_descripttive_name()
+    my_used_car.update_odometer(23500)
+    my_used_car.increment_odomenter(500)
+    my_used_car.read_odometer()
