@@ -17,7 +17,7 @@ class Restaurant:
 
     def read_served(self):
         """Informativo de quantas pessoas estão sendo atendidas"""
-        print(f"Estamos atendendo {self.number_served} pessoas")
+        print(f"Neste momento estamos atendendo {self.number_served} pessoas")
 
     def set_number_served(self, served):
         """Modifica a quantidade de clientes"""
