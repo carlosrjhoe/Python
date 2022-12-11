@@ -13,7 +13,7 @@ class IceCreamStand(Restaurant):
     def describe_flavors(self):
         print(f'Nossos sabores de sorvete são:')
         for i, sabor in enumerate(self.flavors):
-            print(f'{i} - {sabor.title()}')
+            print(f'{i+1} - {sabor.title()}')
 
 
 if __name__ == "__main__":
