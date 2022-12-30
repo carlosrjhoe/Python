@@ -2,4 +2,4 @@
 file_name = "Arquivos_e_Exceções\programming.txt"
 
 with open(file_name, 'a') as file:
-    file.write("\nHis true name is Fujiwara Hidesato")
+    file.write("\nthis is very interesting history")
