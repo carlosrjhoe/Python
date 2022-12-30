@@ -9,5 +9,3 @@ lis = lista_nao_ordenada.find_elements(By.TAG_NAME, "li") # 2
 # 2. Buscamos todos 'li'
 lis[0].find_element(By. TAG_NAME, "a")
 # 3. No primeiro 'li', buscamos 'a' e pegamos seu text.
-
-

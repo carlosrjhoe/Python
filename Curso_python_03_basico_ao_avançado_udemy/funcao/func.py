@@ -1,7 +1,8 @@
-def nome():
-    return f'carlos'
+def soma(x, y, z=None):
+    if z is not None:
+        print(f'{x}-{y}-{z}')
+    else:
+        print(f'{x}-{y}')
 
-def mostrar_nome(nome):
-    return nome
-
-print(nome())
+if __name__ == '__main__':
+    soma(1,2,5)
