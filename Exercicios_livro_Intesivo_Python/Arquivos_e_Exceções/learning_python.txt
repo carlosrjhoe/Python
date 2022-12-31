@@ -1,4 +1,0 @@
-Abra um arquivo em branco em seu editor de texto
-e escreva algumas linhas que sintetizem o que você aprendeu
-sobre Python até agora.
-Comece cada linha com a expressão Em Python podemos.
