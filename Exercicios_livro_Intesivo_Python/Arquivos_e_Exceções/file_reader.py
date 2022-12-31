@@ -1,4 +1,4 @@
-file_path = "Arquivos_e_Exceções\pi_digits.txt"
+file_path = "pi_digits.txt"
 with open(file_path) as file:
     # contents = file.read() # Para ler todo contúdo do arquivo TXT
     # for line in file: # Para ler linha por linha do arquivo TXT
