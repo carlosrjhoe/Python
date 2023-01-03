@@ -6,5 +6,8 @@ with open(file_name) as file:
     header_row = next(reader)
     # print(header_row)
 
-    for index, column_header in enumerate(header_row):
-        print(f"{index} - {column_header}")
+    temperatura_maxima = []
+    for i in reader:
+        temperatura_maxima.append(i[1])
+
+    print(temperatura_maxima, end="")
