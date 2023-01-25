@@ -9,5 +9,5 @@ with open(file_name) as file:
 for dict_pop in pop_data:
     if dict_pop['Year'] == '2010':
         cidade = dict_pop['Country Name']
-        populacao = dict_pop['Value']
+        populacao = int(float(dict_pop['Value']))
         print(f'Cidade: {cidade}, População: {populacao} pessoas.')
