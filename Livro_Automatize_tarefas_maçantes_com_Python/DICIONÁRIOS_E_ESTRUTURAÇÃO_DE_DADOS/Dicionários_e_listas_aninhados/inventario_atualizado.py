@@ -1,11 +1,20 @@
 inventario = {'gold coin': 42, 'rope': 1, 'ruby': 1, 'dagger': 1}
 saqueDragao = ['gold coin', 
-               'dagger', 
+               'dagger',
+               'dagger',
                'gold coin', 
-               'gold coin', 
+               'gold coin',
             ]
 
 def info(inventario, saqueDragao):
+
+    for key in inventario.items():
+        total = 0
+        for key in saqueDragao:
+            if key == 'gold coin':
+                total = total + 1
+    inventario['gold coin'] += total
+ 
     print("Inventário:")
     quantidade = 0
     for nome, qtd in inventario.items():
