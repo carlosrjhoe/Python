@@ -1,13 +1,8 @@
-while True:
-    age = input("Enter your age: ")
-    if age.isdecimal():
-        break
-    else:
-        print("Please enter a number for your age")
+texto = "carlos roberto conceição júnior"
 
-while True:
-    password = input("Enter your password(letters and numbers only): ")
-    if password.isalnum():
-        break
-    else:
-        print("Passwords can only have letters and numbers")
+def mostrarNome(texto):
+    print(f"{texto.center(50, '#').title()}")
+    
+
+if __name__ == '__main__':
+    mostrarNome(texto)
