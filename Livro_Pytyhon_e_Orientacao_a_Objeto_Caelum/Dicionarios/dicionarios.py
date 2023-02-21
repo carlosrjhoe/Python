@@ -13,3 +13,14 @@ print(carlos.keys())
 
 """Consultando as values de um dicionário"""
 print(carlos.values())
+
+"""Mostrando todas chaves e valores de um dicionário"""
+print(carlos.items())
+
+"""Manipulando dados de um dicionário"""
+carlos['nacionalidade'] = 'brasileiro'
+print(carlos.items())
+
+"""Adicionando novos dados a um dicionário"""
+carlos['formacao'].append('vigilante')
+print(carlos.items())
