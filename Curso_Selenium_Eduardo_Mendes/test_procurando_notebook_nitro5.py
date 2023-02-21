@@ -19,7 +19,7 @@ class TestProcurandoNotebookNitro5():
 
     def test_procurandonotebooknitro5(self):
         self.driver.get("https://www.magazineluiza.com.br/")
-        self.driver.set_window_size(1366, 720)
+        self.driver.maximize_window()
         self.driver.find_element(By.ID, "input-search").click()
         self.driver.find_element(By.ID, "input-search").send_keys("acer nitro 5")
         self.driver.find_element(By.CSS_SELECTOR, ".dQJKma").click()
