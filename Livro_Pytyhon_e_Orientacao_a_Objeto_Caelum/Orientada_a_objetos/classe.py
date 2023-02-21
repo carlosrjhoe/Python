@@ -1,11 +1,12 @@
 class Usuario:
 
-    def __init__(self, nome, idade) -> None:
+    def __init__(self, nome, idade):
+        """construtor da classe"""
         self.nome = nome
         self.idade = idade
 
     def informacao(self):
-        print(f'Meu nome é {self.nome} e eu tenho {self.idade} anos de idade.')
+        print(f'Meu nome é {self.nome.title()} e eu tenho {self.idade} anos de idade.')
 
 
 
