@@ -4,5 +4,15 @@
 
 file_name = 'pi_digits.txt'
 with open(file_name) as ob:
-    for line in ob:
-        print(line)
+    lines = ob.readlines()
+
+pi_string = ''
+"""criamos uma variável pi_string para armazenar os dígitos de pi"""
+for line in lines:
+    """criamos um laço que acrescenta cada uma das linhas de dígitos em pi_string removendo o caractere de quebra de linha"""
+    pi_string += line.rstrip()
+
+print(pi_string[:10])
+"""exibiremos as 10 primeiras casas decimais"""
+
+# print(len(pi_string))
