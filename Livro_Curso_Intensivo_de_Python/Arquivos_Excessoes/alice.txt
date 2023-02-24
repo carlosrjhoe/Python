@@ -1,0 +1,21 @@
+Analisando textos
+Podemos analisar arquivos-texto que contenham blocos inteiros. Muitas
+obras clássicas de literatura estão disponíveis como arquivos-texto simples,
+pois estão em domínio público. Os textos usados nesta seção foram
+extraídos do Projeto Gutenberg (http://gutenberg.org/). O Projeto
+Gutenberg mantém uma coleção de obras literárias disponíveis em
+domínio público, e é um ótimo recurso se você estiver interessado em
+trabalhar com textos literários em seus projetos de programação.
+Vamos obter o texto de Alice in Wonderland e tentar contar o número de
+palavras do texto. Usaremos o método de string split(), que cria uma lista
+de palavras a partir de uma string. Eis o que split() faz com uma string
+que contém apenas o título "Alice in Wonderland":
+>>> title = "Alice in Wonderland"
+>>> title.split()
+['Alice', 'in', 'Wonderland']
+O método split() separa uma string em partes sempre que encontra um
+espaço, e armazena todas as partes da string em uma lista. O resultado é
+uma lista de palavras da string, embora algumas pontuações possamtambém aparecer com determinadas palavras. Para contar o número de
+palavras em Alice in Wonderland, usaremos split() no texto todo. Em
+seguida, contaremos os itens da lista para ter uma ideia geral da
+quantidade de palavras no texto:
