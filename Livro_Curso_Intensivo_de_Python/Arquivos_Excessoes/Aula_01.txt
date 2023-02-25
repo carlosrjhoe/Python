@@ -1,0 +1,45 @@
+O que é projeto?
+Projeto é um esforço temporário empreendido para criar um produto, serviço ou resultado exclusivo. Também pode ser descrito como: “uma original organização de pessoas e recursos para atingir um propósito específico, num período de tempo finito”.
+O que é software?
+Software é “uma sequência de instruções a serem executadas, com o objetivo de gerar informações a partir de uma série de dados coletados ou armazenados”. Também podemos definir como sendo “os programas que comandam o funcionamento de um computador”.
+Composição do software:
+Um software é composto por módulos, instruções, bibliotecas, que gera um programa executável que lê dados denominados “entradas” ou inputs ao final do processo de desenvolvimento, e este, quando executado, recebe algum tipo de “entrada” de dados (input), processa as informações e libera uma “saída” (output) como resultado deste processamento.
+Classificação do software:
+Podem os softwares podem ser classificados em três tipos:
+Software de Sistema: é o conjunto de informações que gerenciam o hardware, que permitindoe a interação entre o usuário e os periféricos do computador.
+Exemplos: Windows e Linux.
+Software de Programação: é o conjunto de ferramentas que permitem ao programador desenvolver sistemas informáticos.
+Exemplos: exemplo, C++, C#, VB, ASP, Delphi, GO.
+Software de Aplicação: são programas de computadores que permitem ao usuário executar uma série de tarefas específicas em diversas áreas de atividade.
+Exemplos: planilha eletrônica, editores de texto e editores de apresentações (como PowerPoint).
+Tipos de programação ágil:
+Programação exrema – XP (eXtreme Programming)
+Muito utilizado para equipes pequenas e médias que desenvolvem softwares com requisitos vagos e em constantes mudanças.
+A estratégia adotada é de constante acompanhamento e realização de vários pequenos ajustes durante o desenvolvimento de software. Tem valores fundamentais como: comunicação, simplicidade, feedback, coragem e respeito.
+Método Scrum
+Scrum não é um processo prescribente, ou seja, não descreve o que fazer em cada situação. Ele é usado para trabalhos complexos nos quais é impossível predizer tudo o que irá ocorrer.
+Feature Driven Development - FDD (Desenvolvimento Dirigido a Funcionalidades)
+É uma abordagem poderosa para o desenvolvimento de produtos. Busca o desenvolvimento por funcionalidade através de um requisito funcional do sistema. Uma equipe de projeto seguindo o método FDD primeiro desenvolve um modelo global para o produto, constrói uma lista de recursos e planeja o trabalho.
+O FDD recomenda uma série de boas práticas oriundas da Engenharia de Software, como:
+Modelagem de domínio do objeto: as equipes de explorar e explicar o domínio (ou ambiente de negócios) do problema a ser resolvido;
+Desenvolvimento por funcionalidade: esta prática envolve decompor as necessidades em funcionalidades e definir períodos de desenvolvimento de uma ou mais funcionalidades em intervalos de duas semanas ou mais curtos;
+Propriedade individual (código): as áreas de código devem ter um único proprietário para garantir consistência, desempenho e integridade conceitual. (Nota-se que é bem diferente da ideia de propriedade código coletiva do XP, que visa difundir o conhecimento para outros membros da equipe);
+Times dinâmicos: devem-se formar pequenas equipes, de forma dinâmica, de acordo com características de cada projeto. Os times ajudam a mitigar o risco associado à propriedade individual;
+Inspeções: são revisões que ajudam a garantir boa qualidade e design de código;
+Gerenciamento de configuração: essa prática envolve rotulagem de código, controle de alterações e gerenciamento do código-fonte;
+Construções regulares: através de entregas pequenas e constantes, o time incrementa o produto de software com a nova funcionalidade desenvolvida. Esta prática também permite criar facilmente uma versão demo;
+Visibilidade: controle e acompanhamento do progresso dos resultados, baseados em funcionalidades desenvolvidas.
+Ciclo de vida do DSDM:
+O ciclo de vida do DSDM é iterativo e incremental. Portanto, a solução não pode ser entregue à empresa de uma só vez, mas de uma série de incrementos que facilitam a solução com cada entrega.
+Crystal:
+Crystal é uma família de metodologias (Família Crystal de Metodologia) desenvolvidas por Alistair Cockburn, em meados da década de 1990.
+Ela inclui um grande número de métodos diferentes, que são selecionados de acordo com as características do projeto a ser desenvolvido, destinadas para projetos que vão desde aqueles executados por pequenas equipes de desenvolvimento com baixa criticidade e provê abordagens até com grandes equipes que implementam sistemas de alta criticidade.
+Princípios ágeis da família Crystal:
+Entregas frequentes
+Melhoria reflexiva: verificação constante e busca contínua de promoção de melhoria e implementação de novos métodos;
+Comunicação osmótica: membros são alocados próximos uns dos outros para melhorar a comunicação, conceito também conhecido como War Room (Sala de Guerra);
+Segurança pessoal: o Crystal defende um ambiente seguro para que todos possam apresentar suas dúvidas e questionamentos;
+Foco: cada membro do time deve saber o que precisa fazer e ter liberdade suficiente para trabalhar no que é necessário;
+Fácil acesso ao usuário: fácil acesso aos usuários chaves e rápido feedback;
+Ambiente automatizado: testes automatizados, controle de configurações, integração contínua etc.
+
