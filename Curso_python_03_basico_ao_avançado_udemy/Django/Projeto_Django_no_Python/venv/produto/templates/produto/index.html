@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+{% extends 'base.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produto</title>
-</head>
-
-<body>
-    <h1>Produto</h1>
-</body>
-
-</html>
+{% block 'titulo' %}Produto{% endblock  %}
+{% block 'conteudo' %}
+    <h4>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, nemo libero nobis quasi saepe quia iste et consequatur ipsam sequi officiis quibusdam omnis. Ad deleniti tenetur sed doloribus ipsum excepturi?
+        </p>
+    </h4>
+{% endblock  %}
