@@ -6,4 +6,4 @@ app_name = "blog"
 urlpatterns = [
     path('', views.index, name='index'),
     path('sobre/', views.sobre, name='sobre'),
-]
+] 
