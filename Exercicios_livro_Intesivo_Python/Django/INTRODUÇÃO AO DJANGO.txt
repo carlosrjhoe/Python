@@ -1,0 +1,26 @@
+INTRODUÇÃO AO DJANGO
+
+1° Criar um ambiente virtual:
+comando: python -m venv venv
+
+Explicação:
+Um ambiente virtual é um local de seu sistema em que você pode instalar pacotes e isolá-los de todos os demais pacotes Python. 
+=========================================================================================================================================================================
+2° Ativar virtual venv
+Comando: "dentro do arquivo venv" \Scripts\activate
+
+Explicação: Aqui você poderá instalar pacotes no ambiente e usar pacotes que já tenham sido instalados.
+=========================================================================================================================================================================
+3° instalar Django
+Comando: pip install Django
+=========================================================================================================================================================================
+4° Criando um projeto em Django
+Comando: django-admin.py startproject "Nome do projeto" .
+
+Explicação: Django para criar um novo projeto. O ponto no final do comando cria o novo projeto com uma estrutura de diretórios que facilitará a implantação da aplicação em um servidor quando terminarmos o seu desenvolvimento.
+=========================================================================================================================================================================
+5° Criando um banco de dados
+Comando: python manage.py migrate
+
+Explicação: Sempre que modificamos um banco de dados, dizemos que estamos migrando o banco de dados. Executar o comando migrate pela primeira vez informa a Django para garantir que o banco de dados esteja de acordo com o estado atual do projeto.
+=========================================================================================================================================================================
