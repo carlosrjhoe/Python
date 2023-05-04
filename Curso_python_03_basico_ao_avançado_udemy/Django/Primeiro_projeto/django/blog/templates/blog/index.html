@@ -1,2 +1,16 @@
 {% extends 'base.html' %}
-{% block texto %}<h1>Titulo do post.</h1>{% endblock texto %}
+
+{% block texto %}
+    <h1>Titulo do post.</h1>
+{% endblock texto %}
+
+{% block post %}
+    {% include 'partials\_article.html' %}
+    {% include 'partials\_article.html' %}
+    {% include 'partials\_article.html' %}
+    {% include 'partials\_article.html' %}
+    {% include 'partials\_article.html' %}
+    {% include 'partials\_article.html' %}
+    {% include 'partials\_article.html' %}
+    {% include 'partials\_article.html' %}
+{% endblock post %}

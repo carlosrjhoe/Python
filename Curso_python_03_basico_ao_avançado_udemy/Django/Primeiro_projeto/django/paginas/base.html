@@ -1,8 +1,10 @@
-{% include 'partials\_head.html' %}
+<html lang="pt">
+    {% include 'partials\_head.html' %}
 
-<body>
-    <main class="posts">
-        {% include 'partials\_postblock.html' %}
-
-    </main>
-</body>
+    <body>
+        {% block texto %}{% endblock texto %}
+        <main class="content">
+            {% block post %}{% endblock post %}
+        </main>
+    </body>
+</html>
