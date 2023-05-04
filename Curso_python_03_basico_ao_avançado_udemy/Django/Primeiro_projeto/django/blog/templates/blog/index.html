@@ -5,12 +5,7 @@
 {% endblock texto %}
 
 {% block post %}
-    {% include 'partials\_article.html' %}
-    {% include 'partials\_article.html' %}
-    {% include 'partials\_article.html' %}
-    {% include 'partials\_article.html' %}
-    {% include 'partials\_article.html' %}
-    {% include 'partials\_article.html' %}
-    {% include 'partials\_article.html' %}
-    {% include 'partials\_article.html' %}
+    {% for post in posts %}
+        {% include 'partials\_article.html' %}
+    {% endfor %}
 {% endblock post %}
