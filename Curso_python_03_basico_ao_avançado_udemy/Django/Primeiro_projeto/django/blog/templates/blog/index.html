@@ -4,8 +4,10 @@
     <h1>Titulo do post.</h1>
 {% endblock texto %}
 
-{% block post %}
-    {% for post in posts %}
-        {% include 'partials\_article.html' %}
-    {% endfor %}
-{% endblock post %}
+{% if post %}
+    {% block post %}
+        {% for post in posts %}
+            {% include 'partials\_article.html' %}
+        {% endfor %}
+    {% endblock post %}
+{% endif %}
