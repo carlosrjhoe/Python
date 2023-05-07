@@ -21,6 +21,5 @@ def apresentacao(totalTrazido, todos_convidados):
     print(f'- Nutela: {str(totalTrazido(todos_convidados, "nutela"))}')
     print(f'- Pão: {str(totalTrazido(todos_convidados, "pão"))}')
 
-
 if __name__ == '__main__':
     apresentacao(totalTrazido, todos_convidados)

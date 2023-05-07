@@ -12,7 +12,7 @@ def mostrarInventario(inventario):
     for i, j in inventario.items():
         print(f"{i} - {str(j)}")
         total_itens = total_itens + j
-    print(f"{total_itens}")
+    print(f"Total de intens: {total_itens}")
 
 if __name__ == "__main__":
     mostrarInventario(inventario)
