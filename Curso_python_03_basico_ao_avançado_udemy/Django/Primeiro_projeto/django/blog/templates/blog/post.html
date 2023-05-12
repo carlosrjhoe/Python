@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block texto %} <h2> {{ post.title }} </h2> {% endblock texto %}
+
+{% if post %}
+    {% block post %}
+        <article class="post single-post">
+            <header>
+                <h2 class="post__title">
+                    <a href="{% url 'blog:post' post.id %}">
+                        {{ post.title }}
+                    </a>
+                </h2>
+            </header>
+            <div class="post__body">
+                {{ post.body }}
+            </div>
+        </article>
+    {% endblock post %}
+{% endif %}
