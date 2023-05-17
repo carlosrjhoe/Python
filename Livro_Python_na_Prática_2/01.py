@@ -5,7 +5,7 @@
 from collections import Counter
 
 def recorrecia_letras(frase):
-    a1,a2,a3,a4,a5, a6 = Counter(frase).most_common(6)
+    a2,a3,a4,a5,a6 = Counter(frase).most_common(5)
 
     print(f'A letra mais recorrente é: {a2[0].upper()}, e se repete {a2[1]} vezes.')
     print(f'A letra mais recorrente é: {a3[0].upper()}, e se repete {a3[1]} vezes.')
