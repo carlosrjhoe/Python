@@ -3,29 +3,29 @@
 
 import re
 
-def cadastrar_senha():
+def cadastrarSenha():
     senha = input('Insira sua senha: ')
     x = True # variável de controle
-
+    
     while x:
         if len(senha) < 6 or len(senha) > 16:
             # Verifica se o tamanho de senha é menor que 6 ou maior que 16
             print(f'A senha deve conter entre 6 e 16 caracteres.')
             break
         elif not re.search('[a-z]', senha):
-            # Verifica se o retorno do método com justaposição, neste caso, caracteres minúsculos de A até Z.
+            # Verifica se o retorno não contem caracteres minúsculos de A até Z.
             print('A senha deve ter ao menos uma letra minúcula.')
             break
         elif not re.search('[0-9]', senha):
-            # Verifica se o retorno do método com justaposição, neste caso, não existem números de 0 até 9.
+            # Verifica se o retorno não contem números de 0 até 9.
             print('A senha deve conter ao menos um número.')
             break
         elif not re.search('[@#$%&*!]', senha):
-            # Verifica se o retorno do método com justaposição, neste caso, não existem caracteres especiais.
+            # Verifica se o retorno não contem caracteres especiais.
             print('A senha deve conter ao menos um caractere especial')
             break
         elif re.search('\s', senha):
-            # Verifica no retorno do método com justaposição, neste caso, se contem espaças em branco.
+            # Verifica no retorno não contem espaços em branco.
             break
         else:
             print('Senha cadastrada com sucesso!!!')
@@ -35,4 +35,4 @@ def cadastrar_senha():
         print('Senha invalida!!!')
 
 if __name__ == '__main__':
-    cadastrar_senha()
+    cadastrarSenha()
