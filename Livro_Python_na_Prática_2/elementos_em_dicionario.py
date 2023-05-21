@@ -10,6 +10,7 @@ def adicionar_novo_cliente(clientes):
     else:
         print(f'Para inserir {novo_cliente} a base de dados, precisa de um número de telefone:')
         clientes.__setitem__(novo_cliente, str(input('Digite o telefone: ')))
+        # método __setitem__( ), são usados ​​apenas em atributos indexados como matrizes, dicionários, listas etc. Em vez de acessar e manipular diretamente os atributos da classe, ele fornece esses métodos, de forma que esses atributos podem ser modificados apenas por suas próprias instâncias e, portanto, implementa a abstração.
     print(clientes)
         
 
