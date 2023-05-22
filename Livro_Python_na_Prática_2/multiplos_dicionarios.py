@@ -4,6 +4,8 @@
 from collections import ChainMap
 
 def buscar_itens(cabecalho, cozinha, sala, quarto, banheiro):
+    # Aqui estamos encadeando os itens dos dicionários em um novo contêiner de dados mapeado.
+    # agrupa vários dicts ou outros mapeamentos para criar uma exibição única e atualizável.
     objeto = ChainMap(cozinha, sala, quarto, banheiro)
     item = input('Digite um item a ser buscado: ').capitalize()
 
