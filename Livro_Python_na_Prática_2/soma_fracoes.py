@@ -17,7 +17,7 @@ def verificar_2_fracao(num_1, num_2):
     print(f'Denominador da 2º Fração: {fracao_2.denominator}')
     return fracao_2
 
-def soma_das_frcaoes(def_1, def_2):
+def soma_das_fracoes(def_1, def_2):
     soma = Fraction(def_1) + Fraction(def_2)
     print(f'Soma das fraçoes: {soma}')
     return soma
@@ -25,4 +25,4 @@ def soma_das_frcaoes(def_1, def_2):
 if __name__ == '__main__':
     verificar_1_fracao(1,4)
     verificar_2_fracao(5,8)
-    soma_das_frcaoes(verificar_1_fracao(1,4), verificar_2_fracao(5,8))
+    soma_das_fracoes(verificar_1_fracao(1,4), verificar_2_fracao(5,8))        
