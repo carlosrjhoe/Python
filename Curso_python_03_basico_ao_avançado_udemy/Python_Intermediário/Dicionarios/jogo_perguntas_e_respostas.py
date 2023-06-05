@@ -1,4 +1,6 @@
 def jogo_perguntas_e_respostas(lista):
+    perguntas_acertas = 0
+    
     for pergunta in lista:
         print(f"Pergunta: {pergunta['Pergunta']}")
         print(f"Opções: {pergunta['Opções']}")
@@ -7,6 +9,9 @@ def jogo_perguntas_e_respostas(lista):
             print('Você Errou!')
         else:
             print('Você acertou!')
+            perguntas_acertas += 1
+
+    print(f'Você acretou um total de {perguntas_acertas} de {len(pergunta)}')
 
 if __name__ == '__main__':
     perguntas = [
