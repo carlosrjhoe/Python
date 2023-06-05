@@ -27,3 +27,13 @@ print(pessoa_01)
 
 # pegar pela chave com o get
 print(pessoa_01.get('endereço'))
+
+# apagar um item expecifico
+pessoa_01.pop('idade')
+print(pessoa_01)
+
+# atualizar chave e valor de um dicionario
+pessoa_01.update({
+    'nome': 'Neto'
+})
+print(pessoa_01)
