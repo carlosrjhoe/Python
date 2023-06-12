@@ -56,7 +56,7 @@ class Pessoa:
 
     def deslogar(self):
         if not self.login:
-            print(f"{self.name}você não está logado no sistema.")
+            print(f"{self.name} você não está logado no sistema.")
             return
         print(f"{self.name} Foi deslogado do sistema.")
         self.login = False
