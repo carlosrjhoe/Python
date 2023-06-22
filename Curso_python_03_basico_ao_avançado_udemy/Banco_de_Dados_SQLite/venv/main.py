@@ -18,12 +18,12 @@ def conecta():
         print('Conexão fechada')
         conexao.close()
 
-# with conecta() as conexao:
-#     with conexao.cursor() as cursor:
-#         """Inserir um registro no banco de dados"""
-#         sql = 'INSERT INTO clientes (nome, sobrenome, idade, peso) VALUES (%s,%s,%s,%s)'
-#         cursor.execute(sql, ('Jack', 'Monroe', 112, 220))
-#         conexao.commit()
+with conecta() as conexao:
+    with conexao.cursor() as cursor:
+        """Inserir um registro no banco de dados"""
+        sql = 'INSERT INTO clientes (nome, sobrenome, idade, peso) VALUES (%s,%s,%s,%s)'
+        cursor.execute(sql, ('Jack', 'Monroe', 112, 220))
+        conexao.commit()
 
 # with conecta() as conexao:
 #     with conexao.cursor() as cursor:
@@ -58,18 +58,21 @@ def conecta():
 #         cursor.execute(sql, (10,13))
 #         conexao.commit()
 
-with conecta() as conexao:
-    with conexao.cursor() as cursor:
-        """Atualizar um registro"""
-        sql = 'UPDATE clientes SET nome=%s WHERE id=%s'
-        cursor.execute(sql, ('JOANA', 14))
-        conexao.commit()
+# with conecta() as conexao:
+#     with conexao.cursor() as cursor:
+#         """Atualizar um registro"""
+#         sql = 'UPDATE clientes SET nome=%s WHERE id=%s'
+#         cursor.execute(sql, ('JOANA', 14))
+#         conexao.commit()
 
-with conecta() as conexao:
-    with conexao.cursor() as cursor:
-        """Mostrar todos os registro no banco de dados"""
-        cursor.execute('SELECT * FROM clientes ORDER BY id ASC LIMIT 100')
-        resultado = cursor.fetchall()
+# with conecta() as conexao:
+#     with conexao.cursor() as cursor:
+#         """Mostrar todos os registro no banco de dados"""
+#         cursor.execute('SELECT * FROM clientes ORDER BY id ASC LIMIT 100')
+#         resultado = cursor.fetchall()
         
-        for linha in resultado:
-            print(f'{linha}')
+#         for linha in resultado:
+#             print(f'{linha}')
+
+if __name__ == '__main__':
+    conecta()
