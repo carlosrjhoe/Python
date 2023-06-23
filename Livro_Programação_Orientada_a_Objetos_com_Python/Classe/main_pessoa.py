@@ -1,4 +1,4 @@
-from pessoa import  Pessoa
+from Classe.pessoa import  Pessoa
 
 pessoa1 = Pessoa('carlos')
 pessoa2 = Pessoa('Mayara')
