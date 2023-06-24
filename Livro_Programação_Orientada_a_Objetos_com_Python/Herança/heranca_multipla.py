@@ -14,7 +14,7 @@ class Utensils:
         self.coal = coal
 
 class BarbecueKit(Meat, Utensils):
-    """Herança multipla"""
+    """Herança multipla: Se dá quando uma classe é dona de outra pela interligação de seus atributos e a forma sequencial como uns dependem dos outros."""
     pass
 
 if __name__ == '__main__':

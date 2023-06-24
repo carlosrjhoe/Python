@@ -7,7 +7,7 @@ class Carro:
         print(f'Modelo:{self.modelo}\nFabricação:{self.ano_fabricacao}')
     
 class Chevrolet(Carro):
-    """Herança simples"""
+    """Herança simples: Se dá quando estruturalmente um objeto é outro objeto, no sentido de que ele literalmente herda todas características e funcionalidades do outro, para que o código fique mais enxuto."""
     pass
 
 class Wolksvagem(Carro):

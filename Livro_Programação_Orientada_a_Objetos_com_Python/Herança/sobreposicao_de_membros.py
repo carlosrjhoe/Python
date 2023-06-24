@@ -10,7 +10,9 @@ class Jogador(Pessoa):
         print(f'{self.name} está dormindo.')
 
 class SaveJogador1(Jogador):
-    """Herda tudo de Jogador1 e de Pessoa."""
+    """Agregação: Se dá quando um ou mais objetos de classe é compartilhado, usado por duas ou mais classes (para que não seja necessário programar esse atributo para cada uma delas).
+
+Belomé Feltrin, Fernando. Programação Orientada a Objetos com Python (p. 102). Edição do Kindle. """
     def acao_1(self):
         super().acao_1()
         print(f'{self.name} está comendo.')

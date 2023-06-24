@@ -7,7 +7,7 @@ class Gasolina(Carro):
         self.tipo_alcool = tipo_alcool
 
 class Jeep(Gasolina):
-    """Cadeia de herança"""
+    """Cadeia de herança: Se dá quando uma classe usa outro ou algum objeto de outra."""
     pass
 
 if __name__ == '__main__':
