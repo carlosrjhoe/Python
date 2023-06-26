@@ -6,6 +6,7 @@ def verifica_email(base_dados_email):
     email_regex = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
     for email in base_dados_email:
         if re.match(email_regex, email):
+            """verificar se cada endereço de e-mail corresponde à expressão regular email_regex."""
             print(f'{email} - é um email válido.')
         else:
             print(f'{email} - não é um email válido.')
