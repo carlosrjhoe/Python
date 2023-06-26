@@ -4,6 +4,7 @@ def criar_lista_tupla(a, b):
     """A função zip( ) para criar uma sequência de tuplas, onde cada tupla contém os elementos correspondentes das listas originais. Em seguida, convertemos essa sequência em uma lista usando a função list( ) e armazenamos o resultado na variável lista_tuplas."""
     
     lista_de_tuplas = list(zip(a, b))
+    # lista_de_tuplas = [(x, y) for x, y in zip(a, b)]
     print(f'Listas de tuplas: {lista_de_tuplas}')
 
 if __name__ == '__main__':
