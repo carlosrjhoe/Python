@@ -45,4 +45,9 @@ if __name__ == '__main__':
     print(f'Adição: {adicao.calcular()}')    
     print(f'Subtração: {subtracao.calcular()}')    
     print(f'Multiplicação: {multiplicao.calcular()}')    
-    print(f'Divisão: {divisao.calcular()}')    
+    print(f'Divisão: {divisao.calcular()}')
+
+    # >>> Adição: 5 + 10 = 15
+    # >>> Subtração: 20 - 8 = 12
+    # >>> Multiplicação: 3 * 7 = 21
+    # >>> Divisão: 15 / 3 = 5.0
