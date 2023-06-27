@@ -3,6 +3,10 @@ import string
 import random
 
 def gerar_senha(tamanho):
+    """Esta função por sua vez receberá como parâmetro o tamanho da senha desejada obrigatoriamente sempre que for inicializada.
+    Para isso, indentado ao corpo da mesma, criamos uma variável de nome caracteres, que contém todas as letras maiúsculas e minúsculas, dígitos e caracteres de pontuação.
+    Na sequência, utilizamos uma compreensão de lista com a função random.choice( ) para escolher aleatoriamente um caractere de caracteres tamanho vezes.
+    Finalmente, usamos ''.join( ) para concatenar os caracteres aleatórios em uma única string."""
     caracteres = string.ascii_letters + string.digits + string.punctuation
     return ''.join(random.choice(caracteres) for _ in range(tamanho))
 
