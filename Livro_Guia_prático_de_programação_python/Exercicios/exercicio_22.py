@@ -48,6 +48,10 @@ def salario_liquido():
 def total_desconto():
     inf_inss['total_desconto'] = inf_inss['sidicato'] + inf_inss['desc_imposto_renda'] + inf_inss['desc_inss']
     return inf_inss['total_desconto']
+
+def atualizar_salario():
+    inf_inss['salario_com_desconto'] = inf_inss['salario_bruto'] - inf_inss['total_desconto']
+    return inf_inss['total_desconto']
     
 def resumo():
     print('\n\tResumo do contra-cheque\n\t')
@@ -63,7 +67,7 @@ if __name__ == '__main__':
     aliquota_inss()
     desconto_inss()
     total_desconto()
-    salario_liquido()
+    atualizar_salario()
     resumo()
 
     # Quantas horas foram trabalhadas? 220
