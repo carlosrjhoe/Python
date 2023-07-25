@@ -70,15 +70,15 @@ if __name__ == '__main__':
     verificar_desconto()
     resumo()
 
-    # TIPO DA CARNE: [F]-Filé, [A]-Alcatra, [P]-Picanha? p
-    # Quantidade [kg]: 8
-    # FORMA DE PAGAMENTO [C]-Cartão, [D]-Dinheiro? c
-    # 
-            # Resumo da compra
-    # 
-    # Forma de pagamento:     Cartão
-    # Tipo de carne:          Picanha
-    # Quantidade:             8.000Kg
-    # Total:                  R$55.20
-    # Desconto:               R$2.76
-    # Total com desconto:     R$52.44
+# TIPO DA CARNE: [F]-Filé, [A]-Alcatra, [P]-Picanha? p
+# Quantidade [kg]: 8
+# FORMA DE PAGAMENTO [C]-Cartão, [D]-Dinheiro? c
+# 
+        # Resumo da compra
+# 
+# Forma de pagamento:     Cartão
+# Tipo de carne:          Picanha
+# Quantidade:             8.000Kg
+# Total:                  R$55.20
+# Desconto:               R$2.76
+# Total com desconto:     R$52.44
