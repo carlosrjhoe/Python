@@ -81,7 +81,9 @@ def qtd_clientes():
     return  qtd
 
 def media_altura():
-    media = total_alturas() / qtd_clientes()
+    altura = total_alturas()
+    clientes = qtd_clientes()
+    media = altura / clientes
     return media
 
 def media_peso():
