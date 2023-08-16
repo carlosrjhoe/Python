@@ -6,5 +6,5 @@ from .views import index
 class HomePageTest_2(TestCase):
 
     def test_root_url_lists(self):
-        found = resolve('/')
+        found = resolve('/lists_2/')
         self.assertEqual(found.func, index)
