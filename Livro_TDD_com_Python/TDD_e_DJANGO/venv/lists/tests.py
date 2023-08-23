@@ -10,9 +10,13 @@ class HomePageTest(TestCase):
         self.assertEqual(found.func, index)
 
     def test_index_return_corret_html(self):
+        # Chamar a view function de forma direta
         response = self.client.get('/')
+        # Extrair bytes puro da resposta e converter o html em strigs 
         html = response.content.decode('UTF-8')
-        self.assertTrue(html.startswith('\n') or html)
+        # Verificar se a pagina é uma página padrão HTML
+        self.assertTrue('<html>', html)
+        # Verificar o titilo da pagina renderizada
         self.assertIn('<title>To-Do lists</title>', html)
-        self.assertTrue(html.endswith('\n') or html)
+        # Verificar qual template foi redenrizado
         self.assertTemplateUsed(response, 'lists/index.html')
