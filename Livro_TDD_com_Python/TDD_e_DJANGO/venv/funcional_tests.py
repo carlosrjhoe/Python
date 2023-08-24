@@ -11,11 +11,12 @@ class NewVisitorTest(unittest.TestCase):
 
 
     def test_uma_lista_e_recupera(self):
-        self.driver.get('http://localhost:8000')
-        self.assertIn('To-Do', self.driver.title)
         
-        heade_text = self.driver.find_element(By.TAG_NAME, 'h1')
-        self.assertIn('To-Do', heade_text)
+        self.driver.get('http://127.0.0.1:8000/')
+        self.assertIn('To-Do lists', self.driver.title)
+    
+        tag_h1 = self.driver.find_element(By.TAG_NAME, 'h1')
+        self.assertIn('Your To-Do list', tag_h1.text)
         
         inputbox = self.driver.find_element(By.ID, 'id_new_item')
         self.assertEqual(
