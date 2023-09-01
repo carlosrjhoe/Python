@@ -1,7 +1,7 @@
 class Conta():
-    # Defina a classe
+    # Define a classe
     def __init__(self, numero, titular, saldo, limite):
-        # Defina a função construtora da classe com atributos
+        # Define a função construtora da classe com atributos
         self.numero = numero
         self.titular = titular
         self.saldo = saldo
