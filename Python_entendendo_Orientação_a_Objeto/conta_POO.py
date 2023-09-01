@@ -7,3 +7,11 @@ class Conta():
         self.saldo = saldo
         self.limite = limite
 
+    def depositar(self, valor):
+        self.saldo += valor
+    
+    def sacar(self, valor):
+        self.saldo -= valor
+    
+    def extrato(self):
+        return f'Saldo: {self.saldo}'
