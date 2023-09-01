@@ -14,4 +14,4 @@ class Conta():
         self.saldo -= valor
     
     def extrato(self):
-        return f'Saldo: {self.saldo}'
+        return f'Titular: {self.titular} - Saldo: {self.saldo}'
