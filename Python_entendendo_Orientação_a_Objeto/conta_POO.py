@@ -8,10 +8,13 @@ class Conta():
         self.limite = limite
 
     def depositar(self, valor):
+        # Metodo depositar
         self.saldo += valor
     
     def sacar(self, valor):
+        # Metodo sacar
         self.saldo -= valor
     
     def extrato(self):
+        # Metodo extrato
         return f'Titular: {self.titular} - Saldo: {self.saldo}'
