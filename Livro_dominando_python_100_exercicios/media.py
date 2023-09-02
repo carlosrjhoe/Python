@@ -1,11 +1,11 @@
 def verificar_numeros(lista):
-    for num in range(2):
-        num = int(input('Digite um número: '))
+    for num in range(3):
+        num = float(input('Digite um número: '))
         lista.append(num)
 
 def media_aritmetica(lista):
-    media = sum(lista) / 2
-    print(f'Média aritimética = {media}')
+    media = sum(lista) / len(lista)
+    print(f'Média aritimética = {media:.1f}')
 
 if __name__ == '__main__':
     lista = []
