@@ -8,7 +8,10 @@ def multiplicacao(fator_1, fator_2):
     return fator_1 * fator_2
 
 def divisao(fator_1, fator_2):
-    return fator_1 / fator_2
+    if fator_2 != 0:
+        return fator_1 / fator_2
+    else:
+        return f'Não é possível dividir por 0'
     
 def resulmo():
     fator_1 = int(input('Digite o primeiro número: '))
