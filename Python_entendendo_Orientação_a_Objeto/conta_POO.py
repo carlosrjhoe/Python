@@ -10,6 +10,10 @@ class Conta():
     def depositar(self, valor):
         # Metodo depositar
         self.__saldo += valor
+
+    def transferir(self, valor, destino):
+        self.sacar(valor)
+        destino.depositar(valor)
     
     def sacar(self, valor):
         # Metodo sacar
