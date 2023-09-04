@@ -7,6 +7,11 @@ class Conta():
         self.__saldo = saldo
         self.__limite = limite
 
+    
+    def sacar(self, valor):
+        # Metodo sacar
+        self.__saldo -= valor
+    
     def depositar(self, valor):
         # Metodo depositar
         self.__saldo += valor
@@ -14,10 +19,8 @@ class Conta():
     def transferir(self, valor, destino):
         self.sacar(valor)
         destino.depositar(valor)
-    
-    def sacar(self, valor):
-        # Metodo sacar
-        self.__saldo -= valor
+        msg = f'Transferindo R${valor:.2f} para {destino.__titular.title()}'
+        return msg
     
     def extrato(self):
         # Metodo extrato
