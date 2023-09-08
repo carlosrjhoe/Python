@@ -25,11 +25,15 @@ class Funcionario:
         ano_atual = date.today().year
         return ano_atual - int(ano)
 
-    def calcular_bonus(self):
-        valor = self._salario * 0.1
-        if valor > 1000:
-            valor = 0
-        return valor
+    def eh_socio(self):
+        sobrenomes = ['Conceição', 'Ramos', 'Andrade']
+        return self.sobre_nome() in sobrenomes
+
+    def desconto(self):
+        if self.sobre_nome():
+            desconto = self._salario * 0.1
+            self._salario = self._salario - desconto
+            return self._salario
 
     def __str__(self):
         return f'Funcionario({self._nome}, {self._data_nascimento}, {self._salario})'
@@ -40,3 +44,4 @@ if __name__ == '__main__':
     print(type(carlos._data_nascimento))
     print(type(carlos._salario))
     print(type(carlos.idade()))
+    print(carlos.desconto())
