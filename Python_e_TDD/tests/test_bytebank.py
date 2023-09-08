@@ -8,9 +8,8 @@ class TestClass:
         QUANDO o metodo idade é chamada
         ENTÃO deve retornar a idade
         """
-        entrada = '03/11/1985'
         esperado = 38
-        funcionario_test = Funcionario('carlos', entrada, 3139)
+        funcionario_test = Funcionario('carlos', '03/11/1985', 3139)
         resultado = funcionario_test.idade()
 
         assert resultado == esperado
@@ -21,9 +20,8 @@ class TestClass:
         QUANDO o metodo sobre_nome é chamado
         ENTÃO deve retornar o sobrenome
         """
-        entrada = 'carlos conceição'
         esperado = 'conceição'
-        funcionario_test = Funcionario('carlos conceição', entrada, 3139)
+        funcionario_test = Funcionario('carlos conceição', '03/11/1985', 3139)
         resultado = funcionario_test.sobre_nome()
 
         assert resultado == esperado
@@ -34,9 +32,8 @@ class TestClass:
         QUANDO o metodo desconto é chamado
         ENTÃO deve retornar o salario com desconto de 10 por cento
         """
-        entrada = 100000
         esperado = 90000
-        funcionario_test = Funcionario('carlos conceição', '03/11/1985', entrada)
+        funcionario_test = Funcionario('carlos conceição', '03/11/1985', 100000)
         resultado = funcionario_test.desconto()
 
         assert resultado == esperado
