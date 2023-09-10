@@ -9,5 +9,4 @@ def displays_result():
     
 if __name__ == "__main__":
     radius = float(input('Type the radius of the circle: '))
-    calculates_perimeter(radius)
     displays_result()
