@@ -29,6 +29,12 @@ class Funcionario:
         sobrenomes = ['Conceição', 'Ramos', 'Andrade']
         return self.sobre_nome() in sobrenomes
 
+    def calcular_bonus(self):
+        valor = self._salario * 0.1
+        if valor > 1000:
+            raise Exception('O salário é muito alta para receber um bonus.')
+        return valor
+
     def desconto(self):
         if self.sobre_nome():
             desconto = self._salario * 0.1

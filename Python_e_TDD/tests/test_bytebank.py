@@ -37,3 +37,17 @@ class TestClass:
         resultado = funcionario_test.desconto()
 
         assert resultado == esperado
+
+    def test_quando_calcular_bonus_recebe_1000_deve_retornar_100(self):
+        """
+        GIVEN: um valor do salario
+        WHEN: o metodo desconto é chamado
+        THEN: deve retornar o bonus de R$100.00 
+        """
+        entrada = 1000
+        esperado = 100
+        funcionario_test = Funcionario('carlos conceição', '03/11/1985', entrada)
+        resultado = funcionario_test.calcular_bonus()
+        
+        assert esperado == resultado
+        
