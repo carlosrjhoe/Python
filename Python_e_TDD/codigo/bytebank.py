@@ -40,8 +40,4 @@ class Funcionario:
 
 if __name__ == '__main__':
     carlos = Funcionario('carlos', '03/11/1985', 3139)
-    print(type(carlos.nome))
-    print(type(carlos._data_nascimento))
-    print(type(carlos._salario))
-    print(type(carlos.idade()))
-    print(carlos.desconto())
+    print(carlos)
