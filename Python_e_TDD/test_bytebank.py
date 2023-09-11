@@ -44,7 +44,7 @@ class TestClass:
     def test_quando_calcular_bonus_recebe_1000_deve_retornar_100(self):
         """
         GIVEN: um valor do salario
-        WHEN: o metodo desconto é chamado
+        WHEN: o metodo calcular_bonus é chamado
         THEN: deve retornar o bonus de R$100.00 
         """
         entrada = 1000
@@ -56,6 +56,11 @@ class TestClass:
 
     @mark.calcular_bonus
     def test_quando_calcular_bonus_recebe_100000_deve_retornar_exception(self):
+        """
+        GIVEN: um valor do salario
+        WHEN: o metodo calcular_bonus é chamado
+        THEN: deve retornar um exceptionError
+        """
         with raises(Exception):
             entrada = 100000
             funcionario_test = Funcionario('carlos conceição', '03/11/1985', entrada)
