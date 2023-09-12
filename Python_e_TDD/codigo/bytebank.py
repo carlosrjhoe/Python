@@ -8,7 +8,7 @@ class Funcionario:
 
     @property
     def nome(self):
-        return self._nome
+        return self._nome.title()
 
     @property
     def salario(self):
@@ -17,7 +17,7 @@ class Funcionario:
     def sobre_nome(self):
         nome_completo = self._nome.strip()
         sobre_nome = nome_completo.split(' ')
-        return sobre_nome[-1]
+        return sobre_nome[-1].title()
 
     def idade(self):
         data_formatada = self._data_nascimento.split('/')
@@ -44,6 +44,7 @@ class Funcionario:
     def __str__(self):
         return f'Funcionario({self._nome}, {self._data_nascimento}, {self._salario})'
 
-if __name__ == '__main__':
-    carlos = Funcionario('carlos', '03/11/1985', 3139)
-    print(carlos)
+if __name__ == "__main__":
+    teste = Funcionario('carlos conceição', '03/11/1985', 3193)
+    print(teste.eh_socio())
+    print(teste.nome)
