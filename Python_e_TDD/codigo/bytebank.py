@@ -43,8 +43,3 @@ class Funcionario:
 
     def __str__(self):
         return f'Funcionario({self._nome}, {self._data_nascimento}, {self._salario})'
-
-if __name__ == "__main__":
-    teste = Funcionario('carlos conceição', '03/11/1985', 3193)
-    print(teste.eh_socio())
-    print(teste.nome)
