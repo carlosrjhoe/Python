@@ -6,11 +6,11 @@ class Funcionario:
         self._data_nascimento = data_nascimento
         self._salario = salario
 
-    @property
+    # @property
     def nome(self):
         return self._nome.title()
 
-    @property
+    # @property
     def salario(self):
         return self._salario
 

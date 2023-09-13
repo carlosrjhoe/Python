@@ -11,7 +11,7 @@ class TestClass:
         """
         esperado = 'Carlos Conceição'
         funcionario_test = Funcionario('Carlos Conceição', '03/11/1985', 3139)
-        resultado = funcionario_test._nome
+        resultado = funcionario_test.nome()
 
         assert resultado == esperado
 
@@ -23,7 +23,7 @@ class TestClass:
         """
         esperado = 3139
         funcionario_test = Funcionario('Carlos Conceição', '03/11/1985', 3139)
-        resultado = funcionario_test._salario
+        resultado = funcionario_test.salario()
 
         assert resultado == esperado
         
