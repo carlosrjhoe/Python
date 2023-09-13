@@ -6,11 +6,9 @@ class Funcionario:
         self._data_nascimento = data_nascimento
         self._salario = salario
 
-    # @property
     def nome(self):
         return self._nome.title()
 
-    # @property
     def salario(self):
         return self._salario
 
@@ -27,7 +25,7 @@ class Funcionario:
 
     def eh_socio(self):
         sobrenomes = ['Conceição', 'Ramos', 'Andrade']
-        return self.sobre_nome() in sobrenomes
+        return (self.sobre_nome() in sobrenomes)
 
     def calcular_bonus(self):
         valor = self._salario * 0.1
