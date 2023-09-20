@@ -17,3 +17,7 @@ class AnimaisTestCase(LiveServerTestCase):
     def test_deu_errado(self):
         '''Teste de exemplo de erro'''
         self.fail('Teste falhou...')
+
+    def test_buscando_um_novo_animal(self):
+        '''Teste buscar animal na pesquisa'''
+        
