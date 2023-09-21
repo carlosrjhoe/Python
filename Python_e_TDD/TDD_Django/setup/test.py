@@ -19,7 +19,7 @@ class AnimaisTestCase(LiveServerTestCase):
         home_page = self.driver.get(self.live_server_url)
         
         # porque ele vê no menu do site escrito Busca Animal.
-        nav_element = self.driver.find_element(By.CLASS_NAME, '.navbar')
+        nav_element = self.driver.find_element(By.CLASS_NAME, 'navbar')
         self.assertEqual('Busca Animal', nav_element.text)
         
         # Ele vê um campo para pesquisar animais pelo nome. 
