@@ -1,10 +1,14 @@
-from django.test import TestCase
-from django.urls import reverse
+from django.test import TestCase, RequestFactory
+# from django.urls import reverse
 from animais.views import index
 
 class AnimaisUrlsTestCase(TestCase):
 
-    def test_rota_url_ultiliza_view_index(self):
+    def setUp(self):
+        self.factory = RequestFactory()
+
+    def test_rota_url_utiliza_view_index(self):
         '''Teste home principal do App animais'''
-        root = reverse('/')
-        self.assertEqual(root.func, index)
+        request = self.factory.get('/')
+        response = index(request)
+        self.assertEqual(response.status_code, 200)
