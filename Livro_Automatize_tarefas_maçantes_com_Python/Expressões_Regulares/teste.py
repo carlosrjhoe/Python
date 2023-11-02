@@ -2,6 +2,7 @@ def textoPositivo(texto):
     print(f'{texto} é um número válido!')
     
 def eNumeroDeTelefone(texto):
+    """Verificar se a string em texto é um número de telefone válido"""
     if len(texto) != 14:
         return False
     for i in range(0, 3):
