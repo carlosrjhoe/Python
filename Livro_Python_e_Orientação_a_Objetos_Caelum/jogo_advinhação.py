@@ -5,11 +5,10 @@ def cabecalho():
     print(50*'*')
 
 def advinhacao():
-    tentativas = 2
-    rodada = 1
+    tentativas = 3
     numero_secreto = 42
     
-    while tentativas > 0:
+    for rodada in range(1, tentativas+1):
         print(f'{rodada}° rodada, você tem {tentativas} tentativas')
         chute = int(input('Digite o seu número: '))
         print(f'Você digitou: {chute}')
@@ -27,7 +26,6 @@ def advinhacao():
         elif menor: 
             print('Você errou, o chute foi menor que o número secreto.')
             tentativas -= 1
-            rodada += 1
     print('Fim de jogo!')
     
 def main():
