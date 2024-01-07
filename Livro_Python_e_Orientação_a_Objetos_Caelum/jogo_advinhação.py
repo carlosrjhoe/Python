@@ -4,7 +4,8 @@ def cabecalho():
     print(f'{texto:*^50}')
     print(50*'*')
 
-def advinhacao():
+def main():
+    cabecalho()
     tentativas = 3
     numero_secreto = 42
     
@@ -27,10 +28,6 @@ def advinhacao():
             print('Você errou, o chute foi menor que o número secreto.')
             tentativas -= 1
     print('Fim de jogo!')
-    
-def main():
-    cabecalho()
-    advinhacao()
     
 if __name__ == "__main__":
     main()
