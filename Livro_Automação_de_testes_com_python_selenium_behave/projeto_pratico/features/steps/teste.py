@@ -1,5 +1,5 @@
-from behave import given, when, then
 from selenium.webdriver import Chrome
+from behave import given, when, then
 
 driver = Chrome()
 titulo = 'Google'
