@@ -1,0 +1,2 @@
+Error : Deu muito ruim - (LogFileMixin)Error : Deu muito ruim - (LogFileMixin)
+Success : Deu muito certo - (LogFileMixin)

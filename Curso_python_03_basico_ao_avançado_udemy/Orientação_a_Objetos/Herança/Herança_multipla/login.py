@@ -1,3 +1,7 @@
+from pathlib import Path
+
+LOG_FILE = Path(__file__).parent / 'log.txt'
+
 # Abstração
 class Log:
     def _log(self, msg):
@@ -12,7 +16,11 @@ class Log:
 
 class LogFileMixin(Log):
     def _log(self, msg):
-        print(f'{msg} - {self.__class__.__name__}')
+        msg_formatada = f'{msg} - ({self.__class__.__name__})'
+        print(f'salvando no log: {msg_formatada}')
+        with open(LOG_FILE, 'a') as arquivo:
+            arquivo.write(msg_formatada)
+            arquivo.write('\n')
 
 
 class LogPrintMixin(Log):
