@@ -1,2 +1,4 @@
 Error : Deu muito ruim - (LogFileMixin)Error : Deu muito ruim - (LogFileMixin)
 Success : Deu muito certo - (LogFileMixin)
+Success : Galaxy S24 está ligado - (SmartPhone)
+Success : Iphone 15 Pro está desligado - (SmartPhone)

@@ -13,4 +13,4 @@ galaxy = SmartPhone('Galaxy S24')
 iphone = SmartPhone('Iphone 15 Pro')
 
 galaxy.ligar()
-iphone.desligado()
+iphone.desligar()
