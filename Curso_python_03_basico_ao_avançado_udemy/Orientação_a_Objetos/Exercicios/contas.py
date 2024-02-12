@@ -14,5 +14,16 @@ class Conta(ABC):
         self.saldo += valor
         self.detalhes(f'DEPOSITANDO R${valor:.2f}')
 
-    def detalhes(self, msg=None):
-        return f'O seu saldo: R${self.saldo:.2f} - {msg}'
+    def detalhes(self, msg=''):
+        print(f'O seu saldo: R${self.saldo:.2f} - {msg}')
+
+class ContaPoupanca(Conta):
+    
+    def sacar(self, valor):
+        valor_pos_saque = self.saldo - valor
+        if valor_pos_saque >= 0:
+            self.saldo -= valor
+            self.detalhes(f'SACANDO R${valor:.2f}')
+            return self.saldo
+        print(f'Não foi possivel sacar')
+        self.detalhes(f'SAQUE NEGADO')
