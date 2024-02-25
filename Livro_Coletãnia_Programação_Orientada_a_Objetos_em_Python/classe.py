@@ -1,4 +1,5 @@
 from datetime import date
+from random import randint
 
 class Pessoa:
     ano_atual = date.today()
@@ -14,6 +15,11 @@ class Pessoa:
     def acao1(self) -> str:
         print(f'{self.ano} - Bem vindo {self.nome.title()}, você tem {self.idade} anos, seu sexo é {self.sexo}, e sua altura é {self.altura}!')
 
+    @staticmethod
+    def gerador_id():
+        gerador = randint(100, 999)
+        return gerador
+    
     @classmethod
     def ano_nascimento(cls, nome, ano_nascimento):
         idade = cls.ano - ano_nascimento  
@@ -35,5 +41,5 @@ class Pessoa:
 
 if __name__ == "__main__":
     pessoa01 = Pessoa.ano_nascimento('Carlos', 1985)
-    print(pessoa01.idade)
+    print(pessoa01.gerador_id())
     
