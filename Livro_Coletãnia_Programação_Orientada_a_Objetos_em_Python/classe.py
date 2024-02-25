@@ -14,9 +14,10 @@ class Pessoa:
     def acao1(self) -> str:
         print(f'{self.ano} - Bem vindo {self.nome.title()}, você tem {self.idade} anos, seu sexo é {self.sexo}, e sua altura é {self.altura}!')
 
-    def ano_nascimento(self):
-        ano_nascimento = self.ano - self.idade
-        print(f'Seu ano de nascimento é {ano_nascimento}')
+    @classmethod
+    def ano_nascimento(cls, nome, ano_nascimento):
+        idade = cls.ano - ano_nascimento  
+        return cls(nome, idade)
 
     def logar(self):
         if not self.login:
@@ -33,13 +34,6 @@ class Pessoa:
             self.login = False
 
 if __name__ == "__main__":
-    pessoa01 = Pessoa('carlos', 38, 'M', 1.81)
-    pessoa02 = Pessoa('mayara', 39, 'F', 1.70)
-    pessoa01.deslogar()
-    pessoa01.logar()
-    pessoa01.deslogar()
-    pessoa02.deslogar()
-    pessoa02.logar()
-    pessoa02.logar()
-    pessoa02.deslogar()
+    pessoa01 = Pessoa.ano_nascimento('Carlos', 1985)
+    print(pessoa01.idade)
     
