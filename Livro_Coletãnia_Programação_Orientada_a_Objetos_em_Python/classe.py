@@ -4,13 +4,27 @@ from random import randint
 class Pessoa:
     ano_atual = date.today()
     ano = ano_atual.year
-    def __init__(self, nome, idade, sexo='não definido', altura='não definido', login=False, logoff=False):
+    def __init__(self, nome, idade, preco, sexo='não definido', altura='não definido', login=False, logoff=False):
         self.nome = nome
         self.idade = idade
         self.sexo = sexo
         self.altura = altura
         self.login = login
         self.logoff = logoff
+        self.preco = preco
+
+    @property
+    def preco(self):
+        return self.preco_valido
+
+    @preco.setter
+    def preco(self, valor):
+        if isinstance(valor, str):
+            valor = float(valor.replace('R$', ''))
+        self.preco_valido = valor
+
+    def desconto(self, percentual):
+        self.preco = self.preco - (self.preco*(percentual/100))
     
     def acao1(self) -> str:
         print(f'{self.ano} - Bem vindo {self.nome.title()}, você tem {self.idade} anos, seu sexo é {self.sexo}, e sua altura é {self.altura}!')
@@ -39,7 +53,4 @@ class Pessoa:
             print(f'{self.nome.title()} deslogando do sistema.')
             self.login = False
 
-if __name__ == "__main__":
-    pessoa01 = Pessoa.ano_nascimento('Carlos', 1985)
-    print(pessoa01.gerador_id())
     
