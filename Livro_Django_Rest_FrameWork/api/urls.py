@@ -5,4 +5,4 @@ app_name = 'api'
 
 router = DefaultRouter(trailing_slash = False)
 router.register(r'fundos', FundoImobiliarioViewSet)
-urlpatterns = router.url
+urlpatterns = router.urls
