@@ -1,12 +1,8 @@
-from basesedados import BaseDeDados
+# from basesedados import BaseDeDados
+from usuario import Usuario, Identificador
 
-relClientes = BaseDeDados()
-relClientes.inserir('carlos', 123456789)
-relClientes.inserir('mayara', 12345687689)
-relClientes.inserir('neto', 1234539369)
-relClientes.inserir('luna', 1234539276)
-relClientes.listar()
+usuario1 = Usuario('carlos')
+identificador1 = Identificador('0001')
 
-relClientes.__base = 'Novo Banco de dados'
-print(relClientes._baseDeDados__base)
-print(relClientes.__base)
+usuario1.logar = identificador1
+usuario1.logar.logar()
