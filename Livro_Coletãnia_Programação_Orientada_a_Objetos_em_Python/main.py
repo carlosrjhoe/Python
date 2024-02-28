@@ -1,6 +1,5 @@
-from contato import Contato, Cliente
+from carro import Jeep
 
-cliente_01 = Cliente('carlos', 38)
-cliente_01.addfone(35210079, 81995161616)
-print(cliente_01.nome)
-cliente_01.listaFone()
+carro_01 = Jeep()
+print(carro_01.tipo_gasolina)
+print(carro_01.tipo_alcool)

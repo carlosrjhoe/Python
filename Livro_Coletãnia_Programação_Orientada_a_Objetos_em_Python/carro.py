@@ -8,3 +8,11 @@ class Corsa(Carro):
 
 class Gol(Carro):
     pass
+
+class Carro_gasolina(Carro):
+    def __init__(self, tipo_gasolina=True, tipo_alcool=False):
+        self.tipo_gasolina = tipo_gasolina
+        self.tipo_alcool = tipo_alcool
+
+class Jeep(Carro_gasolina):
+    pass
