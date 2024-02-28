@@ -1,7 +1,7 @@
 class Usuario:
     def __init__(self, nome):
-        self.nome = nome
-        self.logar = None
+        self.__nome = nome
+        self.__logar = None
 
     @property
     def nome(self):
@@ -17,7 +17,7 @@ class Usuario:
 
 class Identificador:
     def __init__(self, numero):
-        self.numero = numero
+        self.__numero = numero
 
     @property
     def numero(self):
