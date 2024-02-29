@@ -1,5 +1,12 @@
-from carro import Jeep
+from mercadoria import KitChurrasco
 
-carro_01 = Jeep()
-print(carro_01.tipo_gasolina)
-print(carro_01.tipo_alcool)
+kit = KitChurrasco('carne', 14.90)
+kit.tipo = 'costela'
+kit.peso = 10
+kit.espetos = 1
+kit.carvao = 1
+
+print(kit.tipo)
+print(kit.peso)
+print(kit.espetos)
+print(kit.carvao)
