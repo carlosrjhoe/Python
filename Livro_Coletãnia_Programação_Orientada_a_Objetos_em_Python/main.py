@@ -1,12 +1,6 @@
-from mercadoria import KitChurrasco
+from pessoa import SaveJogador
 
-kit = KitChurrasco('carne', 14.90)
-kit.tipo = 'costela'
-kit.peso = 10
-kit.espetos = 1
-kit.carvao = 1
-
-print(kit.tipo)
-print(kit.peso)
-print(kit.espetos)
-print(kit.carvao)
+p1 = SaveJogador('Carlos')
+print(p1.nome)
+p1.acao_1()
+p1.acao_2()
