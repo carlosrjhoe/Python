@@ -18,9 +18,13 @@ class SaveJogador(Jogador):
 
 class PessoaABC(ABC):
     @abstractclassmethod
-    def logar(self):
+    def logar(self, chaveSeguranca):
         pass
 
 class Usuario(PessoaABC):
-    def logar(self):
+    def logar(self, chaveSeguranca):
         print('Usuário logado no sistemas')
+
+class Bot(PessoaABC):
+    def logar(self, chaveSeguranca):
+        print('Sistema rodando em segundo plano')
