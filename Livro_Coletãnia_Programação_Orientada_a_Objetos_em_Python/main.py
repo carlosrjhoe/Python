@@ -1,4 +1,6 @@
-from pessoa import Pessoa, PessoaABC, Bot, Usuario
+from caixa import Caixa
 
-user_01 = Usuario()
-user_01.logar('TY76UG')
+caixa_01 = Caixa(15, 10)
+caixa_02 = Caixa(20, 35)
+
+print(caixa_01 + caixa_02)
