@@ -1,6 +1,4 @@
-from pessoa import SaveJogador
+from pessoa import PessoaABC, Usuario
 
-p1 = SaveJogador('Carlos')
-print(p1.nome)
-p1.acao_1()
-p1.acao_2()
+user_01 = Usuario()
+user_01.logar()

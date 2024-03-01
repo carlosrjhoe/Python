@@ -1,3 +1,5 @@
+from abc import ABC, abstractclassmethod
+
 class Pessoa:
     def __init__(self, nome):
         self.nome = nome
@@ -13,3 +15,12 @@ class SaveJogador(Jogador):
     def acao_1(self):
         super().acao_1()
         print(f'{self.nome} está acordando.')
+
+class PessoaABC(ABC):
+    @abstractclassmethod
+    def logar(self):
+        pass
+
+class Usuario(PessoaABC):
+    def logar(self):
+        print('Usuário logado no sistemas')
