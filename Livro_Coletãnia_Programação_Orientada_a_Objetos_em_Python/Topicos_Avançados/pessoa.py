@@ -10,3 +10,11 @@ if __name__ == "__main__":
     pessoa1 = Pessoa('Carlos', 'Encarregado de manutenção')
 
 print(pessoa1)
+
+primeiro_atributo = 'nome'
+segundo_atributo = 'Fernando'
+
+setattr(pessoa1, primeiro_atributo, segundo_atributo)
+primeiro = getattr(pessoa1, primeiro_atributo)
+
+print(primeiro)
