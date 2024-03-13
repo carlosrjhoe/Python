@@ -5,10 +5,9 @@ class Restaurante:
         self.categoria = categoria
         self.ativo = ativo
 
+    def __str__(self) -> str:
+        return f'{self.nome} - {self.categoria} - {self.ativo}'
 
 if __name__ == "__main__":
     restaurante = Restaurante('Restaurante Python', 'FastFood')
-
-    print(restaurante.nome)
-    print(restaurante.categoria)
-    print(vars(restaurante))
+    print(restaurante)
