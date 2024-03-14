@@ -16,19 +16,10 @@ class Restaurante:
         self._ativo = not self._ativo
 
     def __str__(self) -> str:
-        return f'{self._nome} - {self.categoria} - {self.ativo}'
+        return f'{self._nome} - {self.categoria} - {self._ativo}'
 
     @classmethod
     def listar_restaurantes(cls) -> list:
         print(f'{"Nome do restaurante".ljust(25)} | {"Categoria".ljust(25)} | {"Status"}')
         for restaurante in cls.restaurantes:
             print(f'{restaurante._nome.ljust(25)} | {restaurante.categoria.ljust(25)} | {restaurante._ativo}')
-
-
-            
-if __name__ == "__main__":
-    restaurante_1 = Restaurante('restaurante python', 'fastFood')
-    restaurante_1.alterar_estado()
-    restaurante_2 = Restaurante('restaurante java', 'pizza express')
-
-    Restaurante.listar_restaurantes()
