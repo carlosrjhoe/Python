@@ -28,13 +28,14 @@ class Restaurante:
             print(f'{restaurante._nome.ljust(25)} | {restaurante.categoria.ljust(25)} | {str(restaurante.media_avaliacao).ljust(25)} | {restaurante._ativo}')
 
     def receber_avaliacao(self, cliente, nota):
-        avaliacao = Avaliacao(cliente, nota)
-        self._avaliacao.append(avaliacao)
+        if 0 < nota <= 5:
+            avaliacao = Avaliacao(cliente, nota)
+            self._avaliacao.append(avaliacao)
 
     @property
     def media_avaliacao(self):
         if not self._avaliacao:
-            return 0
+            return '-'
         else:
             soma_notas = sum(avaliacao._nota for avaliacao in self._avaliacao)
             quantidade_notas = len(self._avaliacao)

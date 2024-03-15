@@ -1,20 +1,20 @@
 from modelos.restaurante import Restaurante
 
 restaurante_1 = Restaurante('restaurante python', 'fastFood')
-restaurante_1.receber_avaliacao('carlos', 10)
-restaurante_1.receber_avaliacao('mayara', 8)
-restaurante_1.receber_avaliacao('neto', 7)
+restaurante_1.receber_avaliacao('carlos', 3)
+restaurante_1.receber_avaliacao('mayara', 2)
+restaurante_1.receber_avaliacao('neto', 5)
 restaurante_2 = Restaurante('restaurante java', 'pizza express')
 restaurante_2.receber_avaliacao('carlos', 5)
-restaurante_2.receber_avaliacao('mayara', 10)
+restaurante_2.receber_avaliacao('mayara', 1)
 restaurante_2.receber_avaliacao('neto', 2)
 restaurante_3 = Restaurante('restaurante javaScript', 'comida japonesa')
-restaurante_3.receber_avaliacao('carlos', 9)
+restaurante_3.receber_avaliacao('carlos', 2.2)
 restaurante_3.receber_avaliacao('mayara', 3)
-restaurante_3.receber_avaliacao('neto', 7)
+restaurante_3.receber_avaliacao('neto', 1)
 restaurante_4 = Restaurante('restaurante ruby', 'comida tailandesa')
-restaurante_4.receber_avaliacao('carlos', 7)
-restaurante_4.receber_avaliacao('mayara', 2)
+restaurante_4.receber_avaliacao('carlos', 5)
+restaurante_4.receber_avaliacao('mayara', 4)
 restaurante_4.receber_avaliacao('neto', 5)
 
 
