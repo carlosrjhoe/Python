@@ -12,6 +12,7 @@ def par_ou_impar():
         num = int(num)
         if num % 2 == 0: print('Par')
         else: print('Impar')
+        
 def main():
     cabecalho()
     par_ou_impar()
