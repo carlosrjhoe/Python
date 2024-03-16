@@ -22,16 +22,18 @@ def exibir_opcoes():
     print('3. Ativar restaurante')
     print('4. Sair\n')
     
-    opcao = int(input('Escolha uma opção: '))
-    
-    if opcao == 1:
-        print('1. Cadastrar restaurante')
-    elif opcao == 2:
-        print('2. Listar restaurante')
-    elif opcao == 3:
-        print('3. Ativar restaurante')
-    else:
+    opcao_escolhida = int(input('Escolha uma opção: '))
+    if opcao_escolhida == 1:
+        print('Adicionar restaurante')
+    elif opcao_escolhida == 2:
+        print('Listar restaurantes')
+    elif opcao_escolhida == 3:
+        print('Ativar restaurante')
+    elif opcao_escolhida == 4:
+        print('Finalizar app')
         finalizar_app()
+    else:
+        print('Opção inválida!')
 
         
 def main():
