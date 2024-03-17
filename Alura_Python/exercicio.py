@@ -25,12 +25,21 @@ def opcao_invalida():
     input('Digite uma tecla para voltar ao menu principal')
     main()
 
+def cadastrar_novo_restaurante():
+    os.system('cls')
+    print('Cadastro de novos restaurantes')
+    nome_restaurante = input('Nome do restaurante? ')
+    restaurantes.append(nome_restaurante)
+    print(f'{nome_restaurante} cadastrado com sucesso.\n')
+    input('Digite uma tecla para voltar ao menu principal')
+    main()
+
 def exibir_opcoes():
 
     try:
         opcao_escolhida = int(input('Escolha uma opção: '))
         if opcao_escolhida == 1:
-            print('Adicionar restaurante')
+            cadastrar_novo_restaurante()
         elif opcao_escolhida == 2:
             print('Listar restaurantes')
         elif opcao_escolhida == 3:
