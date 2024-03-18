@@ -17,7 +17,7 @@ def exibindo_programa():
     """)
     print('1. Cadastrar restaurante')
     print('2. Listar restaurante')
-    print('3. Ativar restaurante')
+    print('3. Alternar status do restaurante')
     print('4. Sair\n')
 
 def finalizar_app():
@@ -29,8 +29,10 @@ def opcao_invalida():
 
 def exibir_sub_titulos(texto):
     os.system('cls')
+    linha = '*' * (len(texto) + 4)
+    print(linha)
     print(texto)
-    print()
+    print(linha)
 
 def voltar_ao_menu_principal():
     input('\nDigite uma tecla para voltar ao menu principal ')
@@ -55,7 +57,7 @@ def alternar_status_restaurante():
         if nome_restaurante == restaurante['nome']:
             restaurante_encontrado = True
             restaurante['status'] = not restaurante['status']
-            msg = f'O restaurante {nome_restaurante} foi ativado com sucesso.' if restaurante['status'] else f'O restaurante {nome_restaurante} foi desativado com sucesso.'
+            msg = f'O restaurante {nome_restaurante} foi ativado com sucesso.' if restaurante['status'] else f'O restaurante {nome_restaurante} foi desativado com sucesso.' # Operador ternário
             print(msg)
 
     if not restaurante_encontrado:
@@ -64,12 +66,12 @@ def alternar_status_restaurante():
     voltar_ao_menu_principal()
 
 def listar_restaurantes():
-    exibir_sub_titulos('Listando restaurantes:')
+    exibir_sub_titulos(f'Listando restaurantes:\n{"nome".ljust(20)} | {"Categoria".ljust(20)} | {"Status".ljust(20)}')
     for restaurante in restaurantes:
         rest_nome = restaurante['nome']
         rest_categoria = restaurante['categoria']
-        rest_status = restaurante['status']
-        print(f'{rest_nome} | {rest_categoria} | {rest_status}')
+        rest_status = 'ativado' if restaurante['status'] else 'desativado' # Operador ternário
+        print(f'{rest_nome.ljust(20)} | {rest_categoria.ljust(20)} | {rest_status.ljust(20)}')
 
     voltar_ao_menu_principal()
 
