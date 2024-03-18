@@ -46,6 +46,22 @@ def cadastrar_novo_restaurante():
     
     voltar_ao_menu_principal()
     
+def alternar_status_restaurante():
+    exibir_sub_titulos('Alternando estado do restaurante.')
+    nome_restaurante = input('Digite o nome do restaurante que deseja alterar STATUS: ')
+    restaurante_encontrado = False
+
+    for restaurante in restaurantes:
+        if nome_restaurante == restaurante['nome']:
+            restaurante_encontrado = True
+            restaurante['status'] = not restaurante['status']
+            msg = f'O restaurante {nome_restaurante} foi ativado com sucesso.' if restaurante['status'] else f'O restaurante {nome_restaurante} foi desativado com sucesso.'
+            print(msg)
+
+    if not restaurante_encontrado:
+        print('O restaurante não foi encontrado')
+            
+    voltar_ao_menu_principal()
 
 def listar_restaurantes():
     exibir_sub_titulos('Listando restaurantes:')
@@ -66,7 +82,7 @@ def exibir_opcoes():
         elif opcao_escolhida == 2:
             listar_restaurantes()
         elif opcao_escolhida == 3:
-            print('Ativar restaurante')
+            alternar_status_restaurante()
         elif opcao_escolhida == 4:
             print('Finalizar app')
             finalizar_app()
