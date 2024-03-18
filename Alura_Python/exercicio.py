@@ -1,6 +1,10 @@
 import os
 
-restaurantes = []
+restaurantes = [
+    {'nome': 'Praça', 'categoria': 'japonesa', 'status': False},
+    {'nome': 'Pizza Suprema', 'categoria': 'Italiana', 'status': True},
+    {'nome': 'Cantina', 'categoria': 'Brazileirinho', 'status': True}
+]
 
 def exibindo_programa():
     print("""
@@ -43,9 +47,11 @@ def cadastrar_novo_restaurante():
 
 def listar_restaurantes():
     exibir_sub_titulos('Listando restaurantes:')
-
     for restaurante in restaurantes:
-        print(f'{restaurante}')
+        rest_nome = restaurante['nome']
+        rest_categoria = restaurante['categoria']
+        rest_status = restaurante['status']
+        print(f'{rest_nome} | {rest_categoria} | {rest_status}')
 
     voltar_ao_menu_principal()
 
