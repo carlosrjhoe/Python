@@ -1,4 +1,5 @@
 import requests
+import json
 
 url = 'https://guilhermeonrails.github.io/api-restaurantes/restaurantes.json'
 response = requests.get(url)
@@ -21,4 +22,8 @@ if response.status_code == 200:
 else:
     print(f'HTTP error: {response.status_code}')
 
-print(len(dados_restaurante['Pizza Hut']))
+for nome_restaurante, dados in dados_restaurante.items():
+    nome_arquivo = f'{nome_restaurante}.json'
+    with open(nome_arquivo, 'w') as arquivo:
+        json.dump(dados, arquivo, indent=4)
+        
