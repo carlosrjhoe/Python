@@ -8,11 +8,16 @@ restaurante_3 = Restaurante('restaurante javaScript', 'comida japonesa')
 restaurante_4 = Restaurante('restaurante ruby', 'comida tailandesa')
 bebida_suco = Bebida('Suco de melancia', 5.0, 'grande')
 prato_pao = Prato('pãozinho', 3.0, 'Moreninho')
+restaurante_1.adicionar_no_cardapio(bebida_suco)
+restaurante_2.adicionar_no_cardapio(bebida_suco)
+restaurante_3.adicionar_no_cardapio(bebida_suco)
+restaurante_2.adicionar_no_cardapio(prato_pao)
 
 
 def main():
-    print(bebida_suco)
-    print(prato_pao)
+    restaurante_1.exibir_cardapio
+    restaurante_2.exibir_cardapio
+    restaurante_3.exibir_cardapio
 
 if __name__ == "__main__":
     main()
