@@ -18,6 +18,8 @@ df_Principal = df_Principal.merge(df_Total_de_acoes, left_on='Ativo', right_on='
 
 df_Principal['variacao_rs'] = (df_Principal['valor_final'] - df_Principal['valor_inicial']) * df_Principal['Qtde. Teórica']
 
+df_Principal['status'] = df_Principal['variacao_rs'].apply(lambda x: 'Subiu' if x > 0 else ('Desceu' if x < 0 else 'Estavel'))
+
 df_Principal['Qtde. Teórica'] = df_Principal['Qtde. Teórica'].astype(int)
 
 df_Principal = df_Principal.rename(columns={'Qtde. Teórica': 'Qtd_teorica'}).copy()
