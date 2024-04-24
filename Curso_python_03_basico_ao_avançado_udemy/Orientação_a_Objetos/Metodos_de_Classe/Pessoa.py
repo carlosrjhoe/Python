@@ -1,21 +1,30 @@
 from random import randint
 
 class Pessoa:
-    ANO_ATUAL = 2022
+    ANO_ATUAL = 2024
     
-    def __init__(self, nome, idade):
+    def __init__(self, nome=str, idade=int) -> None:
         self.nome = nome
         self.idade = idade
         
-    def get_ano_nascimento(self):
-        print(f'{self.ANO_ATUAL - self.idade}')
-        
-    @classmethod
-    def por_ano_nascimento(cls, nome, idade, ano_nascimento):
-        idade = cls.ANO_ATUAL - ano_nascimento
-        return cls(nome, idade)
-    
-    @staticmethod
-    def gera_id():
-        numero_randomico = randint(10000, 19999)
-        return numero_randomico
+    @property
+    def nome(self):
+        return self._nome
+
+    @nome.setter
+    def nome(self, nome):
+        self._nome = nome
+
+    @property
+    def idade(self):
+        return self._idade
+
+    @idade.setter
+    def idade(self, idade):
+        self._idade = idade
+
+
+class Cliente(Pessoa):
+    def __init__(self, nome=str, idade=int) -> None:
+        super().__init__(nome, idade)
+        self.conta = None
