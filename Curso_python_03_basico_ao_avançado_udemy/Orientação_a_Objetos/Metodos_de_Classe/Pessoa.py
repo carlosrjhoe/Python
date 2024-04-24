@@ -23,8 +23,18 @@ class Pessoa:
     def idade(self, idade):
         self._idade = idade
 
+    def __repr__(self) -> str:
+        class_name = type(self).__name__
+        attrs = f'({self.nome}, {self.idade})'
+        return f'{class_name} - {attrs}'
 
 class Cliente(Pessoa):
     def __init__(self, nome=str, idade=int) -> None:
         super().__init__(nome, idade)
         self.conta = None
+
+
+if __name__ == '__main__':
+    carlos = Cliente('carlos', 37)
+    print(carlos)
+    print(carlos.conta)
