@@ -1,4 +1,3 @@
-from selenium.webdriver import Chrome
 from selenium.webdriver.common.by import By
 from conftest import url, url_produtos
 
