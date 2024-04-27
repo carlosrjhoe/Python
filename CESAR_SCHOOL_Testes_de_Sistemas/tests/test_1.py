@@ -29,4 +29,6 @@ class Test_login:
         self.driver.find_element(By.ID, "user-name").send_keys("standard_user")
         self.driver.find_element(By.NAME, "password").send_keys("secret_sauce")
         self.driver.find_element(By.XPATH, "//*[@id='login-button']").click()
+        produto_titulo = self.driver.find_element(By.CLASS_NAME, "title")
+        assert produto_titulo.text == "Products", 'Página não encontrada!'
         assert self.driver.current_url == self.url_produtos, 'URL incorreta!'
