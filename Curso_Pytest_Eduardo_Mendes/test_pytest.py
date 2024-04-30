@@ -1,5 +1,10 @@
+from pytest import fixture
 from calculadora import soma, subtrair, mutiplicar, dividir, mutiplicar_por_0
 
+@fixture
+def minha_fixture():
+    """Essa fiture é top, mas so vai ser perfeita na proxima live"""
+    
 def test_quando_soma_receber_1_e_2_entao_deve_retornar_3():
     x = 1
     y = 2
