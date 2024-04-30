@@ -1,4 +1,5 @@
 def soma(x, y):
+    print('Entrei na soma')
     return x + y
 
 def subtrair(x, y):

@@ -24,3 +24,10 @@ def test_quando_mutiplicar_receber_0_entao_deve_retornar_0():
     x = 0
     y = 2
     assert mutiplicar_por_0(x, y) == 0
+
+def test_de_soma_deve_escrever_entrei_na_soma(capsys):
+    x = 2
+    y = 2
+    soma(x, y)
+    resultado = capsys.readouterr()
+    assert resultado.out == 'Entrei na soma\n'
