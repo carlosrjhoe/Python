@@ -1,4 +1,5 @@
 from app.quadro import Coluna, Tarefa
+from pytest import mark
 
 
 def test_nao_deve_existir_nenhuma_coluna_no_quadro(quadro):
@@ -26,3 +27,10 @@ def test_quando_mover_cartao_ele_deve_ir_para_coluna_seguinte(quadro_com_colunas
     quadro_com_colunas.inserir_tarefa(tarefa)
     quadro_com_colunas.mover(tarefa)
     assert tarefa in quadro_com_colunas.colunas[1]
+
+def test_quando_mover_tarefa_ele_deve_ser_removida_da_anterior(quadro_com_colunas):
+    tarefa = Tarefa('Usar Mascara')
+    quadro_com_colunas.inserir_tarefa(tarefa)
+    quadro_com_colunas.mover(tarefa)
+    assert tarefa not in quadro_com_colunas.colunas[0]
+    

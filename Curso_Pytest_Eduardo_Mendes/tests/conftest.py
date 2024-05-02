@@ -1,5 +1,22 @@
 from app.quadro import Quadro, Coluna, Tarefa
 from pytest import fixture
+import factory
+
+class QuadroFactory(factory.Factory):
+    class Meta:
+        model = Quadro
+
+    colunas = [Coluna('A'), Coluna('B')]
+
+class ColunasFactory(factory.Factory):
+    class Meta:
+        model = nomes
+
+    colunas = [Coluna('A'), Coluna('B')]
+
+@fixture
+def factory_boy_test():
+    return QuadroFactory.build()
 
 @fixture
 def quadro():
