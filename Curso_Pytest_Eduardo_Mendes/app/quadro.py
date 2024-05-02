@@ -21,7 +21,7 @@ class Quadro:
         self.colunas = colunas
 
 
-    def inserir_colunas(self, coluna):
+    def inserir_coluna(self, coluna):
         self.colunas.append(coluna)
 
     def inserir_tarefa(self, tarefa):
