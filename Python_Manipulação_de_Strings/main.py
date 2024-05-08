@@ -1,14 +1,7 @@
-url = 'pagina?argumentos'
+from extrator_argumentos_url import ExtratorArgumentoUrl
 
-# index = url.find('=')
-# subString = url[index + 1:]
-# print(subString)
+# url = 'https://www.xvideos.com/video.udtumdoe426/charlotte_garconete_safada_de_40_anos'
+url = None
 
-# CELULAR = '(81)99541-9951'
-# INICIO = CELULAR.find('(')+1
-# FINAL = CELULAR.find(')')
-# codigo_cidade = CELULAR[INICIO:FINAL]
-# print(codigo_cidade)
-
-indice = url.find('?')
-print(url[indice+1:])
+# ExtratorArgumentoUrl.url_eh_valida((url))
+print(ExtratorArgumentoUrl.url_eh_valida(url))
