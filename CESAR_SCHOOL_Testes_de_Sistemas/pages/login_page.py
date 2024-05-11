@@ -20,18 +20,21 @@ class LoginPage:
     def login_button(self):
         self.driver.find_element(By.ID, 'login-button').click()
 
-    def close_login_page(self):
-        self.driver.quit()
 
-    def executar_login(self):
+    def executar_login_valido(self):
         self.driver.find_element(By.ID, "user-name").send_keys("standard_user")
         self.driver.find_element(By.NAME, "password").send_keys("secret_sauce")
         self.driver.find_element(By.XPATH, "//*[@id='login-button']").click()
+        produto_titulo = self.driver.find_element(By.CLASS_NAME, "title")
+        return produto_titulo.text
 
-    def click_login(self):
-        self.driver.find_element(*self.login_button).click()
+    # def click_login(self):
+    #     self.driver.find_element(*self.login_button).click()
 
-# driver.find_element(By.ID, "user-name").send_keys("standard_user")
-        # driver.find_element(By.NAME, "password").send_keys("secret_sauce")
-        # driver.find_element(By.XPATH, "//*[@id='login-button']").click()
-        # produto_titulo = driver.find_element(By.CLASS_NAME, "title")
+    # driver.find_element(By.ID, "user-name").send_keys("standard_user")
+    # driver.find_element(By.NAME, "password").send_keys("secret_sauce")
+    # driver.find_element(By.XPATH, "//*[@id='login-button']").click()
+    # produto_titulo = driver.find_element(By.CLASS_NAME, "title")
+
+    def close_login_page(self):
+        self.driver.quit()

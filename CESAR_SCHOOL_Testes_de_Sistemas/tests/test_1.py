@@ -13,10 +13,8 @@ class Test_login:
         login_page.login_button()
         assert login_page.has_message_login_message_error() == 'Epic sadface: Username is required'
 
-    # def test_efetuar_login_valido_e_deve_exibir_pagina_de_produtos(self, setUp):
-    #     """Efetuar login valido e deve exibir pagina de produtos"""
-    #     login_page = setUp
-    #     login_page.executar_login()
+    def test_efetuar_login_valido_e_deve_exibir_pagina_de_produtos(self, setUp):
+        """Efetuar login valido e deve exibir pagina de produtos"""
+        login_page = setUp
+        assert login_page.executar_login_valido() == 'Products'
         
-    #     # assert produto_titulo.text == "Products", 'Página não encontrada!'
-    #     # assert driver.current_url == url_produtos, 'URL incorreta!'
