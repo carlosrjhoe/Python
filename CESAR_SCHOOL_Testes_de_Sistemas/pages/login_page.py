@@ -4,7 +4,6 @@ from selenium.webdriver.common.by import By
 class LoginPage:
     url = "https://www.saucedemo.com/"
     url_produtos = 'https://www.saucedemo.com/inventory.html'
-
     
     def open_login_page(self):
         self.driver = Chrome()
@@ -20,7 +19,6 @@ class LoginPage:
     def login_button(self):
         self.driver.find_element(By.ID, 'login-button').click()
 
-
     def executar_login_valido(self):
         self.driver.find_element(By.ID, "user-name").send_keys("standard_user")
         self.driver.find_element(By.NAME, "password").send_keys("secret_sauce")
@@ -28,13 +26,10 @@ class LoginPage:
         produto_titulo = self.driver.find_element(By.CLASS_NAME, "title")
         return produto_titulo.text
 
-    # def click_login(self):
-    #     self.driver.find_element(*self.login_button).click()
-
-    # driver.find_element(By.ID, "user-name").send_keys("standard_user")
-    # driver.find_element(By.NAME, "password").send_keys("secret_sauce")
-    # driver.find_element(By.XPATH, "//*[@id='login-button']").click()
-    # produto_titulo = driver.find_element(By.CLASS_NAME, "title")
-
+    def clicar_barra_de_menu(self):
+        # //*[@id="menu_button_container"]
+        self.driver.find_element(By.XPATH, "//*[@id='react-burger-menu-btn']").click()
+        self.driver.find_element(By.ID, "logout_sidebar_link").click()
+        
     def close_login_page(self):
         self.driver.quit()
