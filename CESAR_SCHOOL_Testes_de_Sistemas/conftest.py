@@ -20,3 +20,14 @@ def login_app(setUp):
     login_page.find_element(By.XPATH, "//*[@id='login-button']").click()
     assert login_page.current_url == url_produtos, 'URL incorreta!'
     yield login_page
+
+# # Essa parte do código é para escolher o tivo de browser
+# @pytest.fixture
+# def pytest_addoption(parser):
+#   parser.addoption('--browser_selenium', default='chrome', help= 'Select a browser')
+    yield sele
+
+# @pytest.fixture
+# def browser(request):
+#     selected_browser = request.config..getoption('--browser_selenium')
+#     yield selected_browser
