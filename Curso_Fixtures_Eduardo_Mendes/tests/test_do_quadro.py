@@ -15,11 +15,12 @@ def test_não_deve_existir_coluna_no_quadro(setUp):
 def test_quando_inserir_uma_tarefa_no_quadro_deve_estar_na_primeira_coluna(setUp):
     quadro = setUp # Dado
     quadro.inserir_tarefa(Tarefa(nome='Dormir'))
+    assert len(quadro.colunas[0].tarefas) == 1
 
 def test_quando_inserir_uma_coluna_deve_existir_uma_coluna(setUp):
     quadro = setUp # Dado
     quadro.inserir_coluna(Coluna(nome='A fazer')) #
-    quantidade_de_colunas = quadro.colunas #
+    quantidade_de_colunas = quadro.colunas #j
     assert len(quantidade_de_colunas) == 1
 
 def test_quando_inserir_uma_coluna_A_Fazer_ela_deve_estar_no_quadro(setUp):
