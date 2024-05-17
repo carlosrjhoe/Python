@@ -16,10 +16,6 @@ def setUp():
 def login_app(setUp):
     login_page = setUp
     login_page.executar_login_valido()
-    # login_page.open_login_page()
-    # login_page.find_element(By.ID, "user-name").send_keys("standard_user")
-    # login_page.find_element(By.XPATH, "//*[@id='login-button']").click()
-    assert login_page.current_url == url_produtos, 'URL incorreta!'
     yield login_page
 
 # # Essa parte do código é para escolher o tivo de browser

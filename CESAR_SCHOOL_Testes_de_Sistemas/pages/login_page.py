@@ -1,5 +1,6 @@
 from selenium.webdriver import Chrome
 from selenium.webdriver.common.by import By
+from time import sleep
 
 class LoginPage:
     url = "https://www.saucedemo.com/"
@@ -27,9 +28,14 @@ class LoginPage:
         return produto_titulo.text
 
     def clicar_barra_de_menu(self):
-        # //*[@id="menu_button_container"]
         self.driver.find_element(By.XPATH, "//*[@id='react-burger-menu-btn']").click()
         self.driver.find_element(By.ID, "logout_sidebar_link").click()
+
+    def clicar_em_produto(self):
+        lista = self.driver.find_elements(By.CLASS_NAME, 'inventory_list')
+        
+        
+        
         
     def close_login_page(self):
         self.driver.quit()
