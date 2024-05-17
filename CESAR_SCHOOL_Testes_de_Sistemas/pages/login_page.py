@@ -1,3 +1,4 @@
+import random
 from selenium.webdriver import Chrome
 from selenium.webdriver.common.by import By
 from time import sleep
@@ -21,7 +22,7 @@ class LoginPage:
         self.driver.find_element(By.ID, 'login-button').click()
 
     def executar_login_valido(self):
-        self.driver.find_element(By.ID, "user-name").send_keys("standard_user")
+        self.driver.find_element(By.XPATH, "//*[@id='user-name']").send_keys("standard_user")
         self.driver.find_element(By.NAME, "password").send_keys("secret_sauce")
         self.driver.find_element(By.XPATH, "//*[@id='login-button']").click()
         produto_titulo = self.driver.find_element(By.CLASS_NAME, "title")
@@ -32,10 +33,8 @@ class LoginPage:
         self.driver.find_element(By.ID, "logout_sidebar_link").click()
 
     def clicar_em_produto(self):
-        lista = self.driver.find_elements(By.CLASS_NAME, 'inventory_list')
-        
-        
-        
+        lista_produtos = self.driver.find_elements(By.CLASS_NAME, "inventory_item")
+        return len(lista_produtos)
         
     def close_login_page(self):
         self.driver.quit()

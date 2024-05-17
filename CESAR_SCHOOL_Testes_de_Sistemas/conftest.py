@@ -17,13 +17,3 @@ def login_app(setUp):
     login_page = setUp
     login_page.executar_login_valido()
     yield login_page
-
-# # Essa parte do código é para escolher o tivo de browser
-# @pytest.fixture
-# def pytest_addoption(parser):
-#   parser.addoption('--browser_selenium', default='chrome', help= 'Select a browser')
-
-# @pytest.fixture
-# def browser(request):
-#     selected_browser = request.config..getoption('--browser_selenium')
-#     yeld
