@@ -1,5 +1,4 @@
 import pytest
-from selenium.webdriver.common.by import By
 from pages.login_page import LoginPage
 
 # url = "https://www.saucedemo.com/"

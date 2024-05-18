@@ -34,9 +34,12 @@ class LoginPage:
         self.driver.find_element(By.ID, "logout_sidebar_link").click()
 
     def clicar_em_produto(self):
-        lista_produtos = self.driver.find_elements(By.XPATH, '//div[@class="inventory_item"]')
+        lista_produtos = self.driver.find_elements(By.XPATH, '//button[@class="btn btn_primary btn_small btn_inventory "]')
         item = random.choice(lista_produtos)
-        item.find_element(By.XPATH, '//button[@class="btn btn_primary btn_small btn_inventory "]').click()
+        item.click()
+
+    def abrir_carrinho(self):
+        self.driver.find_element(By.XPATH, '//*[@id="shopping_cart_container"]').click()        
 
         
     def close_login_page(self):
