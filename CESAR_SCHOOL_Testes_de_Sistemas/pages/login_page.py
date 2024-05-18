@@ -10,6 +10,7 @@ class LoginPage:
     def open_login_page(self):
         self.driver = Chrome()
         self.driver.get(self.url)
+        self.driver.maximize_window()
 
     def is_url_login(self):
         return self.driver.current_url == self.url
@@ -34,7 +35,9 @@ class LoginPage:
 
     def clicar_em_produto(self):
         lista_produtos = self.driver.find_elements(By.XPATH, '//div[@class="inventory_item"]')
-        return len(lista_produtos)
+        item = random.choice(lista_produtos)
+        item.find_element(By.XPATH, '//button[@class="btn btn_primary btn_small btn_inventory "]').click()
+
         
     def close_login_page(self):
         self.driver.quit()
