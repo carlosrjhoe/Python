@@ -1,8 +1,8 @@
 import pytest
 from pages.login_page import LoginPage
 
-# url = "https://www.saucedemo.com/"
-# url_produtos = 'https://www.saucedemo.com/inventory.html'
+url = "https://www.saucedemo.com/"
+url_produtos = 'https://www.saucedemo.com/inventory.html'
 
 @pytest.fixture
 def setUp():

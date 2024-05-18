@@ -1,7 +1,6 @@
 import random
 from selenium.webdriver import Chrome
 from selenium.webdriver.common.by import By
-from time import sleep
 
 class LoginPage:
     url = "https://www.saucedemo.com/"
