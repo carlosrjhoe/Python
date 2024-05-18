@@ -23,9 +23,9 @@ class LoginPage:
 
     def executar_login_valido(self):
         self.driver.find_element(By.XPATH, "//*[@id='user-name']").send_keys("standard_user")
-        self.driver.find_element(By.NAME, "password").send_keys("secret_sauce")
+        self.driver.find_element(By.XPATH, "//*[@id='password']").send_keys("secret_sauce")
         self.driver.find_element(By.XPATH, "//*[@id='login-button']").click()
-        produto_titulo = self.driver.find_element(By.CLASS_NAME, "title")
+        produto_titulo = self.driver.find_element(By.XPATH, "//span[@class='title']")
         return produto_titulo.text
 
     def clicar_barra_de_menu(self):
@@ -33,7 +33,7 @@ class LoginPage:
         self.driver.find_element(By.ID, "logout_sidebar_link").click()
 
     def clicar_em_produto(self):
-        lista_produtos = self.driver.find_elements(By.CLASS_NAME, "inventory_item")
+        lista_produtos = self.driver.find_elements(By.XPATH, '//div[@class="inventory_item"]')
         return len(lista_produtos)
         
     def close_login_page(self):
