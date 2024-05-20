@@ -6,5 +6,3 @@ class Test4:
         login_page = login_app
         login_page.clicar_em_produto()
         login_page.abrir_carrinho()
-        sleep(2)
-        

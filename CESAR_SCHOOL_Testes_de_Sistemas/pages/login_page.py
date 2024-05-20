@@ -11,6 +11,9 @@ class LoginPage:
         self.driver.get(self.url)
         self.driver.maximize_window()
 
+    def realizar_logout(self):
+        self.driver.find_element(By.XPATH, "//*[@id='logout_sidebar_link']").click()
+
     def is_url_login(self):
         return self.driver.current_url == self.url
 
@@ -30,7 +33,6 @@ class LoginPage:
 
     def clicar_barra_de_menu(self):
         self.driver.find_element(By.XPATH, "//*[@id='react-burger-menu-btn']").click()
-        self.driver.find_element(By.ID, "logout_sidebar_link").click()
 
     def clicar_em_produto(self):
         lista_produtos = self.driver.find_elements(By.XPATH, '//button[@class="btn btn_primary btn_small btn_inventory "]')
