@@ -29,7 +29,7 @@ class LoginPage:
         self.driver.find_element(By.XPATH, "//*[@id='password']").send_keys("secret_sauce")
         self.driver.find_element(By.XPATH, "//*[@id='login-button']").click()
         produto_titulo = self.driver.find_element(By.XPATH, "//span[@class='title']")
-        return produto_titulo.text
+        return produto_titulo.is_displayed()
 
     def clicar_barra_de_menu(self):
         self.driver.find_element(By.XPATH, "//*[@id='react-burger-menu-btn']").click()
