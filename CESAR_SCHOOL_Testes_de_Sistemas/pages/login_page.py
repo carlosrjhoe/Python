@@ -3,8 +3,13 @@ from selenium.webdriver import Chrome
 from selenium.webdriver.common.by import By
 
 class LoginPage:
-    url = "https://www.saucedemo.com/"
-    url_produtos = 'https://www.saucedemo.com/inventory.html'
+
+    def __init__(self) -> None:
+        self.user_name_field = (By.XPATH, "//*[@id='user-name']")
+        self.password_field = By.XPATH, "//*[@id='password']"
+        self.button = (By.XPATH, "//*[@id='login-button']")
+        self.url = "https://www.saucedemo.com/"
+        self.url_produtos = 'https://www.saucedemo.com/inventory.html'
     
     def open_login_page(self):
         self.driver = Chrome()
@@ -22,12 +27,13 @@ class LoginPage:
         return mensage_erro.text
 
     def login_button(self):
-        self.driver.find_element(By.ID, 'login-button').click()
+        self.driver.find_element(*self.button).click()
+        # self.driver.find_element(By.ID, 'login-button').click()
 
     def executar_login_valido(self):
-        self.driver.find_element(By.XPATH, "//*[@id='user-name']").send_keys("standard_user")
-        self.driver.find_element(By.XPATH, "//*[@id='password']").send_keys("secret_sauce")
-        self.driver.find_element(By.XPATH, "//*[@id='login-button']").click()
+        self.driver.find_element(*self.user_name_field).send_keys("standard_user")
+        self.driver.find_element(*self.password_field).send_keys("secret_sauce")
+        self.driver.find_element(*self.button).click()
         produto_titulo = self.driver.find_element(By.XPATH, "//span[@class='title']")
         return produto_titulo.is_displayed()
 
@@ -50,6 +56,12 @@ class LoginPage:
     def verificar_1_item_do_carrinho(self):
         item = self.driver.find_element(By.XPATH, '//div[@class="inventory_item_name"]')
         return item.text
+
+    def realizar_checkout(self):
+        self.driver.find_element(By.ID, 'checkout').click()
+
+    def clicar_botao_continue(self):
+        self.driver.find_element(By.ID, 'continue').click()
 
         
     def close_login_page(self):
