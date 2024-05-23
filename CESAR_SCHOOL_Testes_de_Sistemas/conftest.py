@@ -13,6 +13,6 @@ def setUp():
     
 @pytest.fixture
 def login_app(setUp):
-    login_page = setUp
+    login_page = setUp 
     login_page.executar_login_valido()
     yield login_page

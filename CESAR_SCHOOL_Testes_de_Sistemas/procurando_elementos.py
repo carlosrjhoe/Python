@@ -18,8 +18,9 @@ driver.find_element(By.NAME, 'password').send_keys(senha)
 driver.find_element(By.NAME, 'login-button').click()
 produto = driver.find_elements(By.XPATH, '//button[@class="btn btn_primary btn_small btn_inventory "]')
 item = random.choice(produto)
-sleep(5)
+sleep(2)
 item.click()
+sleep(2)
 
     
 # driver.close()

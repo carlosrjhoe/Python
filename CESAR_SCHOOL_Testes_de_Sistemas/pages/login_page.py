@@ -39,8 +39,17 @@ class LoginPage:
         item = random.choice(lista_produtos)
         item.click()
 
+    def verificar_produto(self):
+        lista_produtos = self.driver.find_elements(By.XPATH, '//button[@class="btn btn_primary btn_small btn_inventory "]')
+        item = random.choice(lista_produtos)
+        item.text
+
     def abrir_carrinho(self):
-        self.driver.find_element(By.XPATH, '//*[@id="shopping_cart_container"]').click()        
+        self.driver.find_element(By.XPATH, '//*[@id="shopping_cart_container"]').click()
+
+    def verificar_1_item_do_carrinho(self):
+        item = self.driver.find_element(By.XPATH, '//div[@class="inventory_item_name"]')
+        return item.text
 
         
     def close_login_page(self):
