@@ -1,12 +1,14 @@
 import random
 from selenium.webdriver import Chrome
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions
 
 class LoginPage:
 
     def __init__(self) -> None:
         self.user_name_field = (By.XPATH, "//*[@id='user-name']")
-        self.password_field = By.XPATH, "//*[@id='password']"
+        self.password_field = (By.XPATH, "//*[@id='password']")
         self.button = (By.XPATH, "//*[@id='login-button']")
         self.url = "https://www.saucedemo.com/"
         self.url_produtos = 'https://www.saucedemo.com/inventory.html'
@@ -17,7 +19,10 @@ class LoginPage:
         self.driver.maximize_window()
 
     def realizar_logout(self):
-        self.driver.find_element(By.XPATH, "//*[@id='logout_sidebar_link']").click()
+        elemento = WebDriverWait(self.driver, 1).until(
+            expected_conditions.visibility_of_element_located((By.XPATH, '//*[@id="logout_sidebar_link"]')))
+        elemento.click()
+        
 
     def is_url_login(self):
         return self.driver.current_url == self.url
@@ -28,7 +33,6 @@ class LoginPage:
 
     def login_button(self):
         self.driver.find_element(*self.button).click()
-        # self.driver.find_element(By.ID, 'login-button').click()
 
     def executar_login_valido(self):
         self.driver.find_element(*self.user_name_field).send_keys("standard_user")
@@ -63,6 +67,16 @@ class LoginPage:
     def clicar_botao_continue(self):
         self.driver.find_element(By.ID, 'continue').click()
 
+    def preencher_campos_de_checkout_e_concluir_compra(self):
+        self.driver.find_element(By.ID, 'first-name').send_keys('nome_test')
+        self.driver.find_element(By.ID, 'last-name').send_keys('sobre_nome_test')
+        self.driver.find_element(By.ID, 'postal-code').send_keys('54515110')
+        self.driver.find_element(By.ID, 'continue').click()
+        self.driver.find_element(By.ID, 'finish').click()
+
+    def verificar_compra_realizada_com_sucesso(self):
+        msg_sucesso = self.driver.find_element(By.XPATH, '//span[@class="title"]')
+        return msg_sucesso.is_displayed()
         
     def close_login_page(self):
         self.driver.quit()

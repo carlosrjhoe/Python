@@ -1,7 +1,7 @@
 from pages.login_page import LoginPage
 from conftest import url
 
-class Test_logout(LoginPage):
+class Test3():
 
     def test_logout(self, setUp):
         logout_page = setUp
