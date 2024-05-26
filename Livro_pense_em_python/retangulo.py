@@ -1,5 +1,3 @@
-from copy import copy
-
 class Retangulo:
     def __init__(self, largura, altura):
         self.largura = largura
@@ -11,7 +9,6 @@ class Retangulo:
 
 if __name__ ==  '__main__':
     caixa = Retangulo(100, 200)
+    caixa_1 = Retangulo(300, 400)
     print(f'Perimetro da caixa = {caixa.perimetro()}cm')
-
-    caixa_1 = copy(caixa)
     print(f'Perimetro da caixa_1 = {caixa_1.perimetro()}cm')
