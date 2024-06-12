@@ -6,7 +6,11 @@
 #     else:
 #         return -1
 
-from math import sqrt
+from math import sqrt, pi
+
+# def area(radius):
+#     a = pi * radius**2
+#     return a
 
 # def distance(x1, y1, x2, y2):
 #     dx = x2 - x1
@@ -15,13 +19,21 @@ from math import sqrt
 #     resultado = sqrt(soma_quadrados)
 #     return resultado
 
-def hipotenusa(a, b):
-    """
-        Calcula o comprimento da hipotenusa de um triângulo 
-        retângulo dados os comprimentos dos outros dois lados.
-    """
-    return sqrt(a**2 + b**2)
+# def circle_area(x1, y1, x2, y2):
+#     radius = distance(x1, y1, x2, y2)
+#     result = area(radius)
+#     return result
+
+
+    
+# def hipotenusa(a, b):
+#     """
+#         Calcula o comprimento da hipotenusa de um triângulo 
+#         retângulo dados os comprimentos dos outros dois lados.
+#     """
+#     return sqrt(a**2 + b**2)
 
 if __name__ == '__main__':
-    a, b = 5, 8
-    print(f'o comprimento da hipotenusa de um triângulo retângulo: {hipotenusa(a, b):.3f}')
+    num_1, num_2, num_3, num_4 = 3, 5, 6, 8
+    print(distance(num_1, num_2, num_3, num_4))
+    print(circle_area(num_1, num_2, num_3, num_4))
