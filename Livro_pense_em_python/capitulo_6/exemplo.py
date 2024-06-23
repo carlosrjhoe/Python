@@ -6,23 +6,25 @@
 #     else:
 #         return -1
 
-from math import sqrt, pi
+from math import sqrt
+from math import pi
+from turtle import distance
 
-# def area(radius):
-#     a = pi * radius**2
-#     return a
+def area(radius):
+    a = pi * radius**2
+    return a
 
-# def distance(x1, y1, x2, y2):
-#     dx = x2 - x1
-#     dy = y2 - y1
-#     soma_quadrados = dx**2 + dy**2
-#     resultado = sqrt(soma_quadrados)
-#     return resultado
+def distance(x1, y1, x2, y2):
+    dx = x2 - x1
+    dy = y2 - y1
+    soma_quadrados = dx**2 + dy**2
+    resultado = sqrt(soma_quadrados)
+    return resultado
 
-# def circle_area(x1, y1, x2, y2):
-#     radius = distance(x1, y1, x2, y2)
-#     result = area(radius)
-#     return result
+def circle_area(x1, y1, x2, y2):
+    radius = distance(x1, y1, x2, y2)
+    result = area(radius)
+    return result
 
 
     
