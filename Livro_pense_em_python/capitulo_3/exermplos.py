@@ -18,4 +18,4 @@ if __name__ == '__main__':
     cat1 = 'alfred'
     cat2 = 'jose'
     cat_twice(cat1, cat2)
-    print(cats)
+    print(cat_twice)
