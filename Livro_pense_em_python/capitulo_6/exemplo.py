@@ -35,11 +35,39 @@
 #     """
 #     return sqrt(a**2 + b**2)
 
-def is_divisible(x: int, y: int):
-    if x % y == 0: 
-        return True
+# def is_divisible(x: int, y: int):
+#     if x % y == 0: 
+#         return True
+#     else:
+#         return False
+
+def factorial(n: int):
+    space = ' ' * (4 * n)
+    print(f'{space} factorial {n}')
+    """Padrão guardião do factorial"""
+    # if not isinstance(n, int):
+    #     print('Factorial is only defined for integers.')
+    #     return None
+    # elif n < 0:
+    #     print('Factorial is not defined for negative integers.')
+    #     return None
+    # elif n == 0:
+    if n == 0:
+        print(f'{space} returning 1')
+        return 1
     else:
-        return False
+        recurse = factorial(n-1)
+        result = n * recurse
+        print(f'{space} returning {result}')
+        return result
+
+# def fibonacci(n):
+#     if n == 0:
+#         return 0
+#     elif n == 1:
+#         return 1
+#     else:
+#         return fibonacci(n-1) + fibonacci(n-2)
     
 if __name__ == '__main__':
-    print(is_divisible(6, 3))
+    print(factorial(4))
