@@ -1,8 +1,8 @@
 from selenium.webdriver import Chrome
 
 driver = Chrome()
-url_saucedemo = 'https://www.saucedemo.com/'
-driver.get(url_saucedemo)
+URL = 'https://www.saucedemo.com/'
+driver.get(URL)
 
 titulo = driver.title
 print(f'Titulo do site: {titulo}')
