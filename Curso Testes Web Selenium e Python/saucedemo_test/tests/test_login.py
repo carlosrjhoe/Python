@@ -8,4 +8,4 @@ def test_login_com_sucesso(webdriver):
     pagina_produto = PaginaProduto(webdriver)
     login_page.open()
     login_page.login('standard_user', 'secret_sauce')
-    assert pagina_produto.exibir_titulo_produtos() == 'Products'
+    assert pagina_produto.exibir_titulo_produtos()

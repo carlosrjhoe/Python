@@ -7,6 +7,7 @@ from selenium.webdriver import Chrome
 def webdriver():
     """Iniciar o driver do Chrome"""
     driver = Chrome()
+    driver.implicitly_wait(5)
     driver.maximize_window()
     # retorna o driver para o teste e, após o término do teste, fecha o navegador.
     yield driver

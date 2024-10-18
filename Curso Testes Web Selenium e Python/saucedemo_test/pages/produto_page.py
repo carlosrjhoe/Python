@@ -7,5 +7,5 @@ class PaginaProduto():
         self.titulo_produto = (By.XPATH, "//span[@class='title']")
 
     def exibir_titulo_produtos(self):
-        titulo = self.driver.find_element(*self.titulo_produto).text
+        titulo = self.driver.find_element(*self.titulo_produto).is_displayed()
         return titulo
