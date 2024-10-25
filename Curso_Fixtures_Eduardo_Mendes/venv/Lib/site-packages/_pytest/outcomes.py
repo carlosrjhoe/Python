@@ -1,12 +1,13 @@
 """Exception classes and constants handling test outcomes as well as
 functions creating them."""
 
+from __future__ import annotations
+
 import sys
 from typing import Any
 from typing import Callable
 from typing import cast
 from typing import NoReturn
-from typing import Optional
 from typing import Protocol
 from typing import Type
 from typing import TypeVar
@@ -18,7 +19,7 @@ class OutcomeException(BaseException):
     """OutcomeException and its subclass instances indicate and contain info
     about test and collection outcomes."""
 
-    def __init__(self, msg: Optional[str] = None, pytrace: bool = True) -> None:
+    def __init__(self, msg: str | None = None, pytrace: bool = True) -> None:
         if msg is not None and not isinstance(msg, str):
             error_msg = (  # type: ignore[unreachable]
                 "{} expected string as 'msg' parameter, got '{}' instead.\n"
@@ -47,7 +48,7 @@ class Skipped(OutcomeException):
 
     def __init__(
         self,
-        msg: Optional[str] = None,
+        msg: str | None = None,
         pytrace: bool = True,
         allow_module_level: bool = False,
         *,
@@ -70,7 +71,7 @@ class Exit(Exception):
     """Raised for immediate program exits (no tracebacks/summaries)."""
 
     def __init__(
-        self, msg: str = "unknown reason", returncode: Optional[int] = None
+        self, msg: str = "unknown reason", returncode: int | None = None
     ) -> None:
         self.msg = msg
         self.returncode = returncode
@@ -104,7 +105,7 @@ def _with_exception(exception_type: _ET) -> Callable[[_F], _WithException[_F, _E
 @_with_exception(Exit)
 def exit(
     reason: str = "",
-    returncode: Optional[int] = None,
+    returncode: int | None = None,
 ) -> NoReturn:
     """Exit testing process.
 
@@ -114,6 +115,9 @@ def exit(
 
     :param returncode:
         Return code to be used when exiting pytest. None means the same as ``0`` (no error), same as :func:`sys.exit`.
+
+    :raises pytest.exit.Exception:
+        The exception that is raised.
     """
     __tracebackhide__ = True
     raise Exit(reason, returncode)
@@ -142,6 +146,9 @@ def skip(
 
         Defaults to False.
 
+    :raises pytest.skip.Exception:
+        The exception that is raised.
+
     .. note::
         It is better to use the :ref:`pytest.mark.skipif ref` marker when
         possible to declare a test to be skipped under certain conditions
@@ -163,6 +170,9 @@ def fail(reason: str = "", pytrace: bool = True) -> NoReturn:
     :param pytrace:
         If False, msg represents the full failure information and no
         python traceback will be reported.
+
+    :raises pytest.fail.Exception:
+        The exception that is raised.
     """
     __tracebackhide__ = True
     raise Failed(msg=reason, pytrace=pytrace)
@@ -188,6 +198,9 @@ def xfail(reason: str = "") -> NoReturn:
         It is better to use the :ref:`pytest.mark.xfail ref` marker when
         possible to declare a test to be xfailed under certain conditions
         like known bugs or missing features.
+
+    :raises pytest.xfail.Exception:
+        The exception that is raised.
     """
     __tracebackhide__ = True
     raise XFailed(reason)
@@ -195,10 +208,10 @@ def xfail(reason: str = "") -> NoReturn:
 
 def importorskip(
     modname: str,
-    minversion: Optional[str] = None,
-    reason: Optional[str] = None,
+    minversion: str | None = None,
+    reason: str | None = None,
     *,
-    exc_type: Optional[Type[ImportError]] = None,
+    exc_type: type[ImportError] | None = None,
 ) -> Any:
     """Import and return the requested module ``modname``, or skip the
     current test if the module cannot be imported.
@@ -227,6 +240,9 @@ def importorskip(
     :returns:
         The imported module. This should be assigned to its canonical name.
 
+    :raises pytest.skip.Exception:
+        If the module cannot be imported.
+
     Example::
 
         docutils = pytest.importorskip("docutils")
@@ -252,8 +268,8 @@ def importorskip(
     else:
         warn_on_import_error = False
 
-    skipped: Optional[Skipped] = None
-    warning: Optional[Warning] = None
+    skipped: Skipped | None = None
+    warning: Warning | None = None
 
     with warnings.catch_warnings():
         # Make sure to ignore ImportWarnings that might happen because

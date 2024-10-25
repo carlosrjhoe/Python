@@ -1,0 +1,3 @@
+FIXTURES:
+    É uma forma de evitar repetiçoes de código em testes.
+
