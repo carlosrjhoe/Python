@@ -4,8 +4,8 @@ from selenium.webdriver.common.by import By
 class PaginaLogin():
     URL_SAUCEDEMO = 'https://www.saucedemo.com/'
 
-    def __init__(self, webdriver):
-        self.driver = webdriver
+    def __init__(self, setUp):
+        self.driver = setUp
         self.user_name = (By.ID, 'user-name')
         self.password = (By.ID, 'password')
         self.login_button = (By.ID, 'login-button')

@@ -4,7 +4,7 @@ from selenium.webdriver import Chrome
 
 # Decorador faz com o que a função seja realizada antes e depois dos testes.
 @fixture
-def webdriver():
+def setUp():
     """Iniciar o driver do Chrome"""
     driver = Chrome()
     driver.implicitly_wait(5)
