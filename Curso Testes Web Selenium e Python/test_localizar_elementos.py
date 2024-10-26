@@ -20,5 +20,4 @@
 
 # img_backpack = driver.find_element(
 #     By.XPATH, "(//img[@class='inventory_item_img'])[1]")
-# print(img_backpack.get_attribute('alt'))
 # assert img_backpack.get_attribute('alt') == 'Sauce Labs Backpack'
