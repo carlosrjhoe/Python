@@ -7,4 +7,9 @@ def test_login_sucess(setUp):
     Object_product_page = ProductsPage(setUp)
     login_page.open()
     login_page.login()
-    assert Object_product_page.is_products_title_dispayed() == 'Products'
+    assert Object_product_page.is_products_title_dispayed() == "Products"
+
+def test_invalid_login(setUp):
+    login_page = LoginPage(setUp)
+    login_page.open()
+    assert login_page.invalid_login()
