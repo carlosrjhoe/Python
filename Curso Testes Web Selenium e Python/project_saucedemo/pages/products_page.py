@@ -3,7 +3,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from .login_page import LoginPage
 from random import choice
-from time import sleep
 
 
 class ProductsPage(LoginPage):
