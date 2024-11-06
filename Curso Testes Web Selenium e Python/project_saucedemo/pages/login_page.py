@@ -6,6 +6,7 @@ class LoginPage:
     username = "standard_user"
     password = "secret_sauce"
     invalid_password = "1111111111"
+    expected_error_message = "Epic sadface: Username and password do not match any user in this service"
 
     def __init__(self, driver):
         self.driver = driver
@@ -31,3 +32,6 @@ class LoginPage:
             *self.password_input).send_keys(self.invalid_password)
         self.driver.find_element(*self.login_button).click()
         return self.driver.find_element(*self.erro_message)
+
+    def verify_login_error_message(self):
+        return self.driver.find_element(*self.erro_message).text == self.expected_error_message
