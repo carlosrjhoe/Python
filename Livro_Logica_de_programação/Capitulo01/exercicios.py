@@ -28,5 +28,16 @@ def atravessar_rio():
     print("\nTodas as cargas foram atravessadas com segurança!")
 
 
+def torre_hanoi(n, origem, destino, auxiliar):
+    if n == 1:
+        print(f'Mova o disco 1 da haste {origem} para a haste {destino}')
+
+    print(f'Mova o disco {n} da haste {origem} para a haste {destino}')
+
+    torre_hanoi(n-1, origem, auxiliar, destino)
+    torre_hanoi(n-1, auxiliar, destino, origem)
+
+
 if __name__ == '__main__':
-    mostrar_vestidos()
+    torre_hanoi(3, 'A', 'C', 'B')
+    
