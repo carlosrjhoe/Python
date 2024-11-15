@@ -1,9 +1,11 @@
 def criar_multiplicador(multiplicador):
     def multiplicar(numero):
         return numero * multiplicador
+
     return multiplicar
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     duplicar = criar_multiplicador(2)
     triplicar = criar_multiplicador(3)
     quadriplicar = criar_multiplicador(4)
