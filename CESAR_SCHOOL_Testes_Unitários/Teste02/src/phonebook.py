@@ -20,24 +20,37 @@ class Phonebook:
             evitar duplicação e garantir consistência.
 
         """
-        if "#" in name:
-            return "Nome invalido"
-        if "@" in name:
-            return "Nome invalido"
-        if "!" in name:
-            return "Nome invalido"
-        if "$" in name:
-            return "Nome invalido"
-        if "%" in name:
+        """Código refatorado:"""
+        caracteres_invalidos = {"#", "@", "!", "$", "%"}
+        if any(char in name for char in caracteres_invalidos):
             return "Nome invalido"
 
-        if len(number) < 0:
-            return "Numero invalid"
+        if not number or not number.isdigit():
+            return "Numero invalido"
 
         if name not in self.entries:
             self.entries[name] = number
+            return "Numero adicionado"
 
-        return "Numero adicionado"
+        """Código antigo."""
+        # if "#" in name:
+        #     return "Nome invalido"
+        # if "@" in name:
+        #     return "Nome invalido"
+        # if "!" in name:
+        #     return "Nome invalido"
+        # if "$" in name:
+        #     return "Nome invalido"
+        # if "%" in name:
+        #     return "Nome invalido"
+
+        # if len(number) < 0:
+        #     return "Numero invalid"
+
+        # if name not in self.entries:
+        #     self.entries[name] = number
+
+        # return "Numero adicionado"
 
     def lookup(self, name):
         """
