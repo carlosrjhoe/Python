@@ -43,6 +43,15 @@ class Phonebook:
         """
         :param name: name of person in string
         :return: return number of person with name
+
+        Erros identificados:
+            Não há tratamento para casos em que o nome não existe nenhum 
+            dicionário, resultando em um erro de chave.
+            
+        Pontos de melhoria:
+            Usar dict.get()o valor padrão para evitar erros, ou verificar 
+            explicitamente se o nome existe.
+           
         """
         if "#" in name:
             return "Nome invalido"
