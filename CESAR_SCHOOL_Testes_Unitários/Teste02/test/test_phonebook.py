@@ -13,6 +13,12 @@ class TestePhoneBook:
         experado = "Nome invalido"
         assert resultado == experado
 
+    def test_add_numero_invalido(self, setUp):
+        phonebook = setUp
+        resultado = phonebook.add('Carlos', " ")
+        esperado = "Numero invalido"
+        assert resultado == esperado
+
     def test_lookup_phonebook_com_caractere_invalido(self, setUp):
         """teste lookup com caractere inválido"""
         phonebook = setUp
