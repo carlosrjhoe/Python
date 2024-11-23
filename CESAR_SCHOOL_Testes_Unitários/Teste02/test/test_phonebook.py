@@ -26,10 +26,13 @@ class TestePhoneBook:
         esperado = True
         assert resultado == esperado
 
-    def test_lookup_phonebook_com_caractere_invalido(self, setUp):
+    @pytest.mark.parametrize(
+        "test_data", ["car#los", "@carlos", "car!los", "cart%r", "car$los"]
+    )
+    def test_lookup_phonebook_com_caractere_invalido(self, setUp, test_data):
         """teste lookup com caractere inválido"""
         phonebook = setUp
-        phonebook.add("Carlos", "333")
-        resultado = phonebook.lookup("Carlos")
-        experado = "333"
+        phonebook.add(test_data, "333")
+        resultado = phonebook.lookup(test_data)
+        experado = "Nome invalido"
         assert resultado == experado
