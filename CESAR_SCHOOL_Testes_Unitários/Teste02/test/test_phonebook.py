@@ -78,7 +78,7 @@ class TestePhoneBook:
         """teste get_name_by_number para retornar o nome do
         número associado a ele."""
         phonebook = setUp
-        phonebook.add("Mayara", "111")
-        resultado = phonebook.get_name_by_number("111")
-        esperado = phonebook.entries
+        phonebook.add("Carlos", "333")
+        resultado = phonebook.get_name_by_number("333")
+        esperado = "Carlos"
         assert resultado == esperado

@@ -149,3 +149,9 @@ class Phonebook:
             return "Nome não encontrado"
         self.entries[name] = number
         return "Número atualizado"
+
+    def get_name_by_number(self, number):
+        for name in self.entries:
+            if self.entries[name] == number:
+                return name
+        return "Número não encontrado"
