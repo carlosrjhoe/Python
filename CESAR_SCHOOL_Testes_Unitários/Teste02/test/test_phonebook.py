@@ -64,3 +64,13 @@ class TestePhoneBook:
         resultado = phonebook.change_number("Carlos", "222")
         esperado = "Número atualizado"
         assert resultado == esperado
+
+    def test_change_number_de_nome_inexistente(self, setUp):
+        """teste charge_number para alterar número de nome não cadastrado"""
+        phonebook = setUp
+        phonebook.add("Mayara", "111")
+        phonebook.add("Carlos", "333")
+        resultado = phonebook.change_number("Neto", "222")
+        esperado = "Nome não encontrado"
+        assert resultado == esperado
+        
