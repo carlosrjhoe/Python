@@ -82,8 +82,10 @@ class Phonebook:
         for char in ["#", "@", "!", "$", "%"]:
             if char in name:
                 return "Nome invalido"
-            else:
-                return self.entries[name]
+        if name in self.entries:
+            return self.entries[name]
+        else:
+            return "Nome não encontrado"
 
     def get_names(self):
         """
