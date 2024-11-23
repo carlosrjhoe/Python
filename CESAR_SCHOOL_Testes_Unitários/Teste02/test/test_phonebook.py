@@ -46,3 +46,13 @@ class TestePhoneBook:
         resultado = phonebook.lookup("Carlos")
         experado = "333"
         assert resultado == experado
+
+    def test_get_names_retornar_todos_nomes(self, setUp):
+        """teste get_names para retornar todos os nomes cadastrados"""
+        phonebook = setUp
+        phonebook.add("Carlos", "333")
+        phonebook.add("Mayara", "111")
+        resultado = phonebook.get_names()
+        esperado = phonebook.entries.keys()
+        assert resultado == esperado
+        
