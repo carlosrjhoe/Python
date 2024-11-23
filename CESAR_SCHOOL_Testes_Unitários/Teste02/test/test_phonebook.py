@@ -36,3 +36,11 @@ class TestePhoneBook:
         resultado = phonebook.lookup(test_data)
         experado = "Nome invalido"
         assert resultado == experado
+
+    def test_lookup_phonebook_com_nome_valido(self, setUp):
+        """teste lookup com caractere inválido"""
+        phonebook = setUp
+        phonebook.add("Carlos", "333")
+        resultado = phonebook.lookup("Carlos")
+        experado = "333"
+        assert resultado == experado
