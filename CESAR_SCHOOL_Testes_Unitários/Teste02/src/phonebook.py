@@ -77,7 +77,7 @@ class Phonebook:
         #     return "Nome invalido"
         # if "%" in name:
         #     return "Nome invalido"
-        
+
         """Código refatorado:"""
         for char in ["#", "@", "!", "$", "%"]:
             if char in name:
