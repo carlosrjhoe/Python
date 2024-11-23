@@ -66,18 +66,24 @@ class Phonebook:
             explicitamente se o nome existe.
 
         """
-        if "#" in name:
-            return "Nome invalido"
-        if "@" in name:
-            return "Nome invalido"
-        if "!" in name:
-            return "Nome invalido"
-        if "$" in name:
-            return "Nome invalido"
-        if "%" in name:
-            return "Nome invalido"
-
-        return self.entries[name]
+        """Código antigo."""
+        # if "#" in name:
+        #     return "Nome invalido"
+        # if "@" in name:
+        #     return "Nome invalido"
+        # if "!" in name:
+        #     return "Nome invalido"
+        # if "$" in name:
+        #     return "Nome invalido"
+        # if "%" in name:
+        #     return "Nome invalido"
+        
+        """Código refatorado:"""
+        for char in ["#", "@", "!", "$", "%"]:
+            if char in name:
+                return "Nome invalido"
+            else:
+                return self.entries[name]
 
     def get_names(self):
         """
