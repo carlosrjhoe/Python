@@ -73,4 +73,12 @@ class TestePhoneBook:
         resultado = phonebook.change_number("Neto", "222")
         esperado = "Nome não encontrado"
         assert resultado == esperado
-        
+
+    def test_get_name_by_number(self, setUp):
+        """teste get_name_by_number para retornar o nome do
+        número associado a ele."""
+        phonebook = setUp
+        phonebook.add("Mayara", "111")
+        resultado = phonebook.get_name_by_number("111")
+        esperado = phonebook.entries
+        assert resultado == esperado
