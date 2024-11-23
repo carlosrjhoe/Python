@@ -15,14 +15,21 @@ class TestePhoneBook:
 
     def test_add_numero_invalido(self, setUp):
         phonebook = setUp
-        resultado = phonebook.add('Carlos', " ")
+        resultado = phonebook.add("Carlos", " ")
         esperado = "Numero invalido"
+        assert resultado == esperado
+
+    def test_add_phonebook_name_nao_existe_adicionado(self, setUp):
+        phonebook = setUp
+        phonebook.add("Carlos", "123456789")
+        resultado = "Carlos" in phonebook.entries
+        esperado = True
         assert resultado == esperado
 
     def test_lookup_phonebook_com_caractere_invalido(self, setUp):
         """teste lookup com caractere inválido"""
         phonebook = setUp
-        phonebook.add('Carlos', '333')
-        resultado = phonebook.lookup('Carlos')
-        experado = '333'
+        phonebook.add("Carlos", "333")
+        resultado = phonebook.lookup("Carlos")
+        experado = "333"
         assert resultado == experado

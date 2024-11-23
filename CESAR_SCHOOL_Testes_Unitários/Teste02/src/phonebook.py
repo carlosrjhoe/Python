@@ -21,9 +21,9 @@ class Phonebook:
 
         """
         """Código refatorado:"""
-        caracteres_invalidos = {"#", "@", "!", "$", "%"}
-        if any(char in name for char in caracteres_invalidos):
-            return "Nome invalido"
+        for char in ["#", "@", "!", "$", "%"]:
+            if char in name:
+                return "Nome invalido"
 
         if not number or not number.isdigit():
             return "Numero invalido"
