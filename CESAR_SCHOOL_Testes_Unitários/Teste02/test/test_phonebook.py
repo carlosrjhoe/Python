@@ -14,12 +14,14 @@ class TestePhoneBook:
         assert resultado == experado
 
     def test_add_numero_invalido(self, setUp):
+        """teste add com número inválido"""
         phonebook = setUp
         resultado = phonebook.add("Carlos", " ")
         esperado = "Numero invalido"
         assert resultado == esperado
 
     def test_add_phonebook_name_nao_existe_adicionado(self, setUp):
+        """teste add com nome não exitente válido"""
         phonebook = setUp
         phonebook.add("Carlos", "123456789")
         resultado = "Carlos" in phonebook.entries
