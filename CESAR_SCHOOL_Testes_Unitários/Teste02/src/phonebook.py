@@ -143,3 +143,9 @@ class Phonebook:
         """
         self.entries.pop(name)
         return "Numero deletado"
+
+    def change_number(self, name, number):
+        if name not in self.entries:
+            return "Nome não encontrado"
+        self.entries[name] = number
+        return "Número atualizado"
