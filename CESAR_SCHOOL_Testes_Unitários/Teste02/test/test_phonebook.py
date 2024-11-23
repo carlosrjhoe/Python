@@ -55,4 +55,3 @@ class TestePhoneBook:
         resultado = phonebook.get_names()
         esperado = phonebook.entries.keys()
         assert resultado == esperado
-        
