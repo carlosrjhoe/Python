@@ -11,14 +11,14 @@ class Phonebook:
         :return: 'Nome invalido' or 'Numero invalido' or 'Numero adicionado'
 
         Erros identificados:
-            O tratamento dos caracteres especiais como #, @, !, $, %repete 
+            O tratamento dos caracteres especiais como #, @, !, $, %repete
             código e possui erros de digitação nas mensagens retornadas.
             Exemplo: "Nme invalido"e "Nome invalio".
-            
+
         Pontos de melhoria:
-            Centralize a validação de caracteres em uma função separada para 
+            Centralize a validação de caracteres em uma função separada para
             evitar duplicação e garantir consistência.
-            
+
         """
         if "#" in name:
             return "Nome invalido"
@@ -45,13 +45,13 @@ class Phonebook:
         :return: return number of person with name
 
         Erros identificados:
-            Não há tratamento para casos em que o nome não existe nenhum 
+            Não há tratamento para casos em que o nome não existe nenhum
             dicionário, resultando em um erro de chave.
-            
+
         Pontos de melhoria:
-            Usar dict.get()o valor padrão para evitar erros, ou verificar 
+            Usar dict.get()o valor padrão para evitar erros, ou verificar
             explicitamente se o nome existe.
-           
+
         """
         if "#" in name:
             return "Nome invalido"
