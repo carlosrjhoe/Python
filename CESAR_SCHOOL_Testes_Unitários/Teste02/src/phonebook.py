@@ -10,9 +10,15 @@ class Phonebook:
         :param number: number of person in string
         :return: 'Nome invalido' or 'Numero invalido' or 'Numero adicionado'
 
-        O tratamento dos caracteres especiais como #, @, !, $, %repete código e
-        possui erros de digitação nas mensagens retornadas.
-        Exemplo: "Nme invalido"e "Nome invalio".
+        Erros identificados:
+            O tratamento dos caracteres especiais como #, @, !, $, %repete 
+            código e possui erros de digitação nas mensagens retornadas.
+            Exemplo: "Nme invalido"e "Nome invalio".
+            
+        Pontos de melhoria:
+            Centralize a validação de caracteres em uma função separada para 
+            evitar duplicação e garantir consistência.
+            
         """
         if "#" in name:
             return "Nome invalido"
