@@ -55,3 +55,12 @@ class TestePhoneBook:
         resultado = phonebook.get_names()
         esperado = phonebook.entries.keys()
         assert resultado == esperado
+
+    def test_change_number_do_nome_exitente(self, setUp):
+        """teste charge_number para alterar número do nome cadastrado"""
+        phonebook = setUp
+        phonebook.add("Mayara", "111")
+        phonebook.add("Carlos", "333")
+        resultado = phonebook.change_number("Carlos", "222")
+        esperado = "Número atualizado"
+        assert resultado == esperado
