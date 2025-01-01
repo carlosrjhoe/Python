@@ -1,3 +1,3 @@
 ALFABETO = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 caractere = input().title()
-print(ALFABETO.find(caractere)+1)
+print(ALFABETO.find(caractere))
