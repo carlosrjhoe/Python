@@ -12,6 +12,6 @@ class Land:
 
 
 if __name__ == '__main__':
-    land = Land(10.0, 30.0)
+    land = Land(15.0, 30.0)
     print(f'AREA = {land.price_meter_land()}')
     print(f'PRICE = R${land.area_square_meters()}')
