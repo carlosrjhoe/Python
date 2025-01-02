@@ -1,13 +1,13 @@
 class Land:
-    def __init__(self, widthland, lengthland):
+    def __init__(self, widthland: float, lengthland: float):
         self.widthland = widthland
         self.lengthland = lengthland
         self.price_land = 200.0
 
-    def price_meter_land(self):
+    def price_meter_land(self) -> float:
         return self.widthland * self.lengthland
 
-    def area_square_meters(self):
+    def area_square_meters(self) -> float:
         return self.price_meter_land() * self.price_land
 
 
