@@ -1,4 +1,4 @@
-a, b ,c = input().split()
+a, b, c = input().split()
 a, b, c = float(a), float(b), float(c)
 PI = 3.14159
 area_triagulo = (a * c) / 2
